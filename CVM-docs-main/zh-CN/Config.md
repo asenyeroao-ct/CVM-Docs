@@ -10,6 +10,8 @@
 | SAVE | `N/A` | action | 按钮点击 | idle | 将当前运行参数保存到当前选中配置文件。 | 会覆盖该配置对应的 JSON 文件。 |
 | LOAD | `N/A` | action | 按钮点击 | idle | 将选中配置加载到当前 UI/运行时。 | 加载后会立即应用到界面与运行状态。 |
 | NEW | `N/A` | action | 按钮点击 + 输入新名称 | idle | 基于当前参数创建新的配置文件。 | 文件名来自用户输入，保存到 `configs/`。 |
+| EXPORT | `N/A` | action | 按钮点击 | idle | 将当前选中配置的 JSON 内容复制到剪贴板。 | 复制完成后会弹出英文提示。 |
+| IMPORT | `N/A` | action | 按钮点击 + 文件选择器 | idle | 选择 JSON 文件并导入为配置。 | 导入后会保存为配置并立即应用。 |
 
 ## 存储路径与命名规范
 
@@ -18,7 +20,7 @@
 | Runtime Config File | `config.json` | file path | 仓库根目录 JSON 文件 | `config.json` | 主运行时配置文件。 | 由 `Config` 类负责读写。 |
 | Profile Folder | `configs/*.json` | file path pattern | JSON 配置文件集合 | `configs/` | 用户配置文件目录。 | 非默认用户配置通常被 git 忽略。 |
 | Default Profile Template | `configs/default.json` | file path | JSON 文件 | `configs/default.json` | 仓库内置默认配置模板。 | 建议保持稳定用于新用户初始化。 |
-| Profile Naming Rule | `N/A` | convention | 文件系统安全名称 | 无强制默认 | 配置名称会映射为 JSON 文件名。 | 建议使用 ASCII 字母、数字、`_`、`-`。 |
+| Profile Naming Rule | `N/A` | convention | 文件系统安全名称 | 后缀 `_cvm.json` | 在 Config 标签中 SAVE/IMPORT 的配置会保存为 `*_cvm.json`。 | 下拉列表不显示末尾 `_cvm`；旧版 `.json` 配置仍可加载。 |
 
 
 ## 安全配置流程

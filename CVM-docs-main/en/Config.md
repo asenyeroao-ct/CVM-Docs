@@ -10,6 +10,8 @@ Back to index: [CVM.md](./CVM.md)
 | SAVE | `N/A` | action | button click | idle | Saves current runtime settings to currently selected profile file. | Overwrites selected profile JSON file. |
 | LOAD | `N/A` | action | button click | idle | Loads selected profile values into runtime config/UI. | Applies values immediately to UI and runtime state. |
 | NEW | `N/A` | action | button click + name input flow | idle | Creates a new profile file from current settings. | Uses provided profile name as filename in `configs/`. |
+| EXPORT | `N/A` | action | button click | idle | Exports selected profile JSON content to clipboard. | Shows an English confirmation message after copy. |
+| IMPORT | `N/A` | action | button click + file picker | idle | Imports a selected JSON file into profile storage. | Saves imported file as a profile and applies it immediately. |
 
 ## Storage and Naming
 
@@ -18,7 +20,7 @@ Back to index: [CVM.md](./CVM.md)
 | Runtime Config File | `config.json` | file path | repo root JSON file | `config.json` | Main persisted runtime configuration file. | Loaded/saved by `Config` class. |
 | Profile Folder | `configs/*.json` | file path pattern | JSON profile files | `configs/` | User profile storage location. | Non-default user profiles are typically git-ignored. |
 | Default Profile Template | `configs/default.json` | file path | JSON file | `configs/default.json` | Baseline profile template shipped with repo. | Keep this file stable for onboarding defaults. |
-| Profile Naming Rule | `N/A` | convention | filesystem-safe profile names | no forced value | Profile names map to JSON filenames. | Prefer ASCII letters, numbers, `_`, `-` for portability. |
+| Profile Naming Rule | `N/A` | convention | filesystem-safe profile names | suffix `_cvm.json` | UI profile names map to `*_cvm.json` filenames when saved/imported from Config tab. | UI hides the trailing `_cvm` in the selector; legacy `.json` profiles remain load-compatible. |
 
 
 ## Safe Profile Workflow

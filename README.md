@@ -6,17 +6,17 @@ Project repository:
 - https://github.com/asenyeroao-ct/CVM-colorBot
 
 Main entry points:
-- Language selector: `CVM-docs/lang.md`
-- English docs: `CVM-docs/en/CVM.md`
-- Simplified Chinese docs: `CVM-docs/zh-CN/CVM.md`
+- Language selector: [`CVM-docs-main/lang.md`](CVM-docs-main/lang.md)
+- English docs: [`CVM-docs-main/en/CVM.md`](CVM-docs-main/en/CVM.md)
+- Simplified Chinese docs: [`CVM-docs-main/zh-CN/CVM.md`](CVM-docs-main/zh-CN/CVM.md)
 
 Additional setup guides:
-- `shared-guides/lang.md`
-- `shared-guides/en/OBS-UDP-setup.md`
-- `shared-guides/en/MAKCU-setup.md`
-- `shared-guides/en/Mouse-Keyboard-API.md`
-- `shared-guides/zh-CN/OBS-UDP-setup.md`
-- `shared-guides/zh-CN/MAKCU-setup.md`
+- [`shared-guides/lang.md`](shared-guides/lang.md)
+- [`shared-guides/en/OBS-UDP-setup.md`](shared-guides/en/OBS-UDP-setup.md)
+- [`shared-guides/en/MAKCU-setup.md`](shared-guides/en/MAKCU-setup.md)
+- [`shared-guides/en/Mouse-Keyboard-API.md`](shared-guides/en/Mouse-Keyboard-API.md)
+- [`shared-guides/zh-CN/OBS-UDP-setup.md`](shared-guides/zh-CN/OBS-UDP-setup.md)
+- [`shared-guides/zh-CN/MAKCU-setup.md`](shared-guides/zh-CN/MAKCU-setup.md)
 
 Scope of this documentation:
 - General tab configuration
@@ -24,7 +24,7 @@ Scope of this documentation:
 - Trigger configuration
 - RCS configuration
 - Config profile workflow
-- Mode-specific tuning guides under `CVM-docs/<lang>/aimbot/`
+- Mode-specific tuning guides under `CVM-docs-main/<lang>/aimbot/`
 
 ### AI-Generated Content
 
