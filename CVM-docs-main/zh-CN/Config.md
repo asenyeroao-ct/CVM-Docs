@@ -9,9 +9,11 @@
 | Profile Selector | `N/A` | UI state | 来自 `configs/*.json` 的配置名 | 首个可用配置 | 选择 LOAD/SAVE 作用的目标配置。 | 列表会从 `configs` 目录刷新。 |
 | SAVE | `N/A` | action | 按钮点击 | idle | 将当前运行参数保存到当前选中配置文件。 | 会覆盖该配置对应的 JSON 文件。 |
 | LOAD | `N/A` | action | 按钮点击 | idle | 将选中配置加载到当前 UI/运行时。 | 加载后会立即应用到界面与运行状态。 |
+| DEL | `N/A` | action | 按钮点击 + 确认弹窗 | idle | 删除当前选中的配置文件。 | 需要用户确认；当仅剩一个配置时会阻止删除。 |
 | NEW | `N/A` | action | 按钮点击 + 输入新名称 | idle | 基于当前参数创建新的配置文件。 | 文件名来自用户输入，保存到 `configs/`。 |
 | EXPORT | `N/A` | action | 按钮点击 | idle | 将当前选中配置的 JSON 内容复制到剪贴板。 | 复制完成后会弹出英文提示。 |
 | IMPORT | `N/A` | action | 按钮点击 + 文件选择器 | idle | 选择 JSON 文件并导入为配置。 | 导入后会保存为配置并立即应用。 |
+| Clipboard Import Prompt | `N/A` | automatic dialog（仅 Config 标签） | 检测剪贴板中的 CVM 配置 + Yes/No 确认 + Yes 时输入配置名 | idle | 当 Config 标签处于激活状态时，若剪贴板存在有效配置内容，会触发导入确认。 | 选择 No 后，除非剪贴板内容变化或当前配置值变化，否则不会再次询问。 |
 
 ## 存储路径与命名规范
 

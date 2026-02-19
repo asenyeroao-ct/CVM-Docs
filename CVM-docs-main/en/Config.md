@@ -9,6 +9,7 @@ Back to index: [CVM.md](./CVM.md)
 | Profile Selector | `N/A` | UI state | profile names from `configs/*.json` | first available profile | Selects active profile target for load/save operations. | List is refreshed from `configs` directory. |
 | SAVE | `N/A` | action | button click | idle | Saves current runtime settings to currently selected profile file. | Overwrites selected profile JSON file. |
 | LOAD | `N/A` | action | button click | idle | Loads selected profile values into runtime config/UI. | Applies values immediately to UI and runtime state. |
+| DEL | `N/A` | action | button click + confirmation dialog | idle | Deletes the currently selected profile file. | Requires user confirmation and is blocked when only one profile remains. |
 | NEW | `N/A` | action | button click + name input flow | idle | Creates a new profile file from current settings. | Uses provided profile name as filename in `configs/`. |
 | EXPORT | `N/A` | action | button click | idle | Exports selected profile JSON content to clipboard. | Shows an English confirmation message after copy. |
 | IMPORT | `N/A` | action | button click + file picker | idle | Imports a selected JSON file into profile storage. | Saves imported file as a profile and applies it immediately. |
