@@ -7,10 +7,10 @@
 | UI Name | Config Key | Type | Range/Options | Default | Description | Notes |
 |---|---|---|---|---|---|---|
 | Enable Triggerbot | `enabletb` | bool | `true` / `false` | `false` | 扳机逻辑总开关。 | 实际触发仍受激活模式和按键状态控制。 |
-| Trigger Type | `trigger_type` | enum (string) | `current`, `rgb` | `current` | 选择 Trigger 引擎。 | `Current` 使用现有 HSV 逻辑；`RGB Trigger` 使用 RGB 预设匹配。 |
+| Trigger Type | `trigger_type` | enum (string) | `current`, `rgb` | `current` | 选择 Trigger 引擎。 | `Classic Trigger` 使用现有 HSV 逻辑；`RGB Trigger` 使用 RGB 预设匹配。 |
 | FOV Size | `tbfovsize` | float | `1` 到 `300` | `5` | Trigger 检测视野大小。 | 作为 ROI 缩放来源。 |
 
-## Current 模式（`trigger_type = current`）
+## Classic Trigger 模式（`trigger_type = current`）
 
 ### 延迟与按住
 

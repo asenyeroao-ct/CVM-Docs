@@ -7,10 +7,10 @@ Back to index: [CVM.md](./CVM.md)
 | UI Name | Config Key | Type | Range/Options | Default | Description | Notes |
 |---|---|---|---|---|---|---|
 | Enable Triggerbot | `enabletb` | bool | `true` / `false` | `false` | Master switch for triggerbot logic. | Trigger logic still depends on activation mode and keybind state. |
-| Trigger Type | `trigger_type` | enum (string) | `current`, `rgb` | `current` | Selects which trigger engine runs. | `Current` uses HSV pipeline; `RGB Trigger` uses fixed RGB preset matching. |
+| Trigger Type | `trigger_type` | enum (string) | `current`, `rgb` | `current` | Selects which trigger engine runs. | `Classic Trigger` uses HSV pipeline; `RGB Trigger` uses fixed RGB preset matching. |
 | FOV Size | `tbfovsize` | float | `1` to `300` | `5` | Trigger detection field-of-view size. | Used as ROI scale source in trigger processing. |
 
-## Current Mode (`trigger_type = current`)
+## Classic Trigger Mode (`trigger_type = current`)
 
 ### Delay and Hold
 

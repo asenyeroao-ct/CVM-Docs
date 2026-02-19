@@ -1,6 +1,6 @@
 ﻿# MAKCU 设置
 
-共享指南索引: [lang.md](../lang.md)
+共享指南索引: [README.md](./README.md)
 
 ## 目标
 

@@ -1,6 +1,6 @@
 ﻿# OBS UDP 设置
 
-共享指南索引: [lang.md](../lang.md)
+共享指南索引: [README.md](./README.md)
 
 按照以下步骤将裁剪后的 FOV 通过 UDP 从主机发送到副机。
 

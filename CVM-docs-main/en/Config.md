@@ -12,6 +12,7 @@ Back to index: [CVM.md](./CVM.md)
 | NEW | `N/A` | action | button click + name input flow | idle | Creates a new profile file from current settings. | Uses provided profile name as filename in `configs/`. |
 | EXPORT | `N/A` | action | button click | idle | Exports selected profile JSON content to clipboard. | Shows an English confirmation message after copy. |
 | IMPORT | `N/A` | action | button click + file picker | idle | Imports a selected JSON file into profile storage. | Saves imported file as a profile and applies it immediately. |
+| Clipboard Import Prompt | `N/A` | automatic dialog (Config tab only) | detects CVM config in clipboard + asks Yes/No + asks profile name on Yes | idle | While the Config tab is active, valid clipboard config content triggers an import confirmation. | If user selects No, it will not ask again until clipboard content changes or current config values change. |
 
 ## Storage and Naming
 

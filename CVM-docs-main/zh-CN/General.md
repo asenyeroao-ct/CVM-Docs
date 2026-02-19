@@ -16,7 +16,7 @@
 | IP Address | `net_ip` | string | IPv4 / 主机名 | `192.168.2.188` | Net API 的目标地址。 | 与 `net_port`、`net_uuid` 配合使用。 |
 | Port | `net_port` | string | 数字字符串 | `6234` | Net API 的目标端口。 | 在配置中按字符串保存。 |
 | UUID | `net_uuid` | string | 设备 UUID/MAC 类字符串 | `""` | Net API 的设备标识。 | `net_mac` 是已弃用别名，会与 `net_uuid` 同步。 |
-| VID/PID | `kmboxa_vid_pid` | string | 例如 `66882021`、`6688/2021`、`V984D741`、`0x1A20/0x07E5` | `"0/0"` | KmboxA 的组合设备 ID 输入，用于 API `init`。 | UI 为单一输入框；后端会解析并同步 `kmboxa_vid` + `kmboxa_pid` 以保持兼容。 |
+| VID/PID | `kmboxa_vid_pid` | string | 例如 `66882021`、`6688/2021`、`V984D741`、`0x1A20/0x07E5` | `"0/0"` | KmboxA 的组合设备 ID 输入，用于 API init。 | UI 为单一输入框；后端会解析并同步 `kmboxa_vid` + `kmboxa_pid` 以保持兼容。 |
 | Port (optional) | `makv2_port` | string | 例如 `COM5` | `""` | MakV2 API 串口号。 | 留空时允许后端走默认探测流程。 |
 | Baud | `makv2_baud` | int | 正整数 | `4000000` | MakV2 API 波特率。 | 输入非法会回退为 `4000000`。 |
 | IP Address | `dhz_ip` | string | IPv4 / 主机名 | `192.168.2.188` | DHZ API 的目标地址。 | 通过 UDP 风格命令协议发送。 |

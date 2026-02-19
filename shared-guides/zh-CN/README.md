@@ -5,5 +5,3 @@
 - [OBS UDP 设置](./OBS-UDP-setup.md)
 - [MAKCU 设置](./MAKCU-setup.md)
 - [FOV Size 对照表](./FOV-size.md)
-- [Mouse Keyboard API](../en/Mouse-Keyboard-API.md)
-
