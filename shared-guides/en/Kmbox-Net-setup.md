@@ -155,8 +155,6 @@ If you don't see this device, disconnect and reconnect the USB cable from Kmbox 
 
 ![Enter Kmbox Net Data](../lib/kmNet/14_enter_kmbox_net_data.png)
 
-4. If connection is successful, you should see "Kmbox net connecting is good" message
-
 ### Save Configuration
 
 To avoid entering Kmbox Net data every time:
@@ -265,7 +263,7 @@ And at the same time connect the USB cable to this connector
 
 The Kmbox screen should turn white, and this blue diode should start flashing rapidly. If this doesn't happen, then try to hold the button again and reconnect the USB cable.
 
-3. On your main PC, go to the folder `DMA Cheats\3. Kmbox\Kmbox Net\Firmware` and install the driver
+3. On your main PC, download and extract the upgrade tool, then install the driver
 
 **Download Upgrade Tool**: [Click to download upgrade tool](https://www.kmbox.top/wiki_doc/kmboxNet/site/tools/updatatools.zip)
 
@@ -279,7 +277,7 @@ The Kmbox screen should turn white, and this blue diode should start flashing ra
 
 ![Select Firmware File](../lib/kmNet/22_select_firmware_file.png)
 
-6. Go to the folder `DMA Cheats\3. Kmbox\Kmbox Net\Firmware`
+6. Navigate to the folder where you downloaded the firmware file
 
 **Download Firmware**:
 - **Latest Firmware**: [Click to download latest firmware](https://www.kmbox.top/Net_firmware.html)
@@ -311,13 +309,11 @@ Spoofing can make Kmbox Net appear as your real mouse, improving security.
 
 2. Connect your mouse to your main PC as usual, without Kmbox
 
-On your main PC go to `DMA Cheats\3. Kmbox\Kmbox Net\Firmware\Kmbox Net Spoofing\1. For Main PC` folder
-
-And run the `USBLogView.exe`, make the program fullscreen
+3. On your main PC, download and run `USBLogView.exe` (you can download it from the official Kmbox Net resources or use a USB device viewer tool), make the program fullscreen
 
 ![USBLogView Program](../lib/kmNet/26_usblogview_program.png)
 
-3. Unplug your mouse from main PC and plug it back in
+4. Unplug your mouse from main PC and plug it back in
 
 You will see Vendor ID and Product ID of your mouse
 
@@ -329,11 +325,11 @@ In my case it will look like this: `046dc077`
 
 ![Check Mouse VID/PID](../lib/kmNet/27_check_mouse_vid_pid.png)
 
-4. Connect Kmbox to your main and second PC
+5. Connect Kmbox to your main and second PC
 
 ![Connection Diagram](../lib/kmNet/28_connection_diagram_main_second_pc.png)
 
-5. On the second PC go to `DMA Cheats\3. Kmbox\Kmbox Net\Firmware\Kmbox Net Spoofing\2. For Second PC` folder
+6. On the second PC, download and extract the [KmboxNet program](https://www.kmbox.top/wiki_doc/kmboxNet/site/tools/NetRelease.zip)
 
 Run `KmboxNet.exe`
 
@@ -341,11 +337,11 @@ Enter IP, Port and UUID from your Kmbox Net
 
 ![KmboxNet Program](../lib/kmNet/29_kmboxnet_program.png)
 
-6. Check "Ping" box and click on the big button
+7. Check "Ping" box and click on the big button
 
 ![Ping Test](../lib/kmNet/30_ping_test.png)
 
-7. A window should appear in which OK will be written at the end.
+8. A window should appear in which OK will be written at the end.
 
 ![Connection Success](../lib/kmNet/31_connection_success.png)
 
@@ -353,19 +349,19 @@ If it doesn't connect to the Kmbox:
 - Try to restart it by unplugging it from your main PC and plug it back in
 - Run the exe as admin
 
-8. Enter your Vendor ID and Product ID which we saved earlier in one line without a space (in my case it's `10381830`)
+9. Enter your Vendor ID and Product ID which we saved earlier in one line without a space (in my case it's `10381830`)
 
 And click VID/PID button
 
 ![Set VID/PID](../lib/kmNet/32_set_vid_pid.png)
 
-9. You should see such a window which means that the process was successful
+10. You should see such a window which means that the process was successful
 
 ![Spoofing Success](../lib/kmNet/33_spoofing_success.png)
 
-10. Go back to your main PC and open USBLogView.exe again, make the program fullscreen
+11. Go back to your main PC and open USBLogView.exe again, make the program fullscreen
 
-11. Unplug the Kmbox from your main PC and plug it back in
+12. Unplug the Kmbox from your main PC and plug it back in
 
 ![Verify Spoofing](../lib/kmNet/34_verify_spoofing.png)
 
@@ -415,11 +411,3 @@ You can view the inherent parameters (IP, Port, UUID) on the box:
 - **Video Tutorial**: [YouTube Connection Tutorial Video](https://youtu.be/ts4Vc6hs38Q?si=HI33KvlLr6wfqQ-C)
 - **Network Card Driver Download**: [Click to download network card driver](https://www.kmbox.top/wiki_doc/kmboxNet/site/)
 - **Host Computer Software Download**: [Click to download KmboxNet host computer software](https://www.kmbox.top/wiki_doc/kmboxNet/site/)
-
-## Private Parameters You Need to Add
-
-Please add according to team Notion:
-
-- Kmbox Net firmware version correspondence
-- Specific IP address and port configuration
-- Recommended setting parameters under different modes

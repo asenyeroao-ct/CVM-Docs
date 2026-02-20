@@ -155,8 +155,6 @@ Kmbox Net 默認包含以下配件：
 
 ![輸入 Kmbox Net 數據](../lib/kmNet/14_enter_kmbox_net_data.png)
 
-4. 如果連接成功，您應該看到 "Kmbox net connecting is good" 的提示
-
 ### 保存配置
 
 為了避免每次都要輸入 Kmbox Net 數據，請：
@@ -258,7 +256,7 @@ Kmbox Net 默認包含以下配件：
 
 Kmbox 屏幕應該變白，藍色指示燈應該快速閃爍。如果沒有發生，請重試按住按鈕並重新連接 USB 線。
 
-3. 在主電腦上，進入 `DMA Cheats\3. Kmbox\Kmbox Net\Firmware` 文件夾並安裝驅動
+3. 在主電腦上，下載並解壓升級工具，然後安裝驅動
 
 **下載升級工具**：[點我下載升級工具](https://www.kmbox.top/wiki_doc/kmboxNet/site/tools/updatatools.zip)
 
@@ -272,7 +270,7 @@ Kmbox 屏幕應該變白，藍色指示燈應該快速閃爍。如果沒有發�
 
 ![選擇固件文件](../lib/kmNet/22_select_firmware_file.png)
 
-6. 進入 `DMA Cheats\3. Kmbox\Kmbox Net\Firmware` 文件夾
+6. 導航到您下載固件文件的文件夾
 
 **下載固件**：
 - **最新固件**：[點我下載最新固件](https://www.kmbox.top/Net_firmware.html)
@@ -304,9 +302,7 @@ Spoofing 可以讓 Kmbox Net 偽裝成您的真實鼠標，提高安全性。
 
 2. 將鼠標直接連接到主電腦（不使用 Kmbox）
 
-3. 在主電腦上，進入 `DMA Cheats\3. Kmbox\Kmbox Net\Firmware\Kmbox Net Spoofing\1. For Main PC` 文件夾
-
-運行 `USBLogView.exe`，將程序全屏顯示
+3. 在主電腦上，下載並運行 `USBLogView.exe`（您可以從 Kmbox Net 官方資源下載或使用 USB 設備查看工具），將程序全屏顯示
 
 ![USBLogView 程序](../lib/kmNet/26_usblogview_program.png)
 
@@ -408,11 +404,3 @@ KM 模式是 Kmbox Net 的工作模式之一，可在盒子上位機軟件中設
 - **視頻教學**：[YouTube 連接教學視頻](https://youtu.be/ts4Vc6hs38Q?si=HI33KvlLr6wfqQ-C)
 - **網卡驅動下載**：[點我下載網卡驅動](https://www.kmbox.top/wiki_doc/kmboxNet/site/)
 - **上位機軟件下載**：[點我下載 KmboxNet 上位機軟件](https://www.kmbox.top/wiki_doc/kmboxNet/site/)
-
-## 需要你補充的私有參數
-
-請按團隊 Notion 補充：
-
-- Kmbox Net 固件版本對應關係
-- 具體的 IP 地址和端口配置
-- 不同模式下的推薦設置參數
