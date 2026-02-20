@@ -56,11 +56,15 @@ udp://192.168.0.1:1234
 2. `Output (Scaled) Resolution` 设置为你的 FOV 值对应的分辨率。例如，当 FOV 为 `128` 时，设置为 `128x128`。
 3. `FPS` 设置为高于 `144`，建议 `160` / `165` / `180` / `240`（按 GPU 性能选择）。
 
-示例（FOV = 128）:
+**重要**: `Base (Canvas) Resolution` 和 `Output (Scaled) Resolution` 都要設置成 FOV 值對應的分辨率（例如 FOV = 128 時，設置為 `128x128`）。
 
-| FOV | Base (Canvas) Resolution | Output (Scaled) Resolution |
+**說明**: 以下表格展示的是 FOV-size 表的格式。在 FOV-size 表中，`Base Resolution` 對應你的桌面/遊戲解析度，`Cropped Resolution` 用於填寫 OBS Filter 的 `Crop/Pad`（見第 4 步）。
+
+示例（FOV = 128，對應 FOV-size 表）:
+
+| FOV | Base Resolution | Cropped Resolution |
 | --- | --- | --- |
-| 128 | 128x128 | 128x128 |
+| 128 | 1920x1080 | 896x476 |
 
 ## 第 4 步: 添加 Crop/Pad 滤镜
 
@@ -70,18 +74,22 @@ udp://192.168.0.1:1234
 2. 点击 `Filters`。
 3. 添加 `Crop/Pad`。
 4. 按你们的 FOV-size 表填写裁剪值（Left/Top/Right/Bottom）:
+   - FOV-size 表中的 `Cropped Resolution` 是用來填寫 OBS Filter 的 `Crop/Pad` 的。
    - `Left` 和 `Right` 对应 FOV-size 表中 `Cropped Resolution` 的第一个值（宽度）。
    - `Top` 和 `Bottom` 对应 FOV-size 表中 `Cropped Resolution` 的第二个值（高度）。
 
 示例（FOV = 128，桌面/遊戲解析度 = 1920x1080）:
 
-根据 FOV-size 表，當桌面/遊戲解析度為 `1920x1080` 時，`Cropped Resolution` 为 `896x476`:
+根据 FOV-size 表，當桌面/遊戲解析度為 `1920x1080`、FOV 為 `128` 時，`Cropped Resolution` 为 `896x476`。這個 `896x476` 是用來填寫 OBS Filter 的 `Crop/Pad`:
 - `Left` = `896`
 - `Top` = `476`
 - `Right` = `896`
 - `Bottom` = `476`
 
-**注意**: 裁剪值是根據你的桌面或遊戲解析度在 FOV-size 表中查找對應的 `Cropped Resolution` 來填寫的。
+**注意**: 
+- 在 FOV-size 表中，根據你的桌面或遊戲解析度（例如 `1920x1080`）找到對應的表格。
+- 然後選擇你要的 FOV 值（例如 `128`）。
+- 對應的 `Cropped Resolution`（例如 `896x476`）就是用來填寫 OBS Filter 的 `Crop/Pad` 的值。
 
 这样可以避免发送过大帧，降低 UDP 丢帧风险。
 

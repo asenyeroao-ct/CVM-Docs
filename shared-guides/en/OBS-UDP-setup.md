@@ -58,11 +58,15 @@ Set:
 
 Recommended FPS values: `160` / `165` / `180` / `240` (based on GPU performance).
 
-Example (FOV = 128):
+**Important**: Both `Base (Canvas) Resolution` and `Output (Scaled) Resolution` should be set to the resolution corresponding to your FOV value (e.g., when FOV = 128, set to `128x128`).
 
-| FOV | Base (Canvas) Resolution | Output (Scaled) Resolution |
+**Note**: The table below shows the format of the FOV-size table. In the FOV-size table, `Base Resolution` corresponds to your desktop/game resolution, and `Cropped Resolution` is used to fill the OBS Filter `Crop/Pad` (see Step 4).
+
+Example (FOV = 128, corresponding to FOV-size table):
+
+| FOV | Base Resolution | Cropped Resolution |
 | --- | --- | --- |
-| 128 | 128x128 | 128x128 |
+| 128 | 1920x1080 | 896x476 |
 
 ## Step 4: Apply Crop/Pad Filter
 
@@ -72,18 +76,22 @@ To send only the FOV region:
 2. Click `Filters`.
 3. Add `Crop/Pad`.
 4. Fill crop values (Left/Top/Right/Bottom) according to your FOV-size table:
+   - The `Cropped Resolution` in the FOV-size table is used to fill the OBS Filter `Crop/Pad` values.
    - `Left` and `Right` correspond to the first value (width) in the `Cropped Resolution` column of the FOV-size table.
    - `Top` and `Bottom` correspond to the second value (height) in the `Cropped Resolution` column of the FOV-size table.
 
 Example (FOV = 128, Desktop/Game Resolution = 1920x1080):
 
-According to the FOV-size table, when desktop/game resolution is `1920x1080`, `Cropped Resolution` is `896x476`:
+According to the FOV-size table, when desktop/game resolution is `1920x1080` and FOV is `128`, `Cropped Resolution` is `896x476`. This `896x476` is used to fill the OBS Filter `Crop/Pad`:
 - `Left` = `896`
 - `Top` = `476`
 - `Right` = `896`
 - `Bottom` = `476`
 
-**Note**: Crop values are filled according to the `Cropped Resolution` from the FOV-size table, which corresponds to your desktop or game resolution.
+**Note**: 
+- In the FOV-size table, find the table that matches your desktop or game resolution (e.g., `1920x1080`).
+- Then select your desired FOV value (e.g., `128`).
+- The corresponding `Cropped Resolution` (e.g., `896x476`) is the value used to fill the OBS Filter `Crop/Pad`.
 
 This prevents oversized frames and reduces UDP drop risk.
 
