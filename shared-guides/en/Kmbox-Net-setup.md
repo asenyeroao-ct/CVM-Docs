@@ -18,6 +18,13 @@ Kmbox Net is a network-controlled keyboard and mouse controller with the followi
 - **Supports Monitoring Physical Keyboard and Mouse**: Blocks physical keyboard and mouse functions, convenient for writing software
 - **Supports Physical Keyboard and Mouse Learning and Copying**: Supports driver passthrough mode
 
+**Important Note**:
+- Kmbox Net only has stronger hardware performance compared to Kmbox B
+- However, in terms of API, serial port API is better than Kmbox Net
+
+**Technical Information**:
+- Kmbox Net 8K version's underlying code is based on **Cherry USB**
+
 ## Prerequisites
 
 - One Kmbox Net box
@@ -49,7 +56,7 @@ The back of the box has interface names. Generally connect according to the foll
 
 After connection is complete, the Kmbox Net screen should display as shown below:
 
-![Kmbox Net Working Screen](../lib/kmNet/kmbox%20net%20screen%20front.webp)
+![Kmbox Net Working Screen](../lib/kmNet/kmbox%2020net%2020screen%2020front.png)
 
 ### 03 Install Network Card Driver (Install driver on computer connected to network port)
 
@@ -218,6 +225,17 @@ Change the sensitivity in the game settings.
 - Avoid using USB Hub, connect directly to computer USB port
 - Check if other programs are occupying network resources
 
+### Mouse Obviously Not Responsive and High Latency in Bypass Mode
+
+- This situation is generally because the mouse exceeds specifications
+- Net only supports up to Full Speed (12Mbps). If your device is High Speed (480Mbps), Net box will only recognize it as Full Speed
+- USB protocol specifies: Full Speed devices 1ms per frame, High Speed devices 0.125ms per frame
+- If a high-speed device wants 1KHZ polling rate, its defined value is 8, but the box can only recognize Full Speed, not High Speed, so when the box reads 8, it means reading data every 8ms, thus causing high latency issues
+- For perfect passthrough support, please choose the NB version with higher speed rating
+- If you want to use high-speed devices on Net, please choose KM mode
+
+**Important Reminder**: Kmbox Net's Bypass mode is suspected to be a fake Bypass, **PID/VID are not correctly passed through**, may not fully simulate real physical keyboard and mouse devices.
+
 ### Cheat Doesn't See Kmbox
 
 If the cheat doesn't see Kmbox at startup:
@@ -377,7 +395,21 @@ If it is, then the spoofing was successful
 
 ### How to Enable Bypass Mode
 
-Bypass mode allows physical keyboard and mouse to pass directly through the box. For specific settings, please refer to the box manual.
+Bypass mode allows physical keyboard and mouse to pass directly through the box. In Bypass mode, physical keyboard and mouse data is directly passed through to the target computer without processing by the box.
+
+**Important Warning**:
+- This Bypass mode is suspected to be a fake Bypass
+- **PID/VID are not correctly passed through**, may not fully simulate real physical keyboard and mouse devices
+- Please be aware of related limitations and risks when using
+
+**Usage Notes**:
+- In Bypass mode, if using high-speed devices (High Speed, 480Mbps), you may experience obvious lag and high latency issues
+- Net only supports up to Full Speed (12Mbps). If the device is High Speed (480Mbps), Net box will only recognize it as Full Speed
+- USB protocol specifies: Full Speed devices 1ms per frame, High Speed devices 0.125ms per frame
+- For perfect passthrough support, please choose the NB version with higher speed rating
+- If you want to use high-speed devices on Net, please choose KM mode
+
+For specific setup methods, please refer to [Kmbox Net Official Documentation](https://www.kmbox.top/wiki_doc/kmboxNet/site/).
 
 ### How to Enable KM Mode
 

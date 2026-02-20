@@ -18,6 +18,13 @@ Kmbox Net 是一款網絡程控鍵鼠控制器，具有以下特性：
 - **支持監控物理鍵鼠**：屏蔽物理鍵鼠功能，方便寫軟件
 - **支持物理鍵鼠學習複製功能**：支持驅動直通模式
 
+**重要說明**：
+- Kmbox Net 只是相對 Kmbox B 的硬體性能較強
+- 但是以 API 來說，串口的 API 比 Kmbox Net 好
+
+**技術資訊**：
+- Kmbox Net 的 8K 版本底層代碼基於 **Cherry USB**
+
 ## 前置條件
 
 - Kmbox Net 盒子一個
@@ -49,7 +56,7 @@ Kmbox Net 默認包含以下配件：
 
 連接完成後，Kmbox Net 屏幕應該顯示如下圖：
 
-![Kmbox Net 工作屏幕](../lib/kmNet/kmbox%20net%20screen%20front.webp)
+![Kmbox Net 工作屏幕](../lib/kmNet/kmbox%2020net%2020screen%2020front.png)
 
 ### 03 安裝網卡驅動（接網口的電腦裝驅動）
 
@@ -163,7 +170,7 @@ Kmbox Net 默認包含以下配件：
 
 ## 建議起始值
 
-- `Input API`: `KmboxNet`
+- `Input API`: `NET`
 - `IP 地址`: `192.168.2.1`
 - `端口`: 根據盒子實際端口設置（通常為默認值）
 - `auto_connect_mouse_api`: 首次設置為 `false`，穩定後改為 `true`
@@ -248,8 +255,12 @@ Kmbox Net 默認包含以下配件：
 
 - 這種情況一般是因為鼠標超綱了
 - Net 僅支持到 Full Speed (12Mbps)，如果你的設備是 High Speed (480Mbps)，Net 盒子只會認為他是 Full Speed
+- USB 協議規定：Full Speed 設備 1ms 一幀，High Speed 設備 0.125ms 一幀
+- 如果高速設備要 1KHZ 回報率，其定義值是 8，但盒子只能識別到 Full Speed，不能識別 High Speed，故盒子讀取到 8 意味著 8ms 讀一次數據，因此出現延遲大的問題
 - 如需完美支持透傳，請選擇速度等級更高的 NB 版本
 - 如想要在 Net 上使用高速設備，請選擇 KM 模式
+
+**重要提醒**：Kmbox Net 的 Bypass 模式疑似是虛假的 Bypass，**PID/VID 並沒有正確穿透**，可能無法完全模擬真實的物理鍵鼠設備。
 
 ## 固件更新
 
@@ -377,7 +388,21 @@ Spoofing 可以讓 Kmbox Net 偽裝成您的真實鼠標，提高安全性。
 
 ### 如何開啟 Bypass 模式
 
-Bypass 模式允許物理鍵鼠直接通過盒子傳輸，具體設置請參考盒子說明書。
+Bypass 模式允許物理鍵鼠直接通過盒子傳輸。在 Bypass 模式下，物理鍵鼠的數據會直接透傳到目標電腦，而不經過盒子的處理。
+
+**重要警告**：
+- 此 Bypass 模式疑似是虛假的 Bypass
+- **PID/VID 並沒有正確穿透**，可能無法完全模擬真實的物理鍵鼠設備
+- 在使用時請注意相關限制和風險
+
+**使用注意事項**：
+- 在 Bypass 模式下，如果使用高速設備（High Speed, 480Mbps），可能會出現明顯不跟手、延遲大的問題
+- Net 僅支持到 Full Speed (12Mbps)，如果設備是 High Speed (480Mbps)，Net 盒子只會認為它是 Full Speed
+- USB 協議規定：Full Speed 設備 1ms 一幀，High Speed 設備 0.125ms 一幀
+- 如需完美支持透傳，請選擇速度等級更高的 NB 版本
+- 如想要在 Net 上使用高速設備，請選擇 KM 模式
+
+具體設置方法請參考 [Kmbox Net 官方文檔](https://www.kmbox.top/wiki_doc/kmboxNet/site/)。
 
 ### 如何開啟 KM 模式
 
