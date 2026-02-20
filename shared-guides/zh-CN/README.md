@@ -9,6 +9,7 @@
 ## CVM機
 - [CVM colorBot 安裝指南](./CVM-install.md)
 - [Python 安装指南](./Python-install.md)
+- [GStreamer 安裝指南](./GStreamer-install.md)
 
 ## 硬體
 - [MAKCU 设置](./MAKCU-setup.md)（首选，兼容性最佳）

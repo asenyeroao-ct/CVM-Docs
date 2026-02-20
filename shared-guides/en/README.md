@@ -11,6 +11,7 @@ Back to language selector: [lang.md](../lang.md)
 
 - [CVM colorBot Installation Guide](./CVM-install.md)
 - [Python Installation](./Python-install.md)
+- [GStreamer Installation](./GStreamer-install.md)
 
 ## Hardware
 
