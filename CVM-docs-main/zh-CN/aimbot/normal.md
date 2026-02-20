@@ -1,26 +1,26 @@
-﻿# Aimbot 妯″紡: Normal
+﻿# Aimbot 模式: Normal
 
-杩斿洖: [Aimbot](../Aimbot.md) | [Sec Aimbot](../Sec-Aimbot.md)
+返回: [Aimbot](../Aimbot.md) | [Sec Aimbot](../Sec-Aimbot.md)
 
 ## Main Aimbot
 
 | UI Name | Config Key | Type | Range/Options | Default | Description | Notes |
 |---|---|---|---|---|---|---|
-| X-Speed | `normal_x_speed` | float | `0.1` 鍒?`2000` | `3` | 涓昏嚜鐬勬按骞宠窡韪€熷害銆?| 鏁板€艰秺澶э紝鍝嶅簲瓒婂揩銆?|
-| Y-Speed | `normal_y_speed` | float | `0.1` 鍒?`2000` | `3` | 涓昏嚜鐬勫瀭鐩磋窡韪€熷害銆?| 寤鸿涓?X-Speed 骞宠　璋冩暣銆?|
-| Smoothing | `normalsmooth` | float | `1` 鍒?`30` | `30` | 涓昏嚜鐬勭Щ鍔ㄥ钩婊戝己搴︺€?| 鏁板€艰秺楂橀€氬父瓒婄ǔ浣嗘洿鎱€?|
-| FOV Size | `fovsize` | float | `1` 鍒?`1000` | `100` | 涓昏嚜鐬勮閲庤寖鍥村ぇ灏忋€?| 鎺у埗鍊欓€夌洰鏍囧尯鍩熴€?|
-| FOV Smooth | `normalsmoothfov` | float | `1` 鍒?`30` | `30` | 涓昏嚜鐬?FOV 杩囨浮骞虫粦銆?| 鍙噺灏?FOV 杈圭紭绐佸彉銆?|
+| X-Speed | `normal_x_speed` | float | `0.1` 到 `2000` | `3` | 主自瞄水平跟踪速度。 | 数值越大，响应越快。 |
+| Y-Speed | `normal_y_speed` | float | `0.1` 到 `2000` | `3` | 主自瞄垂直跟踪速度。 | 建议与 X-Speed 平衡调整。 |
+| Smoothing | `normalsmooth` | float | `1` 到 `30` | `30` | 主自瞄移动平滑强度。 | 数值越高通常越稳但更慢。 |
+| FOV Size | `fovsize` | float | `1` 到 `1000` | `100` | 主自瞄视野范围大小。 | 控制候选目标区域。 |
+| FOV Smooth | `normalsmoothfov` | float | `1` 到 `30` | `30` | 主自瞄 FOV 过渡平滑。 | 可减少 FOV 边缘突变。 |
 
 ## Sec Aimbot
 
 | UI Name | Config Key | Type | Range/Options | Default | Description | Notes |
 |---|---|---|---|---|---|---|
-| X-Speed | `normal_x_speed_sec` | float | `0.1` 鍒?`2000` | `2` | 鍓嚜鐬勬按骞宠窡韪€熷害銆?| 涓庝富鑷瀯閫熷害鐙珛銆?|
-| Y-Speed | `normal_y_speed_sec` | float | `0.1` 鍒?`2000` | `2` | 鍓嚜鐬勫瀭鐩磋窡韪€熷害銆?| 涓庝富鑷瀯閫熷害鐙珛銆?|
-| Smoothing | `normalsmooth_sec` | float | `1` 鍒?`30` | `20` | 鍓嚜鐬勭Щ鍔ㄥ钩婊戝己搴︺€?| 涓庝富鑷瀯骞虫粦鐙珛銆?|
-| FOV Size | `fovsize_sec` | float | `1` 鍒?`1000` | `150` | 鍓嚜鐬勮閲庤寖鍥村ぇ灏忋€?| 涓庝富鑷瀯 FOV 鐙珛銆?|
-| FOV Smooth | `normalsmoothfov_sec` | float | `1` 鍒?`30` | `20` | 鍓嚜鐬?FOV 杩囨浮骞虫粦銆?| 涓庝富鑷瀯 FOV 骞虫粦鐙珛銆?|
+| X-Speed | `normal_x_speed_sec` | float | `0.1` 到 `2000` | `2` | 副自瞄水平跟踪速度。 | 与主自瞄速度独立。 |
+| Y-Speed | `normal_y_speed_sec` | float | `0.1` 到 `2000` | `2` | 副自瞄垂直跟踪速度。 | 与主自瞄速度独立。 |
+| Smoothing | `normalsmooth_sec` | float | `1` 到 `30` | `20` | 副自瞄移动平滑强度。 | 与主自瞄平滑独立。 |
+| FOV Size | `fovsize_sec` | float | `1` 到 `1000` | `150` | 副自瞄视野范围大小。 | 与主自瞄 FOV 独立。 |
+| FOV Smooth | `normalsmoothfov_sec` | float | `1` 到 `30` | `20` | 副自瞄 FOV 过渡平滑。 | 与主自瞄 FOV 平滑独立。 |
 
 ## Practical tuning tips
 

@@ -52,11 +52,17 @@ Path: `Settings -> Video`
 
 Set:
 
-1. `Base (Canvas) Resolution` to your FOV-size resolution.
-2. `Output (Scaled) Resolution` to the same FOV-size resolution.
+1. `Base (Canvas) Resolution` to your desktop or game resolution (e.g., `1920x1080`, `2560x1440`, etc.).
+2. `Output (Scaled) Resolution` to your FOV value corresponding resolution. For example, when FOV is `128`, set it to `128x128`.
 3. `FPS` higher than `144`.
 
 Recommended FPS values: `160` / `165` / `180` / `240` (based on GPU performance).
+
+Example (FOV = 128, Desktop/Game Resolution = 1920x1080):
+
+| FOV | Base Resolution (Desktop/Game) | Output (Scaled) Resolution |
+| --- | --- | --- |
+| 128 | 1920x1080 | 128x128 |
 
 ## Step 4: Apply Crop/Pad Filter
 
@@ -65,7 +71,19 @@ To send only the FOV region:
 1. Select your `Game Capture` or `Display Capture` source in OBS.
 2. Click `Filters`.
 3. Add `Crop/Pad`.
-4. Fill crop values (Left/Top/Right/Bottom) according to your FOV-size table.
+4. Fill crop values (Left/Top/Right/Bottom) according to your FOV-size table:
+   - `Left` and `Right` correspond to the first value (width) in the `Cropped Resolution` column of the FOV-size table.
+   - `Top` and `Bottom` correspond to the second value (height) in the `Cropped Resolution` column of the FOV-size table.
+
+Example (FOV = 128, Desktop/Game Resolution = 1920x1080):
+
+According to the FOV-size table, `Cropped Resolution` is `896x476`:
+- `Left` = `896`
+- `Top` = `476`
+- `Right` = `896`
+- `Bottom` = `476`
+
+**Note**: `Base Resolution` should correspond to your desktop or game resolution, not the `Cropped Resolution` from the FOV-size table.
 
 This prevents oversized frames and reduces UDP drop risk.
 

@@ -1,24 +1,24 @@
-﻿# Aimbot 妯″紡: Silent
+﻿# Aimbot 模式: Silent
 
-杩斿洖: [Aimbot](../Aimbot.md) | [Sec Aimbot](../Sec-Aimbot.md)
+返回: [Aimbot](../Aimbot.md) | [Sec Aimbot](../Sec-Aimbot.md)
 
 ## Main Aimbot
 
 | UI Name | Config Key | Type | Range/Options | Default | Description | Notes |
 |---|---|---|---|---|---|---|
-| Distance (Multiplier) | `silent_distance` | float | `0.1` 鍒?`10.0` | `1.0` | 鐩爣淇璺濈鍊嶇巼銆?| 鍊艰秺澶э紝淇骞呭害鍙兘瓒婂ぇ銆?|
-| Delay (ms) | `silent_delay` | float | `0.001` 鍒?`300.0` ms | `100.0` | Silent 鍔ㄤ綔寮€濮嬪墠寤惰繜銆?| 褰撳墠閰嶇疆浠ユ绉掑€间繚瀛樸€?|
-| Move Delay (ms) | `silent_move_delay` | float | `0.001` 鍒?`300.0` ms | `500.0` | 绉诲姩鍒扮洰鏍囬樁娈靛欢杩熴€?| 鍊艰秺澶э紝Silent 搴忓垪鍝嶅簲瓒婃參銆?|
-| Return Delay (ms) | `silent_return_delay` | float | `0.001` 鍒?`300.0` ms | `500.0` | 鍥炰綅闃舵寤惰繜銆?| 寤鸿涓?Move Delay 鑱斿悎璋冩暣銆?|
-| FOV Size | `fovsize` | float | `1` 鍒?`1000` | `100` | 涓?Silent 妯″紡浣跨敤鐨?FOV銆?| 涓庝富鍏朵粬妯″紡鍏辩敤姝ら敭銆?|
+| Distance (Multiplier) | `silent_distance` | float | `0.1` 到 `10.0` | `1.0` | 目标修正距离倍率。 | 值越大，修正幅度可能越大。 |
+| Delay (ms) | `silent_delay` | float | `0.001` 到 `300.0` ms | `100.0` | Silent 动作开始前延迟。 | 当前配置以毫秒值保存。 |
+| Move Delay (ms) | `silent_move_delay` | float | `0.001` 到 `300.0` ms | `500.0` | 移动到目标阶段延迟。 | 值越大，Silent 序列响应越慢。 |
+| Return Delay (ms) | `silent_return_delay` | float | `0.001` 到 `300.0` ms | `500.0` | 回位阶段延迟。 | 建议与 Move Delay 联动调整。 |
+| FOV Size | `fovsize` | float | `1` 到 `1000` | `100` | 主 Silent 模式使用的 FOV。 | 与主其他模式共用此键。 |
 
 ## Sec Aimbot
 
 | UI Name | Config Key | Type | Range/Options | Default | Description | Notes |
 |---|---|---|---|---|---|---|
-| X-Speed | `normal_x_speed_sec` | float | `0.1` 鍒?`2000` | `2` | 褰撳墠 UI 涓嬪壇 Silent 浣跨敤璇?X 閫熷害閿€?| 鏍囩椤垫湭鏆撮湶鐙珛 `silent_*_sec` 鍙傛暟銆?|
-| Y-Speed | `normal_y_speed_sec` | float | `0.1` 鍒?`2000` | `2` | 褰撳墠 UI 涓嬪壇 Silent 浣跨敤璇?Y 閫熷害閿€?| 鏍囩椤垫湭鏆撮湶鐙珛 `silent_*_sec` 鍙傛暟銆?|
-| FOV Size | `fovsize_sec` | float | `1` 鍒?`1000` | `150` | 褰撳墠 UI 涓嬪壇 Silent 浣跨敤璇?FOV 閿€?| 涓庝富 `fovsize` 鐙珛銆?|
+| X-Speed | `normal_x_speed_sec` | float | `0.1` 到 `2000` | `2` | 当前 UI 下副 Silent 使用此 X 速度键。 | 标签页未暴露独立 `silent_*_sec` 参数。 |
+| Y-Speed | `normal_y_speed_sec` | float | `0.1` 到 `2000` | `2` | 当前 UI 下副 Silent 使用此 Y 速度键。 | 标签页未暴露独立 `silent_*_sec` 参数。 |
+| FOV Size | `fovsize_sec` | float | `1` 到 `1000` | `150` | 当前 UI 下副 Silent 使用此 FOV 键。 | 与主 `fovsize` 独立。 |
 
 ## Practical tuning tips
 

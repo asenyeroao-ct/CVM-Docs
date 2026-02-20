@@ -1,28 +1,28 @@
-﻿# Aimbot 妯″紡: Bezier
+﻿# Aimbot 模式: Bezier
 
-杩斿洖: [Aimbot](../Aimbot.md) | [Sec Aimbot](../Sec-Aimbot.md)
+返回: [Aimbot](../Aimbot.md) | [Sec Aimbot](../Sec-Aimbot.md)
 
 ## Main Aimbot
 
 | UI Name | Config Key | Type | Range/Options | Default | Description | Notes |
 |---|---|---|---|---|---|---|
-| Segments | `bezier_segments` | int | `1` 鍒?`30` | `8` | Bezier 璺緞閲囨牱娈垫暟銆?| 娈垫暟鏇撮珮閫氬父鎻掑€兼洿骞虫粦銆?|
-| Ctrl X | `bezier_ctrl_x` | float | `0.0` 鍒?`100.0` | `16.0` | 鏇茬嚎璺緞姘村钩鎺у埗鐐瑰奖鍝嶉噺銆?| 涓?`Ctrl Y` 涓€璧峰喅瀹氬姬绾垮舰鐘躲€?|
-| Ctrl Y | `bezier_ctrl_y` | float | `0.0` 鍒?`100.0` | `16.0` | 鏇茬嚎璺緞鍨傜洿鎺у埗鐐瑰奖鍝嶉噺銆?| 涓?`Ctrl X` 涓€璧峰喅瀹氬姬绾垮舰鐘躲€?|
-| Speed | `bezier_speed` | float | `0.1` 鍒?`20.0` | `1.0` | 娌?Bezier 鏇茬嚎绉诲姩鐨勯€熷害鍊嶇巼銆?| 鏁板€艰秺楂橈紝娌挎洸绾跨Щ鍔ㄨ秺蹇€?|
-| Delay (ms) | `bezier_delay` | float (seconds in config) | UI `0.1` 鍒?`50.0` ms | `0.002` s | Bezier 鍒嗘姝ヨ繘寤惰繜銆?| UI 浠ユ绉掓樉绀猴紝閰嶇疆浠ョ淇濆瓨銆?|
-| FOV Size | `fovsize` | float | `1` 鍒?`1000` | `100` | 涓?Bezier 妯″紡浣跨敤鐨?FOV銆?| 涓庝富鍏朵粬妯″紡鍏辩敤姝ら敭銆?|
+| Segments | `bezier_segments` | int | `1` 到 `30` | `8` | Bezier 路径采样段数。 | 段数越高通常插值更平滑。 |
+| Ctrl X | `bezier_ctrl_x` | float | `0.0` 到 `100.0` | `16.0` | 曲线路径水平控制点影响量。 | 与 `Ctrl Y` 一起决定曲线形状。 |
+| Ctrl Y | `bezier_ctrl_y` | float | `0.0` 到 `100.0` | `16.0` | 曲线路径垂直控制点影响量。 | 与 `Ctrl X` 一起决定曲线形状。 |
+| Speed | `bezier_speed` | float | `0.1` 到 `20.0` | `1.0` | 沿 Bezier 曲线移动的速度倍率。 | 数值越高，沿曲线移动越快。 |
+| Delay (ms) | `bezier_delay` | float (seconds in config) | UI `0.1` 到 `50.0` ms | `0.002` s | Bezier 分段步进延迟。 | UI 以毫秒显示，配置以秒保存。 |
+| FOV Size | `fovsize` | float | `1` 到 `1000` | `100` | 主 Bezier 模式使用的 FOV。 | 与主其他模式共用此键。 |
 
 ## Sec Aimbot
 
 | UI Name | Config Key | Type | Range/Options | Default | Description | Notes |
 |---|---|---|---|---|---|---|
-| Segments | `bezier_segments_sec` | int | `1` 鍒?`30` | `8` | 鍓?Bezier 璺緞娈垫暟銆?| 涓庝富鑷瀯鍙傛暟鐙珛銆?|
-| Ctrl X | `bezier_ctrl_x_sec` | float | `0.0` 鍒?`100.0` | `16.0` | 鍓洸绾挎按骞虫帶鍒剁偣褰卞搷閲忋€?| 涓庝富鑷瀯鍙傛暟鐙珛銆?|
-| Ctrl Y | `bezier_ctrl_y_sec` | float | `0.0` 鍒?`100.0` | `16.0` | 鍓洸绾垮瀭鐩存帶鍒剁偣褰卞搷閲忋€?| 涓庝富鑷瀯鍙傛暟鐙珛銆?|
-| Speed | `bezier_speed_sec` | float | `0.1` 鍒?`20.0` | `1.0` | 鍓部鏇茬嚎绉诲姩閫熷害鍊嶇巼銆?| 涓庝富鑷瀯鍙傛暟鐙珛銆?|
-| Delay (ms) | `bezier_delay_sec` | float (seconds in config) | UI `0.1` 鍒?`50.0` ms | `0.002` s | 鍓?Bezier 鍒嗘姝ヨ繘寤惰繜銆?| UI 浠ユ绉掓樉绀猴紝閰嶇疆浠ョ淇濆瓨銆?|
-| FOV Size | `fovsize_sec` | float | `1` 鍒?`1000` | `150` | 鍓?Bezier 妯″紡浣跨敤鐨?FOV銆?| 涓庝富 `fovsize` 鐙珛銆?|
+| Segments | `bezier_segments_sec` | int | `1` 到 `30` | `8` | 副 Bezier 路径段数。 | 与主自瞄参数独立。 |
+| Ctrl X | `bezier_ctrl_x_sec` | float | `0.0` 到 `100.0` | `16.0` | 副曲线水平控制点影响量。 | 与主自瞄参数独立。 |
+| Ctrl Y | `bezier_ctrl_y_sec` | float | `0.0` 到 `100.0` | `16.0` | 副曲线垂直控制点影响量。 | 与主自瞄参数独立。 |
+| Speed | `bezier_speed_sec` | float | `0.1` 到 `20.0` | `1.0` | 副沿曲线移动速度倍率。 | 与主自瞄参数独立。 |
+| Delay (ms) | `bezier_delay_sec` | float (seconds in config) | UI `0.1` 到 `50.0` ms | `0.002` s | 副 Bezier 分段步进延迟。 | UI 以毫秒显示，配置以秒保存。 |
+| FOV Size | `fovsize_sec` | float | `1` 到 `1000` | `150` | 副 Bezier 模式使用的 FOV。 | 与主 `fovsize` 独立。 |
 
 ## Practical tuning tips
 
