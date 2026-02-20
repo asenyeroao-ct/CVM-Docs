@@ -14,5 +14,5 @@ Back to language selector: [lang.md](../lang.md)
 
 ## Hardware
 
-- [MAKCU Setup](./MAKCU-setup.md)
+- [MAKCU Setup](./MAKCU-setup.md) (Preferred, Best Compatibility)
 - [Kmbox Net Connection Guide](./Kmbox-Net-setup.md) (Not Recommended, Outdated)
