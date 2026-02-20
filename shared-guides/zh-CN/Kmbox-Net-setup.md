@@ -45,7 +45,7 @@ Kmbox Net 默認包含以下配件：
 
 盒子背面有接口名稱，一般按照下圖接線：
 
-![Kmbox Net 接線示意圖](../lib/kmNet/1_ How to connect Kmbox Net (2).png)
+![Kmbox Net 接線示意圖](../lib/kmNet/01_connection_diagram.png)
 
 - **遊戲機接口（1）**：接目標電腦（被控制的電腦）
 - **網口（2）**：接控制電腦（運行 CVM 的電腦）
@@ -56,22 +56,22 @@ Kmbox Net 默認包含以下配件：
 
 連接完成後，Kmbox Net 屏幕應該顯示如下圖：
 
-![Kmbox Net 工作屏幕](../lib/kmNet/kmbox%2020net%2020screen%2020front.png)
+![Kmbox Net 工作屏幕](../lib/kmNet/02_kmbox_net_working_screen.png)
 
 ### 03 安裝網卡驅動（接網口的電腦裝驅動）
 
 1. 將網口 USB 線連接到控制電腦（第二台電腦）
 2. 在第二台電腦上，以管理員身份運行 `2. WCHUSBNIC` 驅動安裝程序
 
-![網卡驅動安裝程序](../lib/kmNet/driver%20net.png)
+![網卡驅動安裝程序](../lib/kmNet/03_driver_installer.png)
 
 3. 選擇 `INSTALL` 進行安裝
 
-![安裝網卡驅動](../lib/kmNet/2024-07-13_18-28-11.png)
+![安裝網卡驅動](../lib/kmNet/04_driver_install_select.png)
 
 4. 安裝成功後，您應該看到 "Driver Install Success!" 提示
 
-![驅動安裝成功](../lib/kmNet/2222.png)
+![驅動安裝成功](../lib/kmNet/05_driver_install_success.png)
 
 5. **重啟第二台電腦**
 
@@ -93,25 +93,25 @@ Kmbox Net 默認包含以下配件：
 
 1. 在第二台電腦上打開控制面板
 
-![控制面板](../lib/kmNet/control%20panel_edited.jpg)
+![控制面板](../lib/kmNet/06_control_panel.png)
 
 2. 點擊「網絡和 Internet」
 
-![網絡和 Internet](../lib/kmNet/d538b7_84b514cc8f1e40dabbd2f02059dbb7fb~mv2.jpg)
+![網絡和 Internet](../lib/kmNet/07_network_and_internet.png)
 
 3. 點擊「網絡和共享中心」
 
-![網絡和共享中心](../lib/kmNet/d538b7_0b15847dffe34411bb32e4f046bf0087~mv2.jpg)
+![網絡和共享中心](../lib/kmNet/08_network_sharing_center.png)
 
 4. 點擊「更改適配器設置」
 
-![更改適配器設置](../lib/kmNet/d538b7_d9d6bea64a80414f95e026dbea719ee0~mv2.png)
+![更改適配器設置](../lib/kmNet/09_change_adapter_settings.png)
 
 #### 修改網卡 IP
 
 1. 找到「USB 2.0 以太網適配器」或類似的網卡設備（這是盒子的網卡）
 
-![USB 2.0 以太網適配器](../lib/kmNet/ethernet%203_edited.jpg)
+![USB 2.0 以太網適配器](../lib/kmNet/10_usb_ethernet_adapter.png)
 
 如果看不到此設備，請斷開並重新連接 Kmbox 到第二台電腦的 USB 線。
 
@@ -119,11 +119,11 @@ Kmbox Net 默認包含以下配件：
 
 3. 確保「Internet 協議版本 6 (TCP/IPv6)」已**禁用**
 
-![禁用 IPv6](../lib/kmNet/d538b7_a04e356270e24e00bc36019411e50777~mv2.jpg)
+![禁用 IPv6](../lib/kmNet/11_disable_ipv6.png)
 
 4. 確保「Internet 協議版本 4 (TCP/IPv4)」已**啟用**，點擊它並選擇「屬性」
 
-![IPv4 設置](../lib/kmNet/d538b7_e7731a115e2241a586c05c257f376713~mv2.jpg)
+![IPv4 設置](../lib/kmNet/12_ipv4_settings.png)
 
 5. 選擇「使用下面的 IP 地址」
 6. 設置 IP 地址為：`192.168.2.100`
@@ -131,7 +131,7 @@ Kmbox Net 默認包含以下配件：
 8. 其他欄位留空
 9. 點擊「確定」保存
 
-![IP 地址設置](../lib/kmNet/ip.png)
+![IP 地址設置](../lib/kmNet/13_ip_address_settings.png)
 
 **重要提示**：
 - 要改盒子的網卡，而不是你自己的本機網卡
@@ -153,7 +153,7 @@ Kmbox Net 默認包含以下配件：
 2. 將 `Input API` 設置為 `NET` 或對應的網絡模式
 3. 首次啟動時，您需要輸入 Kmbox Net 的數據（IP、端口、UUID）
 
-![輸入 Kmbox Net 數據](../lib/kmNet/LAUNCHING%20WITH%20KMBOX%20NET%20-%20frame%20at%202m30s%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg)
+![輸入 Kmbox Net 數據](../lib/kmNet/14_enter_kmbox_net_data.png)
 
 4. 如果連接成功，您應該看到 "Kmbox net connecting is good" 的提示
 
@@ -164,7 +164,7 @@ Kmbox Net 默認包含以下配件：
 1. 在 CVM 中進入配置（config）部分
 2. 選擇任意配置並點擊保存
 
-![保存配置](../lib/kmNet/cfg%20ip.jpg)
+![保存配置](../lib/kmNet/15_save_config.png)
 
 這樣設置就會被保存，下次啟動時會自動使用。
 
@@ -235,11 +235,11 @@ Kmbox Net 默認包含以下配件：
 
 您會看到遊戲的 .cfg 文件
 
-![配置文件位置](../lib/kmNet/configs%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png)
+![配置文件位置](../lib/kmNet/16_config_files_location.png)
 
 2. 如果您在玩 Call of Duty，請用記事本打開 `MainCOD.cfg`
 
-![Kmbox 設置](../lib/kmNet/kmbox%20cheat%20settings.png)
+![Kmbox 設置](../lib/kmNet/17_kmbox_cheat_settings.png)
 
 3. 找到這一行：`"I_DONT_HAVE_KMBOX"`
 
@@ -274,41 +274,41 @@ Kmbox Net 默認包含以下配件：
 
 2. 使用螺絲刀或其他細小物體按住 Kmbox 內部的小黑按鈕
 
-![刷寫按鈕位置](../lib/kmNet/2024-08-11_14-11-20.png)
+![刷寫按鈕位置](../lib/kmNet/18_flash_button_location.png)
 
 同時將 USB 線連接到此接口
 
-![USB 連接位置](../lib/kmNet/2024-08-11_14-22-49.png)
+![USB 連接位置](../lib/kmNet/19_usb_connection_location.png)
 
 Kmbox 屏幕應該變白，藍色指示燈應該快速閃爍。如果沒有發生，請重試按住按鈕並重新連接 USB 線。
 
 3. 在主電腦上，進入 `DMA Cheats\3. Kmbox\Kmbox Net\Firmware` 文件夾並安裝驅動
 
-![固件驅動](../lib/kmNet/2024-08-11_14-24-20.png)
+![固件驅動](../lib/kmNet/20_firmware_driver.png)
 
 4. 啟動升級工具，點擊「Search Device」。在信息行中應該顯示 "Found 1 USB devices"
 
-![升級工具](../lib/kmNet/upgrade%20tools%20kmbox%20net.png)
+![升級工具](../lib/kmNet/21_upgrade_tool.png)
 
 5. 點擊「Select file」
 
-![選擇固件文件](../lib/kmNet/upgrade%20tools%20kmbox%20net_1.png)
+![選擇固件文件](../lib/kmNet/22_select_firmware_file.png)
 
 6. 進入 `DMA Cheats\3. Kmbox\Kmbox Net\Firmware` 文件夾
 
 將文件顯示類型更改為 `.BIN`
 
-![固件 BIN 文件](../lib/kmNet/2024-08-11_14-52-29.png)
+![固件 BIN 文件](../lib/kmNet/23_firmware_bin_file.png)
 
 7. 選擇固件文件（例如：`kmboxnetfw20240808.bin`）
 
 8. 點擊「Program」
 
-![開始刷寫固件](../lib/kmNet/updater%202.png)
+![開始刷寫固件](../lib/kmNet/24_start_flashing_firmware.png)
 
 9. 等待幾秒鐘。過程結束後，您會看到成功消息
 
-![固件更新完成](../lib/kmNet/upgrade%20success.png)
+![固件更新完成](../lib/kmNet/25_firmware_update_complete.png)
 
 **重要**：固件更新完成後，必須按照下面的 Spoofing 指南進行偽裝。每次更新 Kmbox Net 固件後都必須執行此操作。
 
@@ -326,7 +326,7 @@ Spoofing 可以讓 Kmbox Net 偽裝成您的真實鼠標，提高安全性。
 
 運行 `USBLogView.exe`，將程序全屏顯示
 
-![USBLogView 程序](../lib/kmNet/2024-08-14_16-43-07.png)
+![USBLogView 程序](../lib/kmNet/26_usblogview_program.png)
 
 4. 從主電腦拔下鼠標並重新插入
 
@@ -338,11 +338,11 @@ Spoofing 可以讓 Kmbox Net 偽裝成您的真實鼠標，提高安全性。
 
 **重要**：某些鼠標（例如 Steelseries Rival 3 Wireless）的 Vendor ID 和 Product ID 只包含數字，例如：`10381830`。在這樣的鼠標上進行 Spoofing 會失敗，建議使用其他鼠標。
 
-![查看鼠標 VID/PID](../lib/kmNet/%D0%BC%D0%BE%D0%B9%20kmbox%20net%20%D0%B1%D0%B5%D0%B7%20%D1%84%D0%BE%D0%BD%D0%B0.png)
+![查看鼠標 VID/PID](../lib/kmNet/27_check_mouse_vid_pid.png)
 
 5. 將 Kmbox 連接到主電腦和第二台電腦
 
-![連接示意圖](../lib/kmNet/kmbox%20net%20%D1%81%D1%85%D0%B5%D0%BC%D0%B0%20main%20and%20second%20pc%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png)
+![連接示意圖](../lib/kmNet/28_connection_diagram_main_second_pc.png)
 
 6. 在第二台電腦上，進入 `DMA Cheats\3. Kmbox\Kmbox Net\Firmware\Kmbox Net Spoofing\2. For Second PC` 文件夾
 
@@ -350,15 +350,15 @@ Spoofing 可以讓 Kmbox Net 偽裝成您的真實鼠標，提高安全性。
 
 輸入 Kmbox Net 的 IP、Port 和 UUID
 
-![KmboxNet 程序](../lib/kmNet/kmboxnet%20exe.png)
+![KmboxNet 程序](../lib/kmNet/29_kmboxnet_program.png)
 
 7. 勾選「Ping」框並點擊大按鈕
 
-![Ping 測試](../lib/kmNet/kmbox%20net%20exe%20ping.png)
+![Ping 測試](../lib/kmNet/30_ping_test.png)
 
 8. 應該會出現一個窗口，最後寫著 OK
 
-![連接成功](../lib/kmNet/NET%20EXE%20OK%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png)
+![連接成功](../lib/kmNet/31_connection_success.png)
 
 如果無法連接到 Kmbox：
 - 嘗試通過從主電腦拔下並重新插入來重啟它
@@ -368,17 +368,17 @@ Spoofing 可以讓 Kmbox Net 偽裝成您的真實鼠標，提高安全性。
 
 點擊「VID/PID」按鈕
 
-![設置 VID/PID](../lib/kmNet/vid%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png)
+![設置 VID/PID](../lib/kmNet/32_set_vid_pid.png)
 
 10. 您應該看到一個窗口，表示過程成功
 
-![Spoofing 成功](../lib/kmNet/spoofing%20ok%20kmbox%20net%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png)
+![Spoofing 成功](../lib/kmNet/33_spoofing_success.png)
 
 11. 返回主電腦，再次打開 `USBLogView.exe`，將程序全屏顯示
 
 12. 從主電腦拔下 Kmbox 並重新插入
 
-![驗證 Spoofing](../lib/kmNet/2024-08-14_17-13-54.png)
+![驗證 Spoofing](../lib/kmNet/34_verify_spoofing.png)
 
 您應該看到與步驟 3 中相同的 Vendor ID 和 Product ID
 
@@ -418,7 +418,7 @@ KM 模式是 Kmbox Net 的工作模式之一，可在盒子上位機軟件中設
 
 您可以在盒子上查看固有參數（IP、Port、UUID）：
 
-![盒子固有參數](../lib/kmNet/Inherent parameters of the box.png)
+![盒子固有參數](../lib/kmNet/35_inherent_parameters_box.png)
 
 ## 相關資源
 

@@ -45,7 +45,7 @@ Kmbox Net default includes the following accessories:
 
 The back of the box has interface names. Generally connect according to the following diagram:
 
-![Kmbox Net Connection Diagram](../lib/kmNet/1_ How to connect Kmbox Net (2).png)
+![Kmbox Net Connection Diagram](../lib/kmNet/01_connection_diagram.png)
 
 - **Game Console Interface (1)**: Connect to target computer (the controlled computer)
 - **Network Port (2)**: Connect to control computer (the computer running CVM)
@@ -56,22 +56,22 @@ The back of the box has interface names. Generally connect according to the foll
 
 After connection is complete, the Kmbox Net screen should display as shown below:
 
-![Kmbox Net Working Screen](../lib/kmNet/kmbox%2020net%2020screen%2020front.png)
+![Kmbox Net Working Screen](../lib/kmNet/02_kmbox_net_working_screen.png)
 
 ### 03 Install Network Card Driver (Install driver on computer connected to network port)
 
 1. Connect the network port USB cable to the control computer (second PC)
 2. On the second PC, run `2. WCHUSBNIC` driver installer as administrator
 
-![Network Card Driver Installer](../lib/kmNet/driver%20net.png)
+![Network Card Driver Installer](../lib/kmNet/03_driver_installer.png)
 
 3. Select `INSTALL` to install
 
-![Install Network Card Driver](../lib/kmNet/2024-07-13_18-28-11.png)
+![Install Network Card Driver](../lib/kmNet/04_driver_install_select.png)
 
 4. After successful installation, you should see "Driver Install Success!" message
 
-![Driver Installation Success](../lib/kmNet/2222.png)
+![Driver Installation Success](../lib/kmNet/05_driver_install_success.png)
 
 5. **Reboot the second PC**
 
@@ -93,25 +93,25 @@ After connection is complete, the Kmbox Net screen should display as shown below
 
 1. Open Control Panel on the second PC
 
-![Control Panel](../lib/kmNet/control%20panel_edited.jpg)
+![Control Panel](../lib/kmNet/06_control_panel.png)
 
 2. Click "Network and Internet"
 
-![Network and Internet](../lib/kmNet/d538b7_84b514cc8f1e40dabbd2f02059dbb7fb~mv2.jpg)
+![Network and Internet](../lib/kmNet/07_network_and_internet.png)
 
 3. Click "Network and Sharing Center"
 
-![Network and Sharing Center](../lib/kmNet/d538b7_0b15847dffe34411bb32e4f046bf0087~mv2.jpg)
+![Network and Sharing Center](../lib/kmNet/08_network_sharing_center.png)
 
 4. Click "Change adapter settings"
 
-![Change Adapter Settings](../lib/kmNet/d538b7_d9d6bea64a80414f95e026dbea719ee0~mv2.png)
+![Change Adapter Settings](../lib/kmNet/09_change_adapter_settings.png)
 
 #### Modify Network Card IP
 
 1. Find "USB 2.0 Ethernet Adapter" or similar network card device (this is the box's network card)
 
-![USB 2.0 Ethernet Adapter](../lib/kmNet/ethernet%203_edited.jpg)
+![USB 2.0 Ethernet Adapter](../lib/kmNet/10_usb_ethernet_adapter.png)
 
 If you don't see this device, disconnect and reconnect the USB cable from Kmbox to the second PC.
 
@@ -119,11 +119,11 @@ If you don't see this device, disconnect and reconnect the USB cable from Kmbox 
 
 3. Make sure "Internet Protocol Version 6 (TCP/IPv6)" is **disabled**
 
-![Disable IPv6](../lib/kmNet/d538b7_a04e356270e24e00bc36019411e50777~mv2.jpg)
+![Disable IPv6](../lib/kmNet/11_disable_ipv6.png)
 
 4. Make sure "Internet Protocol Version 4 (TCP/IPv4)" is **enabled**, click on it and select "Properties"
 
-![IPv4 Settings](../lib/kmNet/d538b7_e7731a115e2241a586c05c257f376713~mv2.jpg)
+![IPv4 Settings](../lib/kmNet/12_ipv4_settings.png)
 
 5. Select "Use the following IP address"
 6. Set IP address to: `192.168.2.100`
@@ -131,7 +131,7 @@ If you don't see this device, disconnect and reconnect the USB cable from Kmbox 
 8. Leave other fields empty
 9. Click "OK" to save
 
-![IP Address Settings](../lib/kmNet/ip.png)
+![IP Address Settings](../lib/kmNet/13_ip_address_settings.png)
 
 **Important Notes**:
 - Modify the box's network card, not your own local network card
@@ -153,7 +153,7 @@ If you don't see this device, disconnect and reconnect the USB cable from Kmbox 
 2. Set `Input API` to `NET` or corresponding network mode
 3. When starting for the first time, you need to enter Kmbox Net data (IP, Port, UUID)
 
-![Enter Kmbox Net Data](../lib/kmNet/LAUNCHING%20WITH%20KMBOX%20NET%20-%20frame%20at%202m30s%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg)
+![Enter Kmbox Net Data](../lib/kmNet/14_enter_kmbox_net_data.png)
 
 4. If connection is successful, you should see "Kmbox net connecting is good" message
 
@@ -164,7 +164,7 @@ To avoid entering Kmbox Net data every time:
 1. Go to config section in CVM
 2. Select any config and click save
 
-![Save Config](../lib/kmNet/cfg%20ip.jpg)
+![Save Config](../lib/kmNet/15_save_config.png)
 
 This way the settings will be saved and will be used automatically on next startup.
 
@@ -253,11 +253,11 @@ Check: `C:\Users\*username*\Documents\directcheats.store`
 
 You will see .cfg files of your games
 
-![Config Files Location](../lib/kmNet/configs%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png)
+![Config Files Location](../lib/kmNet/16_config_files_location.png)
 
 2. If you are playing Call of Duty, open `MainCOD.cfg` via Notepad
 
-![Kmbox Settings](../lib/kmNet/kmbox%20cheat%20settings.png)
+![Kmbox Settings](../lib/kmNet/17_kmbox_cheat_settings.png)
 
 3. Find the line: `"I_DONT_HAVE_KMBOX"`
 
@@ -281,41 +281,41 @@ If your Kmbox Net firmware differs from the current one, it's recommended to upd
 
 2. Press and hold this small black button inside the Kmbox using a screwdriver or other thin object
 
-![Flash Button Location](../lib/kmNet/2024-08-11_14-11-20.png)
+![Flash Button Location](../lib/kmNet/18_flash_button_location.png)
 
 And at the same time connect the USB cable to this connector
 
-![USB Connection Location](../lib/kmNet/2024-08-11_14-22-49.png)
+![USB Connection Location](../lib/kmNet/19_usb_connection_location.png)
 
 The Kmbox screen should turn white, and this blue diode should start flashing rapidly. If this doesn't happen, then try to hold the button again and reconnect the USB cable.
 
 3. On your main PC, go to the folder `DMA Cheats\3. Kmbox\Kmbox Net\Firmware` and install the driver
 
-![Firmware Driver](../lib/kmNet/2024-08-11_14-24-20.png)
+![Firmware Driver](../lib/kmNet/20_firmware_driver.png)
 
 4. Launch the Upgrade Tool. Click Search Device. In the information line, it should be written "Found 1 USB devices"
 
-![Upgrade Tool](../lib/kmNet/upgrade%20tools%20kmbox%20net.png)
+![Upgrade Tool](../lib/kmNet/21_upgrade_tool.png)
 
 5. Click Select file
 
-![Select Firmware File](../lib/kmNet/upgrade%20tools%20kmbox%20net_1.png)
+![Select Firmware File](../lib/kmNet/22_select_firmware_file.png)
 
 6. Go to the folder `DMA Cheats\3. Kmbox\Kmbox Net\Firmware`
 
 Change the type of files displayed to `.BIN`
 
-![Firmware BIN File](../lib/kmNet/2024-08-11_14-52-29.png)
+![Firmware BIN File](../lib/kmNet/23_firmware_bin_file.png)
 
 7. Select the firmware file (e.g., `kmboxnetfw20240808.bin`)
 
 8. And click "Program"
 
-![Start Flashing Firmware](../lib/kmNet/updater%202.png)
+![Start Flashing Firmware](../lib/kmNet/24_start_flashing_firmware.png)
 
 9. Wait a few seconds. After the end of the process, you will see a message
 
-![Firmware Update Complete](../lib/kmNet/upgrade%20success.png)
+![Firmware Update Complete](../lib/kmNet/25_firmware_update_complete.png)
 
 **Important**: Firmware update is complete. Now we need to spoof Kmbox according to the guide below. This must be done every time after updating the firmware on Kmbox Net.
 
@@ -333,7 +333,7 @@ On your main PC go to `DMA Cheats\3. Kmbox\Kmbox Net\Firmware\Kmbox Net Spoofing
 
 And run the `USBLogView.exe`, make the program fullscreen
 
-![USBLogView Program](../lib/kmNet/2024-08-14_16-43-07.png)
+![USBLogView Program](../lib/kmNet/26_usblogview_program.png)
 
 3. Unplug your mouse from main PC and plug it back in
 
@@ -345,11 +345,11 @@ In my case it will look like this: `046dc077`
 
 **Important!** On some mice, for example on my Steelseries Rival 3 Wireless, Vendor ID and Product ID contains only numbers and looks like this: `10381830`. You will fail the spoofing process on such a mouse, I recommend using any other one.
 
-![Check Mouse VID/PID](../lib/kmNet/%D0%BC%D0%BE%D0%B9%20kmbox%20net%20%D0%B1%D0%B5%D0%B7%20%D1%84%D0%BE%D0%BD%D0%B0.png)
+![Check Mouse VID/PID](../lib/kmNet/27_check_mouse_vid_pid.png)
 
 4. Connect Kmbox to your main and second PC
 
-![Connection Diagram](../lib/kmNet/kmbox%20net%20%D1%81%D1%85%D0%B5%D0%BC%D0%B0%20main%20and%20second%20pc%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png)
+![Connection Diagram](../lib/kmNet/28_connection_diagram_main_second_pc.png)
 
 5. On the second PC go to `DMA Cheats\3. Kmbox\Kmbox Net\Firmware\Kmbox Net Spoofing\2. For Second PC` folder
 
@@ -357,15 +357,15 @@ Run `KmboxNet.exe`
 
 Enter IP, Port and UUID from your Kmbox Net
 
-![KmboxNet Program](../lib/kmNet/kmboxnet%20exe.png)
+![KmboxNet Program](../lib/kmNet/29_kmboxnet_program.png)
 
 6. Check "Ping" box and click on the big button
 
-![Ping Test](../lib/kmNet/kmbox%20net%20exe%20ping.png)
+![Ping Test](../lib/kmNet/30_ping_test.png)
 
 7. A window should appear in which OK will be written at the end.
 
-![Connection Success](../lib/kmNet/NET%20EXE%20OK%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png)
+![Connection Success](../lib/kmNet/31_connection_success.png)
 
 If it doesn't connect to the Kmbox:
 - Try to restart it by unplugging it from your main PC and plug it back in
@@ -375,17 +375,17 @@ If it doesn't connect to the Kmbox:
 
 And click VID/PID button
 
-![Set VID/PID](../lib/kmNet/vid%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png)
+![Set VID/PID](../lib/kmNet/32_set_vid_pid.png)
 
 9. You should see such a window which means that the process was successful
 
-![Spoofing Success](../lib/kmNet/spoofing%20ok%20kmbox%20net%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png)
+![Spoofing Success](../lib/kmNet/33_spoofing_success.png)
 
 10. Go back to your main PC and open USBLogView.exe again, make the program fullscreen
 
 11. Unplug the Kmbox from your main PC and plug it back in
 
-![Verify Spoofing](../lib/kmNet/2024-08-14_17-13-54.png)
+![Verify Spoofing](../lib/kmNet/34_verify_spoofing.png)
 
 You should see the same Vendor ID and Product ID that you saw in Step 3
 
@@ -425,7 +425,7 @@ KM mode is one of Kmbox Net's working modes, which can be set in the box's host 
 
 You can view the inherent parameters (IP, Port, UUID) on the box:
 
-![Box Inherent Parameters](../lib/kmNet/Inherent parameters of the box.png)
+![Box Inherent Parameters](../lib/kmNet/35_inherent_parameters_box.png)
 
 ## Related Resources
 
