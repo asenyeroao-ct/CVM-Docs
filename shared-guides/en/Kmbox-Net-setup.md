@@ -225,6 +225,8 @@ Change the sensitivity in the game settings.
 - Avoid using USB Hub, connect directly to computer USB port
 - Check if other programs are occupying network resources
 
+Make sure you have configured everything correctly.
+
 ### Mouse Obviously Not Responsive and High Latency in Bypass Mode
 
 - This situation is generally because the mouse exceeds specifications
@@ -243,37 +245,11 @@ If the cheat doesn't see Kmbox at startup:
 - Make sure your main and second PCs are connected to the same local network (e.g., your home Wi-Fi)
 - Try using this IP address in "Internet Protocol Version 4 (TCP/IPv4)" Properties: `192.168.2.189`
 
-### Aimbot Is Not Working
-
-If Kmbox test was successful, but Aimbot doesn't work in the game:
-
-1. Make sure you have started the cheat in mode with Kmbox
-
-Check: `C:\Users\*username*\Documents\directcheats.store`
-
-You will see .cfg files of your games
-
-![Config Files Location](../lib/kmNet/16_config_files_location.png)
-
-2. If you are playing Call of Duty, open `MainCOD.cfg` via Notepad
-
-![Kmbox Settings](../lib/kmNet/17_kmbox_cheat_settings.png)
-
-3. Find the line: `"I_DONT_HAVE_KMBOX"`
-
-If you want to play with Kmbox it should be written: `"I_DONT_HAVE_KMBOX" = ": false,`
-
-Save and close the file.
-
-4. After you launched a game and the cheat you need to enable Aimbot and set it up through menu
-
-Make sure you have configured everything correctly.
-
 ## Firmware Update
 
 If your Kmbox Net firmware differs from the current one, it's recommended to update (flash) it. This can improve performance, fix bugs, and prevent detection.
 
-**Latest Version**: 20251125 (Last update date: November 25, 2025)
+**Latest Version**: 2026.2.12 (Last update date: February 12, 2026)
 
 ### Update Steps
 
@@ -291,6 +267,8 @@ The Kmbox screen should turn white, and this blue diode should start flashing ra
 
 3. On your main PC, go to the folder `DMA Cheats\3. Kmbox\Kmbox Net\Firmware` and install the driver
 
+**Download Upgrade Tool**: [Click to download upgrade tool](https://www.kmbox.top/wiki_doc/kmboxNet/site/tools/updatatools.zip)
+
 ![Firmware Driver](../lib/kmNet/20_firmware_driver.png)
 
 4. Launch the Upgrade Tool. Click Search Device. In the information line, it should be written "Found 1 USB devices"
@@ -302,6 +280,10 @@ The Kmbox screen should turn white, and this blue diode should start flashing ra
 ![Select Firmware File](../lib/kmNet/22_select_firmware_file.png)
 
 6. Go to the folder `DMA Cheats\3. Kmbox\Kmbox Net\Firmware`
+
+**Download Firmware**:
+- **Latest Firmware**: [Click to download latest firmware](https://www.kmbox.top/Net_firmware.html)
+- **Other Versions**: [Click to view history versions](https://www.kmbox.top/Net_firmware.html#NetHistory)
 
 Change the type of files displayed to `.BIN`
 

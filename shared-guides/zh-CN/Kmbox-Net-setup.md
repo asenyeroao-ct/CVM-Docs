@@ -225,30 +225,6 @@ Kmbox Net 默認包含以下配件：
 - 避免使用 USB Hub，直接連接電腦 USB 口
 - 檢查是否有其他程序佔用網絡資源
 
-### Aimbot 不工作
-
-如果 Kmbox 測試成功，但 Aimbot 在遊戲中不工作：
-
-1. 確保您已使用 Kmbox 模式啟動作弊程序
-
-檢查：`C:\Users\*username*\Documents\directcheats.store`
-
-您會看到遊戲的 .cfg 文件
-
-![配置文件位置](../lib/kmNet/16_config_files_location.png)
-
-2. 如果您在玩 Call of Duty，請用記事本打開 `MainCOD.cfg`
-
-![Kmbox 設置](../lib/kmNet/17_kmbox_cheat_settings.png)
-
-3. 找到這一行：`"I_DONT_HAVE_KMBOX"`
-
-如果您想使用 Kmbox 進行遊戲，應該寫成：`"I_DONT_HAVE_KMBOX" = ": false,`
-
-保存並關閉文件。
-
-4. 啟動遊戲和作弊程序後，您需要通過菜單啟用 Aimbot 並進行設置
-
 確保您已正確配置所有內容
 
 ### 在 bypass 模式下鼠標明顯不跟手，延遲大
@@ -266,7 +242,7 @@ Kmbox Net 默認包含以下配件：
 
 如果您的 Kmbox Net 固件版本與當前版本不同，建議更新（刷寫）固件。這可以提高性能、修復錯誤並防止檢測。
 
-**最新版本**：20251125（更新日期：2025年11月25日）
+**最新版本**：2026.2.12（更新日期：2026年2月12日）
 
 ### 更新步驟
 
@@ -284,6 +260,8 @@ Kmbox 屏幕應該變白，藍色指示燈應該快速閃爍。如果沒有發�
 
 3. 在主電腦上，進入 `DMA Cheats\3. Kmbox\Kmbox Net\Firmware` 文件夾並安裝驅動
 
+**下載升級工具**：[點我下載升級工具](https://www.kmbox.top/wiki_doc/kmboxNet/site/tools/updatatools.zip)
+
 ![固件驅動](../lib/kmNet/20_firmware_driver.png)
 
 4. 啟動升級工具，點擊「Search Device」。在信息行中應該顯示 "Found 1 USB devices"
@@ -295,6 +273,10 @@ Kmbox 屏幕應該變白，藍色指示燈應該快速閃爍。如果沒有發�
 ![選擇固件文件](../lib/kmNet/22_select_firmware_file.png)
 
 6. 進入 `DMA Cheats\3. Kmbox\Kmbox Net\Firmware` 文件夾
+
+**下載固件**：
+- **最新固件**：[點我下載最新固件](https://www.kmbox.top/Net_firmware.html)
+- **其他版本固件**：[點我查看歷史版本](https://www.kmbox.top/Net_firmware.html#NetHistory)
 
 將文件顯示類型更改為 `.BIN`
 
@@ -344,7 +326,7 @@ Spoofing 可以讓 Kmbox Net 偽裝成您的真實鼠標，提高安全性。
 
 ![連接示意圖](../lib/kmNet/28_connection_diagram_main_second_pc.png)
 
-6. 在第二台電腦上，進入 `DMA Cheats\3. Kmbox\Kmbox Net\Firmware\Kmbox Net Spoofing\2. For Second PC` 文件夾
+6. 在第二台電腦上，下載並解壓 [KmboxNet 程序](https://www.kmbox.top/wiki_doc/kmboxNet/site/tools/NetRelease.zip)
 
 運行 `KmboxNet.exe`
 
