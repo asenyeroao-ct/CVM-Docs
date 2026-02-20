@@ -11,12 +11,9 @@ Main entry points:
 - Simplified Chinese docs: [`CVM-docs-main/zh-CN/CVM.md`](CVM-docs-main/zh-CN/CVM.md)
 
 Additional setup guides:
-- [`shared-guides/lang.md`](shared-guides/lang.md)
-- [`shared-guides/en/OBS-UDP-setup.md`](shared-guides/en/OBS-UDP-setup.md)
-- [`shared-guides/en/MAKCU-setup.md`](shared-guides/en/MAKCU-setup.md)
-- [`shared-guides/en/Mouse-Keyboard-API.md`](shared-guides/en/Mouse-Keyboard-API.md)
-- [`shared-guides/zh-CN/OBS-UDP-setup.md`](shared-guides/zh-CN/OBS-UDP-setup.md)
-- [`shared-guides/zh-CN/MAKCU-setup.md`](shared-guides/zh-CN/MAKCU-setup.md)
+- Language selector: [`shared-guides/lang.md`](shared-guides/lang.md)
+- English guides: [`shared-guides/en/README.md`](shared-guides/en/README.md)
+- Simplified Chinese guides: [`shared-guides/zh-CN/README.md`](shared-guides/zh-CN/README.md)
 
 Scope of this documentation:
 - General tab configuration
