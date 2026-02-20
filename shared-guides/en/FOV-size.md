@@ -3,6 +3,16 @@
 Shared guide index: [README.md](./README.md)
 
 Use these tables to map base resolution to cropped resolution.
+
+## How to Use
+
+`Base Resolution` corresponds to your desktop or game resolution. Find the table that matches your desktop resolution, then select your desired FOV value.
+
+**Example**:
+- If your desktop resolution is `2560x1440`, refer to the "## 2560x1440" table
+- Then select your desired FOV value, for example `128`
+- The corresponding `Cropped Resolution` is `1216x656`, which are the crop values you need to fill in the OBS `Crop/Pad` filter
+
 ## Formula (Any Aspect Ratio)
 
 If your resolution is not listed below, calculate it with this formula.

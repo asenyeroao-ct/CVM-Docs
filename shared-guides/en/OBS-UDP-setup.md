@@ -52,17 +52,17 @@ Path: `Settings -> Video`
 
 Set:
 
-1. `Base (Canvas) Resolution` to your desktop or game resolution (e.g., `1920x1080`, `2560x1440`, etc.).
+1. `Base (Canvas) Resolution` to your FOV value corresponding resolution. For example, when FOV is `128`, set it to `128x128`.
 2. `Output (Scaled) Resolution` to your FOV value corresponding resolution. For example, when FOV is `128`, set it to `128x128`.
 3. `FPS` higher than `144`.
 
 Recommended FPS values: `160` / `165` / `180` / `240` (based on GPU performance).
 
-Example (FOV = 128, Desktop/Game Resolution = 1920x1080):
+Example (FOV = 128):
 
-| FOV | Base Resolution (Desktop/Game) | Output (Scaled) Resolution |
+| FOV | Base (Canvas) Resolution | Output (Scaled) Resolution |
 | --- | --- | --- |
-| 128 | 1920x1080 | 128x128 |
+| 128 | 128x128 | 128x128 |
 
 ## Step 4: Apply Crop/Pad Filter
 
@@ -77,13 +77,13 @@ To send only the FOV region:
 
 Example (FOV = 128, Desktop/Game Resolution = 1920x1080):
 
-According to the FOV-size table, `Cropped Resolution` is `896x476`:
+According to the FOV-size table, when desktop/game resolution is `1920x1080`, `Cropped Resolution` is `896x476`:
 - `Left` = `896`
 - `Top` = `476`
 - `Right` = `896`
 - `Bottom` = `476`
 
-**Note**: `Base Resolution` should correspond to your desktop or game resolution, not the `Cropped Resolution` from the FOV-size table.
+**Note**: Crop values are filled according to the `Cropped Resolution` from the FOV-size table, which corresponds to your desktop or game resolution.
 
 This prevents oversized frames and reduces UDP drop risk.
 
