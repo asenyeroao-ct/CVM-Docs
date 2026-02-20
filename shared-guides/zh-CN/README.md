@@ -11,5 +11,5 @@
 - [Python 安装指南](./Python-install.md)
 
 ## 硬體
-- [MAKCU 设置](./MAKCU-setup.md)
+- [MAKCU 设置](./MAKCU-setup.md)（首选，兼容性最佳）
 - [Kmbox Net 连接教学](./Kmbox-Net-setup.md) (不推薦,過時)
