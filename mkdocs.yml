@@ -23,7 +23,7 @@ theme:
 docs_dir: docs
 nav:
   - Home: README.md
-  - Language / 语言:
+  - Language:
     - English: CVM-docs-main/en/CVM.md
     - 简体中文: CVM-docs-main/zh-CN/CVM.md
   - English:
