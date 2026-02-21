@@ -24,10 +24,7 @@ docs_dir: docs
 nav:
   - Home: README.md
   - Language:
-    - English: CVM-docs-main/en/CVM.md
-    - 简体中文: CVM-docs-main/zh-CN/CVM.md
-  - English:
-    - CVM colorBot Docs:
+    - English:
       - Introduction: CVM-docs-main/en/CVM.md
       - Working Principle: CVM-docs-main/en/Working-Principle.md
       - General: CVM-docs-main/en/General.md
@@ -42,21 +39,20 @@ nav:
         - NCAF: CVM-docs-main/en/aimbot/ncaf.md
         - WindMouse: CVM-docs-main/en/aimbot/windmouse.md
         - Bezier: CVM-docs-main/en/aimbot/bezier.md
-    - Shared Setup Guides (EN):
-      - Index: shared-guides/en/README.md
-      - OBS UDP Setup: shared-guides/en/OBS-UDP-setup.md
-      - FOV Size: shared-guides/en/FOV-size.md
-      - "FOV 1K": shared-guides/en/FovSize-res/1k.md
-      - "FOV 2K": shared-guides/en/FovSize-res/2k.md
-      - "FOV 4K": shared-guides/en/FovSize-res/4k.md
-      - "FOV 21:9": shared-guides/en/FovSize-res/21-9.md
-      - CVM colorBot Installation: shared-guides/en/CVM-install.md
-      - Python Installation: shared-guides/en/Python-install.md
-      - GStreamer Installation: shared-guides/en/GStreamer-install.md
-      - MAKCU Setup: shared-guides/en/MAKCU-setup.md
-      - Kmbox Net Setup: shared-guides/en/Kmbox-Net-setup.md
-  - 简体中文:
-    - CVM colorBot 文档:
+      - Setup Guides:
+        - Index: shared-guides/en/README.md
+        - OBS UDP Setup: shared-guides/en/OBS-UDP-setup.md
+        - FOV Size: shared-guides/en/FOV-size.md
+        - "FOV 1K": shared-guides/en/FovSize-res/1k.md
+        - "FOV 2K": shared-guides/en/FovSize-res/2k.md
+        - "FOV 4K": shared-guides/en/FovSize-res/4k.md
+        - "FOV 21:9": shared-guides/en/FovSize-res/21-9.md
+        - CVM Installation: shared-guides/en/CVM-install.md
+        - Python Installation: shared-guides/en/Python-install.md
+        - GStreamer Installation: shared-guides/en/GStreamer-install.md
+        - MAKCU Setup: shared-guides/en/MAKCU-setup.md
+        - Kmbox Net Setup: shared-guides/en/Kmbox-Net-setup.md
+    - 简体中文:
       - 简介: CVM-docs-main/zh-CN/CVM.md
       - 工作原理: CVM-docs-main/zh-CN/Working-Principle.md
       - General 通用: CVM-docs-main/zh-CN/General.md
@@ -71,19 +67,19 @@ nav:
         - NCAF: CVM-docs-main/zh-CN/aimbot/ncaf.md
         - WindMouse: CVM-docs-main/zh-CN/aimbot/windmouse.md
         - Bezier 贝塞尔: CVM-docs-main/zh-CN/aimbot/bezier.md
-    - 共享安装指南 (zh-CN):
-      - 索引: shared-guides/zh-CN/README.md
-      - OBS UDP 设置: shared-guides/zh-CN/OBS-UDP-setup.md
-      - FOV Size 对照表: shared-guides/zh-CN/FOV-size.md
-      - "FOV 1K": shared-guides/zh-CN/FovSize-res/1k.md
-      - "FOV 2K": shared-guides/zh-CN/FovSize-res/2k.md
-      - "FOV 4K": shared-guides/zh-CN/FovSize-res/4k.md
-      - "FOV 21:9": shared-guides/zh-CN/FovSize-res/21-9.md
-      - CVM colorBot 安装: shared-guides/zh-CN/CVM-install.md
-      - Python 安装: shared-guides/zh-CN/Python-install.md
-      - GStreamer 安装: shared-guides/zh-CN/GStreamer-install.md
-      - MAKCU 设置: shared-guides/zh-CN/MAKCU-setup.md
-      - Kmbox Net 连接: shared-guides/zh-CN/Kmbox-Net-setup.md
+      - 安装指南:
+        - 索引: shared-guides/zh-CN/README.md
+        - OBS UDP 设置: shared-guides/zh-CN/OBS-UDP-setup.md
+        - FOV Size 对照表: shared-guides/zh-CN/FOV-size.md
+        - "FOV 1K": shared-guides/zh-CN/FovSize-res/1k.md
+        - "FOV 2K": shared-guides/zh-CN/FovSize-res/2k.md
+        - "FOV 4K": shared-guides/zh-CN/FovSize-res/4k.md
+        - "FOV 21:9": shared-guides/zh-CN/FovSize-res/21-9.md
+        - CVM 安装: shared-guides/zh-CN/CVM-install.md
+        - Python 安装: shared-guides/zh-CN/Python-install.md
+        - GStreamer 安装: shared-guides/zh-CN/GStreamer-install.md
+        - MAKCU 设置: shared-guides/zh-CN/MAKCU-setup.md
+        - Kmbox Net 连接: shared-guides/zh-CN/Kmbox-Net-setup.md
 
 plugins:
   - search
