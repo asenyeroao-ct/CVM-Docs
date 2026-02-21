@@ -1,19 +1,17 @@
-﻿# CVM colorBot Config Documentation
+# CVM colorBot Config Documentation
 
 This folder contains configuration tutorials and parameter references for the CVM colorBot project.
 
 Project repository:
 - https://github.com/asenyeroao-ct/CVM-colorBot
 
-Main entry points:
-- Language selector: [`CVM-docs-main/lang.md`](CVM-docs-main/lang.md)
-- English docs: [`CVM-docs-main/en/CVM.md`](CVM-docs-main/en/CVM.md)
-- Simplified Chinese docs: [`CVM-docs-main/zh-CN/CVM.md`](CVM-docs-main/zh-CN/CVM.md)
+**Documentation site (GitHub Pages):**  
+https://asenyeroao-ct.github.io/CVM-Docs/
 
-Additional setup guides:
-- Language selector: [`shared-guides/lang.md`](shared-guides/lang.md)
-- English guides: [`shared-guides/en/README.md`](shared-guides/en/README.md)
-- Simplified Chinese guides: [`shared-guides/zh-CN/README.md`](shared-guides/zh-CN/README.md)
+Entry points (source):
+- Language selector: [`CVM-docs-main/lang.md`](CVM-docs-main/lang.md)
+- English: [`CVM-docs-main/en/CVM.md`](CVM-docs-main/en/CVM.md) · Simplified Chinese: [`CVM-docs-main/zh-CN/CVM.md`](CVM-docs-main/zh-CN/CVM.md)
+- Setup guides: [`shared-guides/en/README.md`](shared-guides/en/README.md) · [`shared-guides/zh-CN/README.md`](shared-guides/zh-CN/README.md)
 
 Scope of this documentation:
 - General tab configuration
@@ -22,6 +20,15 @@ Scope of this documentation:
 - RCS configuration
 - Config profile workflow
 - Mode-specific tuning guides under `CVM-docs-main/<lang>/aimbot/`
+
+### Build the docs site locally (optional)
+
+```bash
+pip install mkdocs mkdocs-material
+mkdocs serve
+```
+
+Then open http://127.0.0.1:8000 . The site is built with [MkDocs](https://www.mkdocs.org/) and deployed to GitHub Pages on push to `master`.
 
 ### AI-Generated Content
 

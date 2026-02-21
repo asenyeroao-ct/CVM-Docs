@@ -1,0 +1,58 @@
+site_name: CVM colorBot Documentation
+site_description: Configuration documentation and setup guides for the CVM colorBot project.
+site_url: https://asenyeroao-ct.github.io/CVM-Docs/
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+docs_dir: .
+nav:
+  - Home: README.md
+  - CVM colorBot Docs:
+    - Introduction: CVM-docs-main/en/CVM.md
+    - Working Principle: CVM-docs-main/en/Working-Principle.md
+    - General: CVM-docs-main/en/General.md
+    - Aimbot: CVM-docs-main/en/Aimbot.md
+    - Sec Aimbot: CVM-docs-main/en/Sec-Aimbot.md
+    - Trigger: CVM-docs-main/en/Trigger.md
+    - RCS: CVM-docs-main/en/RCS.md
+    - Config: CVM-docs-main/en/Config.md
+    - Aimbot Modes:
+      - Normal: CVM-docs-main/en/aimbot/normal.md
+      - Silent: CVM-docs-main/en/aimbot/silent.md
+      - NCAF: CVM-docs-main/en/aimbot/ncaf.md
+      - WindMouse: CVM-docs-main/en/aimbot/windmouse.md
+      - Bezier: CVM-docs-main/en/aimbot/bezier.md
+  - Shared Setup Guides:
+    - Index: shared-guides/en/README.md
+    - OBS UDP Setup: shared-guides/en/OBS-UDP-setup.md
+    - FOV Size: shared-guides/en/FOV-size.md
+    - "FOV 1K": shared-guides/en/FovSize-res/1k.md
+    - "FOV 2K": shared-guides/en/FovSize-res/2k.md
+    - "FOV 4K": shared-guides/en/FovSize-res/4k.md
+    - "FOV 21:9": shared-guides/en/FovSize-res/21-9.md
+    - CVM colorBot Installation: shared-guides/en/CVM-install.md
+    - Python Installation: shared-guides/en/Python-install.md
+    - GStreamer Installation: shared-guides/en/GStreamer-install.md
+    - MAKCU Setup: shared-guides/en/MAKCU-setup.md
+    - Kmbox Net Setup: shared-guides/en/Kmbox-Net-setup.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.superfences
