@@ -1,5 +1,6 @@
-# MkDocs build output
+# MkDocs build output and prepared docs (used in CI)
 site/
+docs/
 
 # Python
 __pycache__/

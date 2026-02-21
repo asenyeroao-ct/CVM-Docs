@@ -19,7 +19,8 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
-docs_dir: .
+# Content is copied into docs/ during CI; docs_dir must be a child of config file
+docs_dir: docs
 nav:
   - Home: README.md
   - CVM colorBot Docs:
