@@ -1,4 +1,4 @@
-﻿# FOV Size 对照表
+# FOV Size 对照表
 
 共享指南索引: [README.md](./README.md)
 
@@ -51,6 +51,83 @@ CroppedH = (1440 - 320) / 2 = 560
 Left=Right=(5120+320)/4=1360
 Top=Bottom=(1440+320)/4=440
 ```
+
+## 自訂解析度 FOV 計算器
+
+輸入自訂寬高、選擇 FOV，即時計算裁剪解析度與 OBS Crop/Pad 數值。
+
+<div id="fov-calc-zh" class="fov-calculator">
+  <div style="display:grid;grid-template-columns:auto 1fr;gap:0.5rem 1rem;align-items:center;max-width:360px;margin:1rem 0;">
+    <label for="fov-basew">寬度 (BaseW)</label>
+    <input type="number" id="fov-basew" min="1" value="2560" placeholder="例如 2560">
+    <label for="fov-baseh">高度 (BaseH)</label>
+    <input type="number" id="fov-baseh" min="1" value="1440" placeholder="例如 1440">
+    <label for="fov-select">FOV</label>
+    <select id="fov-select">
+      <option value="128">128</option>
+      <option value="160">160</option>
+      <option value="192">192</option>
+      <option value="224">224</option>
+      <option value="256">256</option>
+      <option value="288">288</option>
+      <option value="320">320</option>
+      <option value="352">352</option>
+      <option value="384">384</option>
+      <option value="416">416</option>
+      <option value="448">448</option>
+      <option value="480">480</option>
+      <option value="512">512</option>
+      <option value="544">544</option>
+      <option value="576">576</option>
+      <option value="608">608</option>
+      <option value="640">640</option>
+      <option value="custom">自訂...</option>
+    </select>
+    <span id="fov-custom-wrap" style="display:none;grid-column:2;">
+      <input type="number" id="fov-custom" min="1" placeholder="FOV 值" style="width:100px;">
+    </span>
+  </div>
+  <div id="fov-result-zh" style="margin:1rem 0;padding:0.75rem;background:var(--md-default-bg-color);border-radius:6px;border:1px solid var(--md-default-fg-color--lightest);"></div>
+</div>
+
+<script>
+(function() {
+  var baseW = document.getElementById('fov-basew');
+  var baseH = document.getElementById('fov-baseh');
+  var sel = document.getElementById('fov-select');
+  var customWrap = document.getElementById('fov-custom-wrap');
+  var customIn = document.getElementById('fov-custom');
+  var result = document.getElementById('fov-result-zh');
+  function calc() {
+    var w = parseInt(baseW.value, 10) || 0;
+    var h = parseInt(baseH.value, 10) || 0;
+    var fov = sel.value === 'custom' ? (parseInt(customIn.value, 10) || 0) : (parseInt(sel.value, 10) || 0);
+    if (w <= 0 || h <= 0 || fov <= 0) {
+      result.innerHTML = '請輸入有效的寬、高與 FOV（正整數）。';
+      return;
+    }
+    if (fov >= w || fov >= h) {
+      result.innerHTML = 'FOV 須小於寬度與高度，請調整。';
+      return;
+    }
+    var outW = Math.floor((w - fov) / 2);
+    var outH = Math.floor((h - fov) / 2);
+    var leftRight = Math.floor((w + fov) / 4);
+    var topBottom = Math.floor((h + fov) / 4);
+    result.innerHTML = '<strong>裁剪解析度 (Cropped Resolution)</strong>: ' + outW + '×' + outH +
+      ' &nbsp;|&nbsp; <strong>OBS Crop/Pad</strong>: Left=Right=' + leftRight + ', Top=Bottom=' + topBottom;
+  }
+  sel.addEventListener('change', function() {
+    customWrap.style.display = sel.value === 'custom' ? 'block' : 'none';
+    if (sel.value !== 'custom') customIn.value = '';
+    calc();
+  });
+  customIn.addEventListener('input', calc);
+  baseW.addEventListener('input', calc);
+  baseH.addEventListener('input', calc);
+  calc();
+})();
+</script>
 
 ## 解析度對照表
 
