@@ -14,6 +14,7 @@ GStreamer is the runtime used when running the "Capture Card (GStreamer)" mode i
    - **Direct Download from Official Website**: [gstreamer-1.0-msvc-x86_64-1.28.0.exe](https://gstreamer.freedesktop.org/data/pkg/windows/1.28.0/msvc/gstreamer-1.0-msvc-x86_64-1.28.0.exe)
    - **Official Website**: https://gstreamer.freedesktop.org/download/#windows
 
+
 2. The installer includes both runtime and development packages.
 
 ## Step 2: Run the Installer and Select Installation Option
