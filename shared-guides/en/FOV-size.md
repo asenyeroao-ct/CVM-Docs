@@ -1,4 +1,4 @@
-﻿# FOV Size Reference
+# FOV Size Reference
 
 Shared guide index: [README.md](./README.md)
 
@@ -51,6 +51,83 @@ CroppedH = (1440 - 320) / 2 = 560
 Left=Right=(5120+320)/4=1360
 Top=Bottom=(1440+320)/4=440
 ```
+
+## Custom Resolution FOV Calculator
+
+Enter custom width/height and select FOV to get cropped resolution and OBS Crop/Pad values.
+
+<div id="fov-calc-en" class="fov-calculator">
+  <div style="display:grid;grid-template-columns:auto 1fr;gap:0.5rem 1rem;align-items:center;max-width:360px;margin:1rem 0;">
+    <label for="fov-basew-en">Width (BaseW)</label>
+    <input type="number" id="fov-basew-en" min="1" value="2560" placeholder="e.g. 2560">
+    <label for="fov-baseh-en">Height (BaseH)</label>
+    <input type="number" id="fov-baseh-en" min="1" value="1440" placeholder="e.g. 1440">
+    <label for="fov-select-en">FOV</label>
+    <select id="fov-select-en">
+      <option value="128">128</option>
+      <option value="160">160</option>
+      <option value="192">192</option>
+      <option value="224">224</option>
+      <option value="256">256</option>
+      <option value="288">288</option>
+      <option value="320">320</option>
+      <option value="352">352</option>
+      <option value="384">384</option>
+      <option value="416">416</option>
+      <option value="448">448</option>
+      <option value="480">480</option>
+      <option value="512">512</option>
+      <option value="544">544</option>
+      <option value="576">576</option>
+      <option value="608">608</option>
+      <option value="640">640</option>
+      <option value="custom">Custom...</option>
+    </select>
+    <span id="fov-custom-wrap-en" style="display:none;grid-column:2;">
+      <input type="number" id="fov-custom-en" min="1" placeholder="FOV value" style="width:100px;">
+    </span>
+  </div>
+  <div id="fov-result-en" style="margin:1rem 0;padding:0.75rem;background:var(--md-default-bg-color);border-radius:6px;border:1px solid var(--md-default-fg-color--lightest);"></div>
+</div>
+
+<script>
+(function() {
+  var baseW = document.getElementById('fov-basew-en');
+  var baseH = document.getElementById('fov-baseh-en');
+  var sel = document.getElementById('fov-select-en');
+  var customWrap = document.getElementById('fov-custom-wrap-en');
+  var customIn = document.getElementById('fov-custom-en');
+  var result = document.getElementById('fov-result-en');
+  function calc() {
+    var w = parseInt(baseW.value, 10) || 0;
+    var h = parseInt(baseH.value, 10) || 0;
+    var fov = sel.value === 'custom' ? (parseInt(customIn.value, 10) || 0) : (parseInt(sel.value, 10) || 0);
+    if (w <= 0 || h <= 0 || fov <= 0) {
+      result.innerHTML = 'Please enter valid width, height and FOV (positive integers).';
+      return;
+    }
+    if (fov >= w || fov >= h) {
+      result.innerHTML = 'FOV must be less than width and height.';
+      return;
+    }
+    var outW = Math.floor((w - fov) / 2);
+    var outH = Math.floor((h - fov) / 2);
+    var leftRight = Math.floor((w + fov) / 4);
+    var topBottom = Math.floor((h + fov) / 4);
+    result.innerHTML = '<strong>Cropped Resolution</strong>: ' + outW + '×' + outH +
+      ' &nbsp;|&nbsp; <strong>OBS Crop/Pad</strong>: Left=Right=' + leftRight + ', Top=Bottom=' + topBottom;
+  }
+  sel.addEventListener('change', function() {
+    customWrap.style.display = sel.value === 'custom' ? 'block' : 'none';
+    if (sel.value !== 'custom') customIn.value = '';
+    calc();
+  });
+  customIn.addEventListener('input', calc);
+  baseW.addEventListener('input', calc);
+  baseH.addEventListener('input', calc);
+  calc();
+})();
+</script>
 
 ## Resolution Reference Tables
 
