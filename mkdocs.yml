@@ -39,6 +39,7 @@ nav:
         - NCAF: CVM-docs-main/en/aimbot/ncaf.md
         - WindMouse: CVM-docs-main/en/aimbot/windmouse.md
         - Bezier: CVM-docs-main/en/aimbot/bezier.md
+        - PID: CVM-docs-main/en/aimbot/pid.md
       - Setup Guides:
         - Index: shared-guides/en/README.md
         - OBS UDP Setup: shared-guides/en/OBS-UDP-setup.md
@@ -67,6 +68,7 @@ nav:
         - NCAF: CVM-docs-main/zh-CN/aimbot/ncaf.md
         - WindMouse: CVM-docs-main/zh-CN/aimbot/windmouse.md
         - Bezier 贝塞尔: CVM-docs-main/zh-CN/aimbot/bezier.md
+        - PID: CVM-docs-main/zh-CN/aimbot/pid.md
       - 安装指南:
         - 索引: shared-guides/zh-CN/README.md
         - OBS UDP 设置: shared-guides/zh-CN/OBS-UDP-setup.md
