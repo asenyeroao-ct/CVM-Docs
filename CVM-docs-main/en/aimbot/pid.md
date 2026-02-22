@@ -38,6 +38,16 @@ Back: [Aimbot](../Aimbot.md) | [Sec Aimbot](../Sec-Aimbot.md)
    `output = clamp((Kp * err + Ki * integral + Kd * derivative) * axis_speed, -Max Output, Max Output)`.
 5. `Kp Min`/`Kp Max` are auto-corrected if entered in reverse order.
 
+## PID Preview (UI)
+
+1. When mode is `PID`, a collapsible section named `PID Preview` is shown in both Main Aimbot and Sec Aimbot tabs.
+2. The chart is a simulated step-response preview based on current PID parameters (`Kp Min/Max`, `Ki`, `Kd`, `Max Output`, `X/Y Speed`, `FOV Size`, and `target_fps`).
+3. Two curves are rendered in real time while tuning sliders:
+   - `Error`: simulated remaining tracking error.
+   - `Output`: simulated PID movement output.
+4. The info line below the chart shows start/end error, peak output, estimated settle frame count, and FPS.
+5. This preview is for tuning reference only; in-game behavior still depends on capture latency, activation state, and input backend timing.
+
 ## Detailed PID tuning workflow
 
 1. Prepare a stable baseline before tuning gains.

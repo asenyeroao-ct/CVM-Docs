@@ -80,3 +80,13 @@
 2. 当 `Ki != 0` 时，积分项会按 `Max Output / |Ki|` 限制，因此 `Ki` 与 `Max Output` 需要联动考虑。
 3. `FOV Size` 会直接影响 Kp 从 `Kp Min` 过渡到 `Kp Max` 的斜率。
 4. 主瞄与副瞄 PID 参数完全独立，`*_sec` 需要单独调参。
+
+
+
+## PID Preview (UI)
+
+1. When mode is PID, a collapsible section named PID Preview is shown in both Main Aimbot and Sec Aimbot tabs.
+2. The chart is a simulated step-response preview based on current PID parameters: Kp Min/Max, Ki, Kd, Max Output, X/Y Speed, FOV Size, and target_fps.
+3. Two curves are rendered in real time while tuning sliders: Error (simulated remaining tracking error) and Output (simulated PID movement output).
+4. The info line below the chart shows start/end error, peak output, estimated settle frame count, and FPS.
+5. This preview is for tuning reference only; in-game behavior still depends on capture latency, activation state, and input backend timing.
