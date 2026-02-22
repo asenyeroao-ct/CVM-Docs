@@ -87,7 +87,7 @@ After frame ingress (UDP/NDI/CaptureCard), CVM processing is the same:
 2. Detection: HSV detection builds target candidates.
 3. Target select: choose active target (typically nearest to center).
 4. Offset compute: calculate center offset `dx/dy`.
-5. Mode handling: active mode (Normal/Silent/NCAF/WindMouse/Bezier) generates movement.
+5. Mode handling: active mode (Normal/Silent/NCAF/WindMouse/Bezier/PID) generates movement.
 6. Queueing: movement commands are pushed into `move_queue`.
 
 ## 3. Input API Call Chain (Output Stage)

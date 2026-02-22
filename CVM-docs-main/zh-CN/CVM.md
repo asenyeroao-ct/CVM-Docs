@@ -24,6 +24,7 @@
 - [NCAF](./aimbot/ncaf.md)
 - [WindMouse](./aimbot/windmouse.md)
 - [Bezier](./aimbot/bezier.md)
+- [PID](./aimbot/pid.md)
 
 ## 安装与联动
 

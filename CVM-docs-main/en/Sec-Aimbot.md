@@ -8,7 +8,7 @@ Back to index: [CVM.md](./CVM.md)
 |---|---|---|---|---|---|---|
 | Enable Sec Aimbot | `enableaim_sec` | bool | `true` / `false` | `false` | Master switch for Secondary Aimbot. | Secondary aimbot runs when its activation logic is satisfied. |
 | Enable Anti-Smoke | `anti_smoke_enabled_sec` | bool | `true` / `false` | `false` | Enables smoke-aware filtering for Secondary Aimbot targeting. | Runtime filtering is applied independently from Main Aimbot anti-smoke. |
-| Mode | `mode_sec` | enum (string) | `Normal`, `Silent`, `NCAF`, `WindMouse`, `Bezier` | `Normal` | Selects Secondary Aimbot movement mode. | Mode-specific parameters are documented in mode files below. |
+| Mode | `mode_sec` | enum (string) | `Normal`, `Silent`, `NCAF`, `WindMouse`, `Bezier`, `PID` | `Normal` | Selects Secondary Aimbot movement mode. | UI label for PID is `PID Controller ( RISK )`. |
 
 ## Shared Parameters
 
@@ -42,6 +42,7 @@ Back to index: [CVM.md](./CVM.md)
 - [NCAF](./aimbot/ncaf.md)
 - [WindMouse](./aimbot/windmouse.md)
 - [Bezier](./aimbot/bezier.md)
+- [PID](./aimbot/pid.md)
 
 ## Coordination With Main Aimbot
 

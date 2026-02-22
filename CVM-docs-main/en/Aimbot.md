@@ -8,7 +8,7 @@ Back to index: [CVM.md](./CVM.md)
 |---|---|---|---|---|---|---|
 | Enable Aimbot | `enableaim` | bool | `true` / `false` | `true` | Master switch for Main Aimbot. | Disabling stops main aiming logic. |
 | Enable Anti-Smoke | `anti_smoke_enabled` | bool | `true` / `false` | `false` | Enables smoke-aware filtering for Main Aimbot targeting. | Runtime filtering is applied independently from Secondary Aimbot anti-smoke. |
-| Mode | `mode` | enum (string) | `Normal`, `Silent`, `NCAF`, `WindMouse`, `Bezier` | `Normal` | Selects Main Aimbot movement mode. | Mode-specific parameters are documented in mode files below. |
+| Mode | `mode` | enum (string) | `Normal`, `Silent`, `NCAF`, `WindMouse`, `Bezier`, `PID` | `Normal` | Selects Main Aimbot movement mode. | UI label for PID is `PID Controller ( RISK )`. |
 
 ## Shared Parameters
 
@@ -36,6 +36,7 @@ Back to index: [CVM.md](./CVM.md)
 - [NCAF](./aimbot/ncaf.md)
 - [WindMouse](./aimbot/windmouse.md)
 - [Bezier](./aimbot/bezier.md)
+- [PID](./aimbot/pid.md)
 
 ## Main and Secondary Role Split (Recommended)
 

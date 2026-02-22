@@ -87,7 +87,7 @@ NDI 风险补充（Valorant）:
 2. 检测: HSV 颜色检测生成候选目标。
 3. 选目标: 选择当前有效目标（通常是离中心最近）。
 4. 计算偏移: 计算中心偏移量 `dx/dy`。
-5. 模式处理: 按模式（Normal/Silent/NCAF/WindMouse/Bezier）生成移动指令。
+5. 模式处理: 按模式（Normal/Silent/NCAF/WindMouse/Bezier/PID）生成移动指令。
 6. 入队: 将移动指令写入 `move_queue`。
 
 ## 3. Input API 调用链（输出阶段）

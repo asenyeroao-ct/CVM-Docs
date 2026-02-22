@@ -8,7 +8,7 @@
 |---|---|---|---|---|---|---|
 | Enable Sec Aimbot | `enableaim_sec` | bool | `true` / `false` | `false` | 副自瞄总开关。 | 满足激活逻辑时才会执行副自瞄。 |
 | Enable Anti-Smoke | `anti_smoke_enabled_sec` | bool | `true` / `false` | `false` | 为副自瞄目标启用防烟雾过滤。 | 运行时与主自瞄 anti-smoke 独立过滤。 |
-| Mode | `mode_sec` | enum (string) | `Normal`, `Silent`, `NCAF`, `WindMouse`, `Bezier` | `Normal` | 选择副自瞄移动模式。 | 模式参数详见下方模式文档。 |
+| Mode | `mode_sec` | enum (string) | `Normal`, `Silent`, `NCAF`, `WindMouse`, `Bezier`, `PID` | `Normal` | 选择副自瞄移动模式。 | PID 的 UI 显示名称为 `PID Controller ( RISK )`。 |
 
 ## 通用参数
 
@@ -42,6 +42,7 @@
 - [NCAF](./aimbot/ncaf.md)
 - [WindMouse](./aimbot/windmouse.md)
 - [Bezier](./aimbot/bezier.md)
+- [PID](./aimbot/pid.md)
 
 ## 与主自瞄联动建议
 

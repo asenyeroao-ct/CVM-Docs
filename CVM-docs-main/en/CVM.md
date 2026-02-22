@@ -24,6 +24,7 @@ This is the central index for CVM colorBot UI parameter documentation.
 - [NCAF](./aimbot/ncaf.md)
 - [WindMouse](./aimbot/windmouse.md)
 - [Bezier](./aimbot/bezier.md)
+- [PID](./aimbot/pid.md)
 
 ## Setup Guides
 
