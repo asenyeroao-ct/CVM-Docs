@@ -34,5 +34,49 @@ Back: [Aimbot](../Aimbot.md) | [Sec Aimbot](../Sec-Aimbot.md)
 2. Kp is interpolated by distance-to-center:
    `Kp = Kp Min + (Kp Max - Kp Min) * clamp(distance_to_center / FOV, 0, 1)`.
 3. If `Kp Min` equals `Kp Max`, behavior is equivalent to fixed-Kp PID.
-4. Start with small `Kp Max`, tune `Kd`, and increase `Ki` last.
-5. If movement oscillates, reduce `Kp Max` or increase `Kd`.
+4. Per-axis output is effectively:
+   `output = clamp((Kp * err + Ki * integral + Kd * derivative) * axis_speed, -Max Output, Max Output)`.
+5. `Kp Min`/`Kp Max` are auto-corrected if entered in reverse order.
+
+## Detailed PID tuning workflow
+
+1. Prepare a stable baseline before tuning gains.
+   - Set `X Speed` and `Y Speed` to `1.0` first, then tune gains.
+   - Use a moderate `Max Output` (for example `30` to `60`) to avoid extreme spikes while tuning.
+   - Keep FOV fixed during tuning so gain behavior is comparable across attempts.
+2. Start with fixed-Kp behavior.
+   - Set `Kp Min = Kp Max`.
+   - Set `Ki = 0` and use a small `Kd` (for example `0.05` to `0.15`).
+   - Increase Kp until tracking becomes fast enough, then back off slightly if oscillation starts.
+3. Add damping with `Kd`.
+   - Increase `Kd` in small steps when you see overshoot or left-right shaking.
+   - If motion becomes sluggish or noisy, reduce `Kd` a bit.
+4. Add `Ki` last to remove persistent bias.
+   - Increase `Ki` slowly; large `Ki` can cause drifting or delayed oscillation.
+   - If crosshair keeps "pushing" after error is near zero, reduce `Ki`.
+5. Re-enable dynamic Kp range.
+   - Keep `Kp Min` lower for near-center stability.
+   - Raise `Kp Max` for faster large-error correction.
+   - Typical pattern: `Kp Min` around `50%` to `80%` of `Kp Max`, then refine by feel.
+6. Re-tune outer parameters.
+   - Raise `Max Output` if movement saturates too early.
+   - Lower `Max Output` if bursts are too harsh.
+   - Adjust `X Speed`/`Y Speed` only after gain tuning, to correct axis imbalance.
+
+## Symptom-to-adjustment guide
+
+| Symptom | Most likely cause | What to adjust first |
+|---|---|---|
+| Crosshair oscillates around target | `Kp Max` too high or `Kd` too low | Lower `Kp Max`, then increase `Kd` slightly |
+| Fast snap then bounce-back | Clamp too loose + insufficient damping | Lower `Max Output` or raise `Kd` |
+| Slow to catch far targets | `Kp Max` too low or `Max Output` too low | Increase `Kp Max`, then `Max Output` |
+| Near-center micro jitter | `Kp Min` too high / `Kd` too sensitive | Lower `Kp Min`, reduce `Kd` slightly |
+| Steady small offset not corrected | `Ki` too low (or zero) | Increase `Ki` a little |
+| Drift or delayed wobble after tracking | `Ki` too high | Reduce `Ki` |
+
+## Implementation details that affect tuning
+
+1. `Ki` and `Kd` changes reset PID internal state (integral/history) for that aim mode.
+2. Integral term is limited by `Max Output / |Ki|` when `Ki != 0`, so `Ki` and `Max Output` are coupled.
+3. `FOV Size` directly changes how quickly Kp moves from `Kp Min` to `Kp Max` by distance.
+4. Main and secondary PID settings are fully independent; tune `*_sec` separately.

@@ -27,3 +27,4 @@ This folder contains configuration tutorials and parameter references for the CV
 **範圍:** General、Aimbot、Sec Aimbot、Trigger、RCS、Config；模式說明見 `CVM-docs-main/<lang>/aimbot/`。
 
 *本文檔為 AI 生成，重要內容請自行核實並回報問題。*
+    
