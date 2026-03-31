@@ -57,8 +57,8 @@ nav:
       - 简介: CVM-docs-main/zh-CN/CVM.md
       - 工作原理: CVM-docs-main/zh-CN/Working-Principle.md
       - General 通用: CVM-docs-main/zh-CN/General.md
-      - Aimbot 自瞄: CVM-docs-main/zh-CN/Aimbot.md
-      - Sec Aimbot 安全自瞄: CVM-docs-main/zh-CN/Sec-Aimbot.md
+      - Aimbot 主自瞄: CVM-docs-main/zh-CN/Aimbot.md
+      - Sec Aimbot 副自瞄: CVM-docs-main/zh-CN/Sec-Aimbot.md
       - Trigger 扳机: CVM-docs-main/zh-CN/Trigger.md
       - RCS: CVM-docs-main/zh-CN/RCS.md
       - Config 配置: CVM-docs-main/zh-CN/Config.md
