@@ -1,0 +1,3466 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Configuration documentation and setup guides for the CVM colorBot project.">
+      
+      
+      
+        <link rel="canonical" href="https://asenyeroao-ct.github.io/CVM-Docs/shared-guides/zh-CN/Kmbox-Net-setup/">
+      
+      
+        <link rel="prev" href="../MAKCU-setup/">
+      
+      
+      
+        
+          <link rel="alternate" href="/CVM-Docs/CVM-docs-main/en/CVM/" hreflang="en">
+        
+          <link rel="alternate" href="/CVM-Docs/CVM-docs-main/zh-CN/CVM/" hreflang="zh-CN">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Kmbox Net 连接 - CVM colorBot Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kmbox-net" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="CVM colorBot Documentation" class="md-header__button md-logo" aria-label="CVM colorBot Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CVM colorBot Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kmbox Net 连接
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/CVM-Docs/CVM-docs-main/en/CVM/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/CVM-Docs/CVM-docs-main/zh-CN/CVM/" hreflang="zh-CN" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="CVM colorBot Documentation" class="md-nav__button md-logo" aria-label="CVM colorBot Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CVM colorBot Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Language
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Language
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/CVM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/Working-Principle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working Principle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/General/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/Aimbot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aimbot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/Sec-Aimbot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sec Aimbot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/Trigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/RCS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RCS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/Config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Config
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_9" id="__nav_2_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aimbot Modes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Aimbot Modes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/aimbot/normal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/aimbot/silent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Silent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/aimbot/ncaf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NCAF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/aimbot/windmouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WindMouse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/aimbot/bezier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezier
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/aimbot/pid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PID
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_10" id="__nav_2_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/OBS-UDP-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OBS UDP Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/FOV-size/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV Size
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/FovSize-res/1k/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 1K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/FovSize-res/2k/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 2K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/FovSize-res/4k/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 4K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/FovSize-res/21-9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 21:9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/CVM-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVM Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/Python-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/GStreamer-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GStreamer Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/MAKCU-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MAKCU Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/Kmbox-Net-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kmbox Net Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简体中文
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    简体中文
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/CVM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/Working-Principle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工作原理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/General/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General 通用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/Aimbot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aimbot 主自瞄
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/Sec-Aimbot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sec Aimbot 副自瞄
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/Trigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trigger 扳机
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/RCS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RCS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/Config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Config 配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_9" id="__nav_2_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aimbot 模式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Aimbot 模式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/aimbot/normal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/aimbot/silent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Silent 静默
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/aimbot/ncaf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NCAF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/aimbot/windmouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WindMouse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/aimbot/bezier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezier 贝塞尔
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/aimbot/pid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PID
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_10" id="__nav_2_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安装指南
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    安装指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    索引
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OBS-UDP-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OBS UDP 设置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FOV-size/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV Size 对照表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FovSize-res/1k/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 1K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FovSize-res/2k/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 2K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FovSize-res/4k/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 4K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FovSize-res/21-9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 21:9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CVM-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVM 安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python 安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GStreamer-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GStreamer 安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MAKCU-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MAKCU 设置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kmbox Net 连接
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kmbox Net 连接
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目標
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kmbox-net_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        什麼是 Kmbox Net
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前置條件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        連接步驟
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="連接步驟">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 開箱介紹
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 如何接線
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 安裝網卡驅動（接網口的電腦裝驅動）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-ip-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 修改網卡 IP（接網口的電腦改網卡 IP）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="04 修改網卡 IP（接網口的電腦改網卡 IP）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        打開控制面板 → 網絡共享中心
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        修改網卡 IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        檢查網絡是否連通
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cvm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CVM 配置步驟
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CVM 配置步驟">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        首次連接
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        保存配置
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        建議起始值
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        驗證清單
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        故障排查
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="故障排查">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        無法連接
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        裝上網卡驅動還是沒反應
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        改完 IP 為什麼突然沒網了
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        鼠標不工作
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        鼠標靈敏度
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        移動不流暢或延遲
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bypass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        在 bypass 模式下鼠標明顯不跟手，延遲大
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        固件更新
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="固件更新">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        更新步驟
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spoofingkmbox-net" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spoofing（偽裝）Kmbox Net
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spoofing（偽裝）Kmbox Net">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spoofing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spoofing 步驟
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        進階設置
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="進階設置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bypass_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何開啟 Bypass 模式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#km" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何開啟 KM 模式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何修改曲線
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        檢查盒子固有參數
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        相關資源
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目標
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kmbox-net_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        什麼是 Kmbox Net
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前置條件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        連接步驟
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="連接步驟">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 開箱介紹
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 如何接線
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 安裝網卡驅動（接網口的電腦裝驅動）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-ip-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 修改網卡 IP（接網口的電腦改網卡 IP）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="04 修改網卡 IP（接網口的電腦改網卡 IP）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        打開控制面板 → 網絡共享中心
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        修改網卡 IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        檢查網絡是否連通
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cvm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CVM 配置步驟
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CVM 配置步驟">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        首次連接
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        保存配置
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        建議起始值
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        驗證清單
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        故障排查
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="故障排查">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        無法連接
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        裝上網卡驅動還是沒反應
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        改完 IP 為什麼突然沒網了
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        鼠標不工作
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        鼠標靈敏度
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        移動不流暢或延遲
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bypass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        在 bypass 模式下鼠標明顯不跟手，延遲大
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        固件更新
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="固件更新">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        更新步驟
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spoofingkmbox-net" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spoofing（偽裝）Kmbox Net
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spoofing（偽裝）Kmbox Net">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spoofing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spoofing 步驟
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        進階設置
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="進階設置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bypass_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何開啟 Bypass 模式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#km" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何開啟 KM 模式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何修改曲線
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        檢查盒子固有參數
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        相關資源
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="kmbox-net">Kmbox Net 連接教學</h1>
+<p>共享指南索引: <a href="../">README.md</a></p>
+<h2 id="_1">目標</h2>
+<p>在 CVM 中使用 Kmbox Net 網絡程控鍵鼠控制器。Kmbox Net 是一款通過網絡通信的鍵鼠控制設備，具有速度快、穩定性強、安全性高等特點。</p>
+<h2 id="kmbox-net_1">什麼是 Kmbox Net</h2>
+<p>Kmbox Net 是一款網絡程控鍵鼠控制器，具有以下特性：</p>
+<ul>
+<li><strong>安全性高</strong>：協議不公開，每個盒子獨立 IP、端口、硬件編碼，採用阻塞 socket 通信，無法被掃描</li>
+<li><strong>穩定性強</strong>：不會像串口通信那樣白屏重啟</li>
+<li><strong>速度快</strong>：100M 專用網絡，通信速度是原來 B 板的 100 倍，每秒調用次數接近 1000 次</li>
+<li><strong>自動默認人工軌跡</strong>：不會出現鍵鼠數據異常</li>
+<li><strong>無需適配鼠標</strong>：通用性強</li>
+<li><strong>支持監控物理鍵鼠</strong>：屏蔽物理鍵鼠功能，方便寫軟件</li>
+<li><strong>支持物理鍵鼠學習複製功能</strong>：支持驅動直通模式</li>
+</ul>
+<p><strong>重要說明</strong>：
+- Kmbox Net 只是相對 Kmbox B 的硬體性能較強
+- 但是以 API 來說，串口的 API 比 Kmbox Net 好</p>
+<p><strong>技術資訊</strong>：
+- Kmbox Net 的 8K 版本底層代碼基於 <strong>Cherry USB</strong></p>
+<h2 id="_2">前置條件</h2>
+<ul>
+<li>Kmbox Net 盒子一個</li>
+<li>藍色線纜兩條（USB 線）</li>
+<li>Windows 10 或 11 系統</li>
+<li>兩台電腦（單機模式可接同一台電腦）</li>
+</ul>
+<h2 id="_3">連接步驟</h2>
+<h3 id="01">01 開箱介紹</h3>
+<p>Kmbox Net 默認包含以下配件：</p>
+<ul>
+<li>Kmbox Net 盒子一個</li>
+<li>藍色線纜兩條</li>
+</ul>
+<h3 id="02">02 如何接線</h3>
+<p>盒子背面有接口名稱，一般按照下圖接線：</p>
+<p><img alt="Kmbox Net 接線示意圖" src="../../lib/kmNet/01_connection_diagram.png" /></p>
+<ul>
+<li><strong>遊戲機接口（1）</strong>：接目標電腦（被控制的電腦）</li>
+<li><strong>網口（2）</strong>：接控制電腦（運行 CVM 的電腦）</li>
+</ul>
+<p><strong>注意</strong>：
+- 如果是單機模式，那麼網口和遊戲機口都接同一台電腦
+- 如果是 B 電腦控 A 電腦，那麼遊戲機接口（1）接 A 電腦，網口（2）接 B 電腦</p>
+<p>連接完成後，Kmbox Net 屏幕應該顯示如下圖：</p>
+<p><img alt="Kmbox Net 工作屏幕" src="../../lib/kmNet/02_kmbox_net_working_screen.png" /></p>
+<h3 id="03">03 安裝網卡驅動（接網口的電腦裝驅動）</h3>
+<ol>
+<li>將網口 USB 線連接到控制電腦（第二台電腦）</li>
+<li>在第二台電腦上，以管理員身份運行 <code>2. WCHUSBNIC</code> 驅動安裝程序</li>
+</ol>
+<p><img alt="網卡驅動安裝程序" src="../../lib/kmNet/03_driver_installer.png" /></p>
+<ol>
+<li>選擇 <code>INSTALL</code> 進行安裝</li>
+</ol>
+<p><img alt="安裝網卡驅動" src="../../lib/kmNet/04_driver_install_select.png" /></p>
+<ol>
+<li>安裝成功後，您應該看到 "Driver Install Success!" 提示</li>
+</ol>
+<p><img alt="驅動安裝成功" src="../../lib/kmNet/05_driver_install_success.png" /></p>
+<ol>
+<li><strong>重啟第二台電腦</strong></li>
+</ol>
+<p><strong>下載網卡驅動</strong>：<a href="https://www.kmbox.top/wiki_doc/kmboxNet/site/">點我下載網卡驅動</a></p>
+<p><strong>注意事項</strong>：
+- 網口 USB 線接在哪裡，哪裡就裝網卡驅動
+- 不要驅動裝了電腦 A，線接在電腦 B 上
+- 若裝上網卡驅動沒反應：
+  - 查看網口線接上沒有？
+  - 確認驅動安裝在正確的電腦上
+  - 確認以管理員身份運行驅動安裝程序</p>
+<h3 id="04-ip-ip">04 修改網卡 IP（接網口的電腦改網卡 IP）</h3>
+<p><strong>重要</strong>：確保主電腦和第二台電腦連接到同一個本地網絡（例如，您的家庭 Wi-Fi）</p>
+<h4 id="_4">打開控制面板 → 網絡共享中心</h4>
+<ol>
+<li>在第二台電腦上打開控制面板</li>
+</ol>
+<p><img alt="控制面板" src="../../lib/kmNet/06_control_panel.png" /></p>
+<ol>
+<li>點擊「網絡和 Internet」</li>
+</ol>
+<p><img alt="網絡和 Internet" src="../../lib/kmNet/07_network_and_internet.png" /></p>
+<ol>
+<li>點擊「網絡和共享中心」</li>
+</ol>
+<p><img alt="網絡和共享中心" src="../../lib/kmNet/08_network_sharing_center.png" /></p>
+<ol>
+<li>點擊「更改適配器設置」</li>
+</ol>
+<p><img alt="更改適配器設置" src="../../lib/kmNet/09_change_adapter_settings.png" /></p>
+<h4 id="ip">修改網卡 IP</h4>
+<ol>
+<li>找到「USB 2.0 以太網適配器」或類似的網卡設備（這是盒子的網卡）</li>
+</ol>
+<p><img alt="USB 2.0 以太網適配器" src="../../lib/kmNet/10_usb_ethernet_adapter.png" /></p>
+<p>如果看不到此設備，請斷開並重新連接 Kmbox 到第二台電腦的 USB 線。</p>
+<ol>
+<li>
+<p>右鍵點擊該網卡，選擇「屬性」</p>
+</li>
+<li>
+<p>確保「Internet 協議版本 6 (TCP/IPv6)」已<strong>禁用</strong></p>
+</li>
+</ol>
+<p><img alt="禁用 IPv6" src="../../lib/kmNet/11_disable_ipv6.png" /></p>
+<ol>
+<li>確保「Internet 協議版本 4 (TCP/IPv4)」已<strong>啟用</strong>，點擊它並選擇「屬性」</li>
+</ol>
+<p><img alt="IPv4 設置" src="../lib/kmNet/12_ipv4_settings.png" /></p>
+<ol>
+<li>選擇「使用下面的 IP 地址」</li>
+<li>設置 IP 地址為：<code>192.168.2.100</code></li>
+<li>子網掩碼：<code>255.255.255.0</code></li>
+<li>其他欄位留空</li>
+<li>點擊「確定」保存</li>
+</ol>
+<p><img alt="IP 地址設置" src="../../lib/kmNet/13_ip_address_settings.png" /></p>
+<p><strong>重要提示</strong>：
+- 要改盒子的網卡，而不是你自己的本機網卡
+- 通常頁面上會新出現網卡（盒子的網卡），要改盒子的網卡
+- 如果改完 IP 突然沒網了，可能是改錯了網卡
+- 如果上述 IP 地址不工作，可以嘗試使用：<code>192.168.2.189</code></p>
+<h4 id="_5">檢查網絡是否連通</h4>
+<ol>
+<li>打開命令提示符（CMD）</li>
+<li>執行 <code>ping 192.168.2.1</code>（盒子的默認 IP）</li>
+<li>如果能夠 ping 通，說明連接成功</li>
+</ol>
+<h2 id="cvm">CVM 配置步驟</h2>
+<h3 id="_6">首次連接</h3>
+<ol>
+<li>打開 CVM 的 <code>General</code> 標籤頁</li>
+<li>將 <code>Input API</code> 設置為 <code>NET</code> 或對應的網絡模式</li>
+<li>首次啟動時，您需要輸入 Kmbox Net 的數據（IP、端口、UUID）</li>
+</ol>
+<p><img alt="輸入 Kmbox Net 數據" src="../../lib/kmNet/14_enter_kmbox_net_data.png" /></p>
+<h3 id="_7">保存配置</h3>
+<p>為了避免每次都要輸入 Kmbox Net 數據，請：</p>
+<ol>
+<li>在 CVM 中進入配置（config）部分</li>
+<li>選擇任意配置並點擊保存</li>
+</ol>
+<p><img alt="保存配置" src="../../lib/kmNet/15_save_config.png" /></p>
+<p>這樣設置就會被保存，下次啟動時會自動使用。</p>
+<h2 id="_8">建議起始值</h2>
+<ul>
+<li><code>Input API</code>: <code>NET</code></li>
+<li><code>IP 地址</code>: <code>192.168.2.1</code></li>
+<li><code>端口</code>: 根據盒子實際端口設置（通常為默認值）</li>
+<li><code>auto_connect_mouse_api</code>: 首次設置為 <code>false</code>，穩定後改為 <code>true</code></li>
+</ul>
+<h2 id="_9">驗證清單</h2>
+<ul>
+<li>CVM 可以連接到 Kmbox Net 且無超時報錯</li>
+<li>微動測試平滑，方向正確</li>
+<li>重啟 CVM 後可用同一配置再次連接</li>
+<li>網絡 ping 測試成功</li>
+</ul>
+<h2 id="_10">故障排查</h2>
+<h3 id="_11">無法連接</h3>
+<ul>
+<li>檢查網口線是否正確連接</li>
+<li>確認網卡驅動已正確安裝在接網口的電腦上</li>
+<li>確認 IP 地址設置正確（<code>192.168.2.100</code>）</li>
+<li>確認盒子的 IP 地址（通常為 <code>192.168.2.1</code>）</li>
+<li>檢查防火牆是否阻止了連接</li>
+<li>確認兩台電腦在同一網絡（單機模式除外）</li>
+</ul>
+<h3 id="_12">裝上網卡驅動還是沒反應</h3>
+<ul>
+<li>查看網口線接上沒有？</li>
+<li>網口 USB 線接在哪裡，哪裡就裝網卡驅動</li>
+<li>不要驅動裝了電腦 A，線接在電腦 B 上</li>
+</ul>
+<h3 id="ip_1">改完 IP 為什麼突然沒網了</h3>
+<ul>
+<li>如果沒網了，可能是改錯了網卡</li>
+<li>通常頁面上會新出現網卡（盒子的網卡），要改盒子的網卡而不是你自己的本機網卡</li>
+<li>具體操作參見上面的修改網卡教程</li>
+</ul>
+<h3 id="_13">鼠標不工作</h3>
+<p>如果通過 Kmbox 連接的鼠標在主電腦上不工作：</p>
+<ul>
+<li>確保 Kmbox 連接正確</li>
+<li>嘗試將 USB 線連接到主電腦的另一個端口</li>
+<li>嘗試使用另一個鼠標</li>
+<li>嘗試將鼠標連接到 Kmbox 的另一個 USB 端口</li>
+</ul>
+<h3 id="_14">鼠標靈敏度</h3>
+<p>在遊戲中更改靈敏度設置。</p>
+<h3 id="_15">移動不流暢或延遲</h3>
+<ul>
+<li>檢查網絡連接質量</li>
+<li>確認使用高質量 USB 線纜</li>
+<li>避免使用 USB Hub，直接連接電腦 USB 口</li>
+<li>檢查是否有其他程序佔用網絡資源</li>
+</ul>
+<p>確保您已正確配置所有內容</p>
+<h3 id="bypass">在 bypass 模式下鼠標明顯不跟手，延遲大</h3>
+<ul>
+<li>這種情況一般是因為鼠標超綱了</li>
+<li>Net 僅支持到 Full Speed (12Mbps)，如果你的設備是 High Speed (480Mbps)，Net 盒子只會認為他是 Full Speed</li>
+<li>USB 協議規定：Full Speed 設備 1ms 一幀，High Speed 設備 0.125ms 一幀</li>
+<li>如果高速設備要 1KHZ 回報率，其定義值是 8，但盒子只能識別到 Full Speed，不能識別 High Speed，故盒子讀取到 8 意味著 8ms 讀一次數據，因此出現延遲大的問題</li>
+<li>如需完美支持透傳，請選擇速度等級更高的 NB 版本</li>
+<li>如想要在 Net 上使用高速設備，請選擇 KM 模式</li>
+</ul>
+<p><strong>重要提醒</strong>：Kmbox Net 的 Bypass 模式疑似是虛假的 Bypass，<strong>PID/VID 並沒有正確穿透</strong>，可能無法完全模擬真實的物理鍵鼠設備。</p>
+<h2 id="_16">固件更新</h2>
+<p>如果您的 Kmbox Net 固件版本與當前版本不同，建議更新（刷寫）固件。這可以提高性能、修復錯誤並防止檢測。</p>
+<p><strong>最新版本</strong>：2026.2.12（更新日期：2026年2月12日）</p>
+<h3 id="_17">更新步驟</h3>
+<ol>
+<li>
+<p>將 USB 線連接到主電腦</p>
+</li>
+<li>
+<p>使用螺絲刀或其他細小物體按住 Kmbox 內部的小黑按鈕</p>
+</li>
+</ol>
+<p><img alt="刷寫按鈕位置" src="../../lib/kmNet/18_flash_button_location.png" /></p>
+<p>同時將 USB 線連接到此接口</p>
+<p><img alt="USB 連接位置" src="../../lib/kmNet/19_usb_connection_location.png" /></p>
+<p>Kmbox 屏幕應該變白，藍色指示燈應該快速閃爍。如果沒有發生，請重試按住按鈕並重新連接 USB 線。</p>
+<ol>
+<li>在主電腦上，下載並解壓升級工具，然後安裝驅動</li>
+</ol>
+<p><strong>下載升級工具</strong>：<a href="https://www.kmbox.top/wiki_doc/kmboxNet/site/tools/updatatools.zip">點我下載升級工具</a></p>
+<p><img alt="固件驅動" src="../../lib/kmNet/20_firmware_driver.png" /></p>
+<ol>
+<li>啟動升級工具，點擊「Search Device」。在信息行中應該顯示 "Found 1 USB devices"</li>
+</ol>
+<p><img alt="升級工具" src="../../lib/kmNet/21_upgrade_tool.png" /></p>
+<ol>
+<li>點擊「Select file」</li>
+</ol>
+<p><img alt="選擇固件文件" src="../../lib/kmNet/22_select_firmware_file.png" /></p>
+<ol>
+<li>導航到您下載固件文件的文件夾</li>
+</ol>
+<p><strong>下載固件</strong>：
+- <strong>最新固件</strong>：<a href="https://www.kmbox.top/Net_firmware.html">點我下載最新固件</a>
+- <strong>其他版本固件</strong>：<a href="https://www.kmbox.top/Net_firmware.html#NetHistory">點我查看歷史版本</a></p>
+<p>將文件顯示類型更改為 <code>.BIN</code></p>
+<p><img alt="固件 BIN 文件" src="../../lib/kmNet/23_firmware_bin_file.png" /></p>
+<ol>
+<li>
+<p>選擇固件文件（例如：<code>kmboxnetfw20240808.bin</code>）</p>
+</li>
+<li>
+<p>點擊「Program」</p>
+</li>
+</ol>
+<p><img alt="開始刷寫固件" src="../../lib/kmNet/24_start_flashing_firmware.png" /></p>
+<ol>
+<li>等待幾秒鐘。過程結束後，您會看到成功消息</li>
+</ol>
+<p><img alt="固件更新完成" src="../../lib/kmNet/25_firmware_update_complete.png" /></p>
+<p><strong>重要</strong>：固件更新完成後，必須按照下面的 Spoofing 指南進行偽裝。每次更新 Kmbox Net 固件後都必須執行此操作。</p>
+<h2 id="spoofingkmbox-net">Spoofing（偽裝）Kmbox Net</h2>
+<p>Spoofing 可以讓 Kmbox Net 偽裝成您的真實鼠標，提高安全性。</p>
+<h3 id="spoofing">Spoofing 步驟</h3>
+<ol>
+<li>
+<p>斷開 Kmbox 的所有線纜和鼠標</p>
+</li>
+<li>
+<p>將鼠標直接連接到主電腦（不使用 Kmbox）</p>
+</li>
+<li>
+<p>在主電腦上，下載並運行 <code>USBLogView.exe</code>（您可以從 Kmbox Net 官方資源下載或使用 USB 設備查看工具），將程序全屏顯示</p>
+</li>
+</ol>
+<p><img alt="USBLogView 程序" src="../../lib/kmNet/26_usblogview_program.png" /></p>
+<ol>
+<li>從主電腦拔下鼠標並重新插入</li>
+</ol>
+<p>您將看到鼠標的 Vendor ID 和 Product ID</p>
+<p>將此數據寫下來（一行，無空格）</p>
+<p>例如：<code>046dc077</code></p>
+<p><strong>重要</strong>：某些鼠標（例如 Steelseries Rival 3 Wireless）的 Vendor ID 和 Product ID 只包含數字，例如：<code>10381830</code>。在這樣的鼠標上進行 Spoofing 會失敗，建議使用其他鼠標。</p>
+<p><img alt="查看鼠標 VID/PID" src="../lib/kmNet/27_check_mouse_vid_pid.png" /></p>
+<ol>
+<li>將 Kmbox 連接到主電腦和第二台電腦</li>
+</ol>
+<p><img alt="連接示意圖" src="../../lib/kmNet/28_connection_diagram_main_second_pc.png" /></p>
+<ol>
+<li>在第二台電腦上，下載並解壓 <a href="https://www.kmbox.top/wiki_doc/kmboxNet/site/tools/NetRelease.zip">KmboxNet 程序</a></li>
+</ol>
+<p>運行 <code>KmboxNet.exe</code></p>
+<p>輸入 Kmbox Net 的 IP、Port 和 UUID</p>
+<p><img alt="KmboxNet 程序" src="../../lib/kmNet/29_kmboxnet_program.png" /></p>
+<ol>
+<li>勾選「Ping」框並點擊大按鈕</li>
+</ol>
+<p><img alt="Ping 測試" src="../../lib/kmNet/30_ping_test.png" /></p>
+<ol>
+<li>應該會出現一個窗口，最後寫著 OK</li>
+</ol>
+<p><img alt="連接成功" src="../../lib/kmNet/31_connection_success.png" /></p>
+<p>如果無法連接到 Kmbox：
+- 嘗試通過從主電腦拔下並重新插入來重啟它
+- 以管理員身份運行 exe</p>
+<ol>
+<li>輸入您之前保存的 Vendor ID 和 Product ID（一行，無空格，例如：<code>10381830</code>）</li>
+</ol>
+<p>點擊「VID/PID」按鈕</p>
+<p><img alt="設置 VID/PID" src="../../lib/kmNet/32_set_vid_pid.png" /></p>
+<ol>
+<li>您應該看到一個窗口，表示過程成功</li>
+</ol>
+<p><img alt="Spoofing 成功" src="../../lib/kmNet/33_spoofing_success.png" /></p>
+<ol>
+<li>
+<p>返回主電腦，再次打開 <code>USBLogView.exe</code>，將程序全屏顯示</p>
+</li>
+<li>
+<p>從主電腦拔下 Kmbox 並重新插入</p>
+</li>
+</ol>
+<p><img alt="驗證 Spoofing" src="../../lib/kmNet/34_verify_spoofing.png" /></p>
+<p>您應該看到與步驟 3 中相同的 Vendor ID 和 Product ID</p>
+<p>如果是這樣，則 Spoofing 成功</p>
+<h2 id="_18">進階設置</h2>
+<h3 id="bypass_1">如何開啟 Bypass 模式</h3>
+<p>Bypass 模式允許物理鍵鼠直接通過盒子傳輸。在 Bypass 模式下，物理鍵鼠的數據會直接透傳到目標電腦，而不經過盒子的處理。</p>
+<p><strong>重要警告</strong>：
+- 此 Bypass 模式疑似是虛假的 Bypass
+- <strong>PID/VID 並沒有正確穿透</strong>，可能無法完全模擬真實的物理鍵鼠設備
+- 在使用時請注意相關限制和風險</p>
+<p><strong>使用注意事項</strong>：
+- 在 Bypass 模式下，如果使用高速設備（High Speed, 480Mbps），可能會出現明顯不跟手、延遲大的問題
+- Net 僅支持到 Full Speed (12Mbps)，如果設備是 High Speed (480Mbps)，Net 盒子只會認為它是 Full Speed
+- USB 協議規定：Full Speed 設備 1ms 一幀，High Speed 設備 0.125ms 一幀
+- 如需完美支持透傳，請選擇速度等級更高的 NB 版本
+- 如想要在 Net 上使用高速設備，請選擇 KM 模式</p>
+<p>具體設置方法請參考 <a href="https://www.kmbox.top/wiki_doc/kmboxNet/site/">Kmbox Net 官方文檔</a>。</p>
+<h3 id="km">如何開啟 KM 模式</h3>
+<p>KM 模式是 Kmbox Net 的工作模式之一，可在盒子上位機軟件中設置。</p>
+<h3 id="_19">如何修改曲線</h3>
+<ol>
+<li>下載盒子上位機控制軟件</li>
+<li>連接盒子後，可以選擇硬件曲線值和算法類型</li>
+<li>默認曲線是關閉的，如需開啟請在上位機軟件中設置</li>
+</ol>
+<h3 id="_20">檢查盒子固有參數</h3>
+<p>您可以在盒子上查看固有參數（IP、Port、UUID）：</p>
+<p><img alt="盒子固有參數" src="../../lib/kmNet/35_inherent_parameters_box.png" /></p>
+<h2 id="_21">相關資源</h2>
+<ul>
+<li><strong>官方文檔</strong>：<a href="https://www.kmbox.top/wiki_doc/kmboxNet/site/">Kmbox Net 用戶手冊</a></li>
+<li><strong>視頻教學</strong>：<a href="https://youtu.be/ts4Vc6hs38Q?si=HI33KvlLr6wfqQ-C">YouTube 連接教學視頻</a></li>
+<li><strong>網卡驅動下載</strong>：<a href="https://www.kmbox.top/wiki_doc/kmboxNet/site/">點我下載網卡驅動</a></li>
+<li><strong>上位機軟件下載</strong>：<a href="https://www.kmbox.top/wiki_doc/kmboxNet/site/">點我下載 KmboxNet 上位機軟件</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3496 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Configuration documentation and setup guides for the CVM colorBot project.">
+      
+      
+      
+        <link rel="canonical" href="https://asenyeroao-ct.github.io/CVM-Docs/shared-guides/en/Kmbox-Net-setup/">
+      
+      
+        <link rel="prev" href="../MAKCU-setup/">
+      
+      
+        <link rel="next" href="../../../CVM-docs-main/zh-CN/CVM/">
+      
+      
+        
+          <link rel="alternate" href="/CVM-Docs/CVM-docs-main/en/CVM/" hreflang="en">
+        
+          <link rel="alternate" href="/CVM-Docs/CVM-docs-main/zh-CN/CVM/" hreflang="zh-CN">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Kmbox Net Setup - CVM colorBot Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kmbox-net-connection-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="CVM colorBot Documentation" class="md-header__button md-logo" aria-label="CVM colorBot Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CVM colorBot Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kmbox Net Setup
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/CVM-Docs/CVM-docs-main/en/CVM/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/CVM-Docs/CVM-docs-main/zh-CN/CVM/" hreflang="zh-CN" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="CVM colorBot Documentation" class="md-nav__button md-logo" aria-label="CVM colorBot Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CVM colorBot Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Language
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Language
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/CVM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/Working-Principle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working Principle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/General/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/Aimbot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aimbot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/Sec-Aimbot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sec Aimbot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/Trigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/RCS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RCS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/Config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Config
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_9" id="__nav_2_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aimbot Modes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Aimbot Modes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/aimbot/normal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/aimbot/silent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Silent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/aimbot/ncaf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NCAF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/aimbot/windmouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WindMouse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/aimbot/bezier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezier
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/en/aimbot/pid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PID
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_10" id="__nav_2_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OBS-UDP-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OBS UDP Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FOV-size/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV Size
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FovSize-res/1k/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 1K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FovSize-res/2k/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 2K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FovSize-res/4k/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 4K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FovSize-res/21-9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 21:9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CVM-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVM Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GStreamer-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GStreamer Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MAKCU-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MAKCU Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kmbox Net Setup
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kmbox Net Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-kmbox-net" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Kmbox Net
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connection Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-unboxing-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 Unboxing Introduction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-how-to-connect-cables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 How to Connect Cables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-install-network-card-driver-install-driver-on-computer-connected-to-network-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 Install Network Card Driver (Install driver on computer connected to network port)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-modify-network-card-ip-modify-network-card-ip-on-computer-connected-to-network-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 Modify Network Card IP (Modify network card IP on computer connected to network port)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="04 Modify Network Card IP (Modify network card IP on computer connected to network port)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#open-control-panel-network-and-sharing-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open Control Panel → Network and Sharing Center
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-network-card-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modify Network Card IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-network-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Network Connectivity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cvm-configuration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CVM Configuration Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CVM Configuration Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First Connection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-starting-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Starting Values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cannot-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cannot Connect
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-card-driver-installed-but-no-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Card Driver Installed But No Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-no-internet-after-modifying-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why No Internet After Modifying IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mouse-doesnt-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mouse Doesn't Work
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mouse-sensitivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mouse Sensitivity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movement-not-smooth-or-delayed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Movement Not Smooth or Delayed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mouse-obviously-not-responsive-and-high-latency-in-bypass-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mouse Obviously Not Responsive and High Latency in Bypass Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cheat-doesnt-see-kmbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheat Doesn't See Kmbox
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firmware Update
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Firmware Update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spoofing-kmbox-net" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spoofing Kmbox Net
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spoofing Kmbox Net">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spoofing-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spoofing Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-enable-bypass-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Enable Bypass Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-enable-km-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Enable KM Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-modify-curves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Modify Curves
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-box-inherent-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Box Inherent Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简体中文
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    简体中文
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/CVM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/Working-Principle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工作原理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/General/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General 通用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/Aimbot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aimbot 主自瞄
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/Sec-Aimbot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sec Aimbot 副自瞄
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/Trigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trigger 扳机
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/RCS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RCS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/Config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Config 配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_9" id="__nav_2_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aimbot 模式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Aimbot 模式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/aimbot/normal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/aimbot/silent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Silent 静默
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/aimbot/ncaf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NCAF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/aimbot/windmouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WindMouse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/aimbot/bezier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezier 贝塞尔
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CVM-docs-main/zh-CN/aimbot/pid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PID
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_10" id="__nav_2_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安装指南
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    安装指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    索引
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/OBS-UDP-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OBS UDP 设置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/FOV-size/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV Size 对照表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/FovSize-res/1k/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 1K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/FovSize-res/2k/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 2K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/FovSize-res/4k/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 4K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/FovSize-res/21-9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 21:9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/CVM-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVM 安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/Python-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python 安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/GStreamer-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GStreamer 安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/MAKCU-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MAKCU 设置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/Kmbox-Net-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kmbox Net 连接
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-kmbox-net" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Kmbox Net
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connection Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-unboxing-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 Unboxing Introduction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-how-to-connect-cables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 How to Connect Cables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-install-network-card-driver-install-driver-on-computer-connected-to-network-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 Install Network Card Driver (Install driver on computer connected to network port)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-modify-network-card-ip-modify-network-card-ip-on-computer-connected-to-network-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 Modify Network Card IP (Modify network card IP on computer connected to network port)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="04 Modify Network Card IP (Modify network card IP on computer connected to network port)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#open-control-panel-network-and-sharing-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open Control Panel → Network and Sharing Center
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-network-card-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modify Network Card IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-network-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Network Connectivity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cvm-configuration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CVM Configuration Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CVM Configuration Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First Connection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-starting-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Starting Values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cannot-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cannot Connect
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-card-driver-installed-but-no-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Card Driver Installed But No Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-no-internet-after-modifying-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why No Internet After Modifying IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mouse-doesnt-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mouse Doesn't Work
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mouse-sensitivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mouse Sensitivity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movement-not-smooth-or-delayed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Movement Not Smooth or Delayed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mouse-obviously-not-responsive-and-high-latency-in-bypass-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mouse Obviously Not Responsive and High Latency in Bypass Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cheat-doesnt-see-kmbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheat Doesn't See Kmbox
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firmware Update
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Firmware Update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spoofing-kmbox-net" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spoofing Kmbox Net
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spoofing Kmbox Net">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spoofing-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spoofing Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-enable-bypass-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Enable Bypass Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-enable-km-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Enable KM Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-modify-curves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Modify Curves
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-box-inherent-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Box Inherent Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="kmbox-net-connection-guide">Kmbox Net Connection Guide</h1>
+<p>Shared guide index: <a href="../">README.md</a></p>
+<h2 id="objective">Objective</h2>
+<p>Use Kmbox Net network-controlled keyboard and mouse controller in CVM. Kmbox Net is a keyboard and mouse control device that communicates over the network, featuring high speed, strong stability, and high security.</p>
+<h2 id="what-is-kmbox-net">What is Kmbox Net</h2>
+<p>Kmbox Net is a network-controlled keyboard and mouse controller with the following features:</p>
+<ul>
+<li><strong>High Security</strong>: Protocol is not public, each box has independent IP, port, and hardware encoding, uses blocking socket communication, cannot be scanned</li>
+<li><strong>Strong Stability</strong>: Will not white screen and restart like serial communication</li>
+<li><strong>High Speed</strong>: 100M dedicated network, communication speed is 100 times that of the original B board, close to 1000 calls per second</li>
+<li><strong>Automatic Default Human Trajectory</strong>: No keyboard and mouse data anomalies</li>
+<li><strong>No Mouse Adaptation Required</strong>: Strong universality</li>
+<li><strong>Supports Monitoring Physical Keyboard and Mouse</strong>: Blocks physical keyboard and mouse functions, convenient for writing software</li>
+<li><strong>Supports Physical Keyboard and Mouse Learning and Copying</strong>: Supports driver passthrough mode</li>
+</ul>
+<p><strong>Important Note</strong>:
+- Kmbox Net only has stronger hardware performance compared to Kmbox B
+- However, in terms of API, serial port API is better than Kmbox Net</p>
+<p><strong>Technical Information</strong>:
+- Kmbox Net 8K version's underlying code is based on <strong>Cherry USB</strong></p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>One Kmbox Net box</li>
+<li>Two blue cables (USB cables)</li>
+<li>Windows 10 or 11 system</li>
+<li>Two computers (single machine mode can connect to the same computer)</li>
+</ul>
+<h2 id="connection-steps">Connection Steps</h2>
+<h3 id="01-unboxing-introduction">01 Unboxing Introduction</h3>
+<p>Kmbox Net default includes the following accessories:</p>
+<ul>
+<li>One Kmbox Net box</li>
+<li>Two blue cables</li>
+</ul>
+<h3 id="02-how-to-connect-cables">02 How to Connect Cables</h3>
+<p>The back of the box has interface names. Generally connect according to the following diagram:</p>
+<p><img alt="Kmbox Net Connection Diagram" src="../../lib/kmNet/01_connection_diagram.png" /></p>
+<ul>
+<li><strong>Game Console Interface (1)</strong>: Connect to target computer (the controlled computer)</li>
+<li><strong>Network Port (2)</strong>: Connect to control computer (the computer running CVM)</li>
+</ul>
+<p><strong>Note</strong>:
+- If it's single machine mode, both network port and game console port connect to the same computer
+- If computer B controls computer A, then game console interface (1) connects to computer A, network port (2) connects to computer B</p>
+<p>After connection is complete, the Kmbox Net screen should display as shown below:</p>
+<p><img alt="Kmbox Net Working Screen" src="../../lib/kmNet/02_kmbox_net_working_screen.png" /></p>
+<h3 id="03-install-network-card-driver-install-driver-on-computer-connected-to-network-port">03 Install Network Card Driver (Install driver on computer connected to network port)</h3>
+<ol>
+<li>Connect the network port USB cable to the control computer (second PC)</li>
+<li>On the second PC, run <code>2. WCHUSBNIC</code> driver installer as administrator</li>
+</ol>
+<p><img alt="Network Card Driver Installer" src="../../lib/kmNet/03_driver_installer.png" /></p>
+<ol>
+<li>Select <code>INSTALL</code> to install</li>
+</ol>
+<p><img alt="Install Network Card Driver" src="../../lib/kmNet/04_driver_install_select.png" /></p>
+<ol>
+<li>After successful installation, you should see "Driver Install Success!" message</li>
+</ol>
+<p><img alt="Driver Installation Success" src="../../lib/kmNet/05_driver_install_success.png" /></p>
+<ol>
+<li><strong>Reboot the second PC</strong></li>
+</ol>
+<p><strong>Download Network Card Driver</strong>: <a href="https://www.kmbox.top/wiki_doc/kmboxNet/site/">Click to download network card driver</a></p>
+<p><strong>Notes</strong>:
+- Install the network card driver on whichever computer the network port USB cable is connected to
+- Don't install driver on computer A but connect cable to computer B
+- If network card driver is installed but no response:
+  - Check if network port cable is connected?
+  - Confirm driver is installed on the correct computer
+  - Confirm running driver installer as administrator</p>
+<h3 id="04-modify-network-card-ip-modify-network-card-ip-on-computer-connected-to-network-port">04 Modify Network Card IP (Modify network card IP on computer connected to network port)</h3>
+<p><strong>Important</strong>: Ensure main PC and second PC are connected to the same local network (e.g., your home Wi-Fi)</p>
+<h4 id="open-control-panel-network-and-sharing-center">Open Control Panel → Network and Sharing Center</h4>
+<ol>
+<li>Open Control Panel on the second PC</li>
+</ol>
+<p><img alt="Control Panel" src="../../lib/kmNet/06_control_panel.png" /></p>
+<ol>
+<li>Click "Network and Internet"</li>
+</ol>
+<p><img alt="Network and Internet" src="../../lib/kmNet/07_network_and_internet.png" /></p>
+<ol>
+<li>Click "Network and Sharing Center"</li>
+</ol>
+<p><img alt="Network and Sharing Center" src="../../lib/kmNet/08_network_sharing_center.png" /></p>
+<ol>
+<li>Click "Change adapter settings"</li>
+</ol>
+<p><img alt="Change Adapter Settings" src="../../lib/kmNet/09_change_adapter_settings.png" /></p>
+<h4 id="modify-network-card-ip">Modify Network Card IP</h4>
+<ol>
+<li>Find "USB 2.0 Ethernet Adapter" or similar network card device (this is the box's network card)</li>
+</ol>
+<p><img alt="USB 2.0 Ethernet Adapter" src="../../lib/kmNet/10_usb_ethernet_adapter.png" /></p>
+<p>If you don't see this device, disconnect and reconnect the USB cable from Kmbox to the second PC.</p>
+<ol>
+<li>
+<p>Right-click on this network card and select "Properties"</p>
+</li>
+<li>
+<p>Make sure "Internet Protocol Version 6 (TCP/IPv6)" is <strong>disabled</strong></p>
+</li>
+</ol>
+<p><img alt="Disable IPv6" src="../../lib/kmNet/11_disable_ipv6.png" /></p>
+<ol>
+<li>Make sure "Internet Protocol Version 4 (TCP/IPv4)" is <strong>enabled</strong>, click on it and select "Properties"</li>
+</ol>
+<p><img alt="IPv4 Settings" src="../lib/kmNet/12_ipv4_settings.png" /></p>
+<ol>
+<li>Select "Use the following IP address"</li>
+<li>Set IP address to: <code>192.168.2.100</code></li>
+<li>Subnet mask: <code>255.255.255.0</code></li>
+<li>Leave other fields empty</li>
+<li>Click "OK" to save</li>
+</ol>
+<p><img alt="IP Address Settings" src="../../lib/kmNet/13_ip_address_settings.png" /></p>
+<p><strong>Important Notes</strong>:
+- Modify the box's network card, not your own local network card
+- Usually a new network card will appear on the page (the box's network card), modify the box's network card
+- If you lose internet after modifying IP, you may have modified the wrong network card
+- If the above IP address doesn't work, you can try using: <code>192.168.2.189</code></p>
+<h4 id="check-network-connectivity">Check Network Connectivity</h4>
+<ol>
+<li>Open Command Prompt (CMD)</li>
+<li>Execute <code>ping 192.168.2.1</code> (the box's default IP)</li>
+<li>If you can ping successfully, the connection is successful</li>
+</ol>
+<h2 id="cvm-configuration-steps">CVM Configuration Steps</h2>
+<h3 id="first-connection">First Connection</h3>
+<ol>
+<li>Open CVM's <code>General</code> tab</li>
+<li>Set <code>Input API</code> to <code>NET</code> or corresponding network mode</li>
+<li>When starting for the first time, you need to enter Kmbox Net data (IP, Port, UUID)</li>
+</ol>
+<p><img alt="Enter Kmbox Net Data" src="../../lib/kmNet/14_enter_kmbox_net_data.png" /></p>
+<h3 id="save-configuration">Save Configuration</h3>
+<p>To avoid entering Kmbox Net data every time:</p>
+<ol>
+<li>Go to config section in CVM</li>
+<li>Select any config and click save</li>
+</ol>
+<p><img alt="Save Config" src="../../lib/kmNet/15_save_config.png" /></p>
+<p>This way the settings will be saved and will be used automatically on next startup.</p>
+<h2 id="recommended-starting-values">Recommended Starting Values</h2>
+<ul>
+<li><code>Input API</code>: <code>NET</code></li>
+<li><code>IP Address</code>: <code>192.168.2.1</code></li>
+<li><code>Port</code>: Set according to actual box port (usually default value)</li>
+<li><code>auto_connect_mouse_api</code>: Set to <code>false</code> initially, change to <code>true</code> after stable</li>
+</ul>
+<h2 id="verification-checklist">Verification Checklist</h2>
+<ul>
+<li>CVM can connect to Kmbox Net without timeout errors</li>
+<li>Micro-movement test is smooth, direction is correct</li>
+<li>After restarting CVM, can connect again with the same configuration</li>
+<li>Network ping test is successful</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="cannot-connect">Cannot Connect</h3>
+<ul>
+<li>Check if network port cable is correctly connected</li>
+<li>Confirm network card driver is correctly installed on the computer connected to network port</li>
+<li>Confirm IP address is set correctly (<code>192.168.2.100</code>)</li>
+<li>Confirm box's IP address (usually <code>192.168.2.1</code>)</li>
+<li>Check if firewall is blocking the connection</li>
+<li>Confirm two computers are on the same network (except single machine mode)</li>
+</ul>
+<h3 id="network-card-driver-installed-but-no-response">Network Card Driver Installed But No Response</h3>
+<ul>
+<li>Check if network port cable is connected?</li>
+<li>Install network card driver on whichever computer the network port USB cable is connected to</li>
+<li>Don't install driver on computer A but connect cable to computer B</li>
+</ul>
+<h3 id="why-no-internet-after-modifying-ip">Why No Internet After Modifying IP</h3>
+<ul>
+<li>If you lost internet, you may have modified the wrong network card</li>
+<li>Usually a new network card will appear on the page (the box's network card), modify the box's network card instead of your own local network card</li>
+<li>See the network card modification tutorial above for specific operations</li>
+</ul>
+<h3 id="mouse-doesnt-work">Mouse Doesn't Work</h3>
+<p>If the mouse connected through Kmbox doesn't work on the main PC:</p>
+<ul>
+<li>Make sure Kmbox is connected correctly</li>
+<li>Try connecting USB cable to another port on the main PC</li>
+<li>Try using another mouse</li>
+<li>Try connecting mouse to another USB port on Kmbox</li>
+</ul>
+<h3 id="mouse-sensitivity">Mouse Sensitivity</h3>
+<p>Change the sensitivity in the game settings.</p>
+<h3 id="movement-not-smooth-or-delayed">Movement Not Smooth or Delayed</h3>
+<ul>
+<li>Check network connection quality</li>
+<li>Confirm using high-quality USB cables</li>
+<li>Avoid using USB Hub, connect directly to computer USB port</li>
+<li>Check if other programs are occupying network resources</li>
+</ul>
+<p>Make sure you have configured everything correctly.</p>
+<h3 id="mouse-obviously-not-responsive-and-high-latency-in-bypass-mode">Mouse Obviously Not Responsive and High Latency in Bypass Mode</h3>
+<ul>
+<li>This situation is generally because the mouse exceeds specifications</li>
+<li>Net only supports up to Full Speed (12Mbps). If your device is High Speed (480Mbps), Net box will only recognize it as Full Speed</li>
+<li>USB protocol specifies: Full Speed devices 1ms per frame, High Speed devices 0.125ms per frame</li>
+<li>If a high-speed device wants 1KHZ polling rate, its defined value is 8, but the box can only recognize Full Speed, not High Speed, so when the box reads 8, it means reading data every 8ms, thus causing high latency issues</li>
+<li>For perfect passthrough support, please choose the NB version with higher speed rating</li>
+<li>If you want to use high-speed devices on Net, please choose KM mode</li>
+</ul>
+<p><strong>Important Reminder</strong>: Kmbox Net's Bypass mode is suspected to be a fake Bypass, <strong>PID/VID are not correctly passed through</strong>, may not fully simulate real physical keyboard and mouse devices.</p>
+<h3 id="cheat-doesnt-see-kmbox">Cheat Doesn't See Kmbox</h3>
+<p>If the cheat doesn't see Kmbox at startup:</p>
+<ul>
+<li>Make sure your main and second PCs are connected to the same local network (e.g., your home Wi-Fi)</li>
+<li>Try using this IP address in "Internet Protocol Version 4 (TCP/IPv4)" Properties: <code>192.168.2.189</code></li>
+</ul>
+<h2 id="firmware-update">Firmware Update</h2>
+<p>If your Kmbox Net firmware differs from the current one, it's recommended to update (flash) it. This can improve performance, fix bugs, and prevent detection.</p>
+<p><strong>Latest Version</strong>: 2026.2.12 (Last update date: February 12, 2026)</p>
+<h3 id="update-steps">Update Steps</h3>
+<ol>
+<li>
+<p>Connect USB cable to your main PC</p>
+</li>
+<li>
+<p>Press and hold this small black button inside the Kmbox using a screwdriver or other thin object</p>
+</li>
+</ol>
+<p><img alt="Flash Button Location" src="../../lib/kmNet/18_flash_button_location.png" /></p>
+<p>And at the same time connect the USB cable to this connector</p>
+<p><img alt="USB Connection Location" src="../../lib/kmNet/19_usb_connection_location.png" /></p>
+<p>The Kmbox screen should turn white, and this blue diode should start flashing rapidly. If this doesn't happen, then try to hold the button again and reconnect the USB cable.</p>
+<ol>
+<li>On your main PC, download and extract the upgrade tool, then install the driver</li>
+</ol>
+<p><strong>Download Upgrade Tool</strong>: <a href="https://www.kmbox.top/wiki_doc/kmboxNet/site/tools/updatatools.zip">Click to download upgrade tool</a></p>
+<p><img alt="Firmware Driver" src="../../lib/kmNet/20_firmware_driver.png" /></p>
+<ol>
+<li>Launch the Upgrade Tool. Click Search Device. In the information line, it should be written "Found 1 USB devices"</li>
+</ol>
+<p><img alt="Upgrade Tool" src="../../lib/kmNet/21_upgrade_tool.png" /></p>
+<ol>
+<li>Click Select file</li>
+</ol>
+<p><img alt="Select Firmware File" src="../../lib/kmNet/22_select_firmware_file.png" /></p>
+<ol>
+<li>Navigate to the folder where you downloaded the firmware file</li>
+</ol>
+<p><strong>Download Firmware</strong>:
+- <strong>Latest Firmware</strong>: <a href="https://www.kmbox.top/Net_firmware.html">Click to download latest firmware</a>
+- <strong>Other Versions</strong>: <a href="https://www.kmbox.top/Net_firmware.html#NetHistory">Click to view history versions</a></p>
+<p>Change the type of files displayed to <code>.BIN</code></p>
+<p><img alt="Firmware BIN File" src="../../lib/kmNet/23_firmware_bin_file.png" /></p>
+<ol>
+<li>
+<p>Select the firmware file (e.g., <code>kmboxnetfw20240808.bin</code>)</p>
+</li>
+<li>
+<p>And click "Program"</p>
+</li>
+</ol>
+<p><img alt="Start Flashing Firmware" src="../../lib/kmNet/24_start_flashing_firmware.png" /></p>
+<ol>
+<li>Wait a few seconds. After the end of the process, you will see a message</li>
+</ol>
+<p><img alt="Firmware Update Complete" src="../../lib/kmNet/25_firmware_update_complete.png" /></p>
+<p><strong>Important</strong>: Firmware update is complete. Now we need to spoof Kmbox according to the guide below. This must be done every time after updating the firmware on Kmbox Net.</p>
+<h2 id="spoofing-kmbox-net">Spoofing Kmbox Net</h2>
+<p>Spoofing can make Kmbox Net appear as your real mouse, improving security.</p>
+<h3 id="spoofing-steps">Spoofing Steps</h3>
+<ol>
+<li>
+<p>Disconnect all cables and mouse from Kmbox</p>
+</li>
+<li>
+<p>Connect your mouse to your main PC as usual, without Kmbox</p>
+</li>
+<li>
+<p>On your main PC, download and run <code>USBLogView.exe</code> (you can download it from the official Kmbox Net resources or use a USB device viewer tool), make the program fullscreen</p>
+</li>
+</ol>
+<p><img alt="USBLogView Program" src="../../lib/kmNet/26_usblogview_program.png" /></p>
+<ol>
+<li>Unplug your mouse from main PC and plug it back in</li>
+</ol>
+<p>You will see Vendor ID and Product ID of your mouse</p>
+<p>We will need this data later, write it down somewhere in one line without a space</p>
+<p>In my case it will look like this: <code>046dc077</code></p>
+<p><strong>Important!</strong> On some mice, for example on my Steelseries Rival 3 Wireless, Vendor ID and Product ID contains only numbers and looks like this: <code>10381830</code>. You will fail the spoofing process on such a mouse, I recommend using any other one.</p>
+<p><img alt="Check Mouse VID/PID" src="../lib/kmNet/27_check_mouse_vid_pid.png" /></p>
+<ol>
+<li>Connect Kmbox to your main and second PC</li>
+</ol>
+<p><img alt="Connection Diagram" src="../../lib/kmNet/28_connection_diagram_main_second_pc.png" /></p>
+<ol>
+<li>On the second PC, download and extract the <a href="https://www.kmbox.top/wiki_doc/kmboxNet/site/tools/NetRelease.zip">KmboxNet program</a></li>
+</ol>
+<p>Run <code>KmboxNet.exe</code></p>
+<p>Enter IP, Port and UUID from your Kmbox Net</p>
+<p><img alt="KmboxNet Program" src="../../lib/kmNet/29_kmboxnet_program.png" /></p>
+<ol>
+<li>Check "Ping" box and click on the big button</li>
+</ol>
+<p><img alt="Ping Test" src="../../lib/kmNet/30_ping_test.png" /></p>
+<ol>
+<li>A window should appear in which OK will be written at the end.</li>
+</ol>
+<p><img alt="Connection Success" src="../../lib/kmNet/31_connection_success.png" /></p>
+<p>If it doesn't connect to the Kmbox:
+- Try to restart it by unplugging it from your main PC and plug it back in
+- Run the exe as admin</p>
+<ol>
+<li>Enter your Vendor ID and Product ID which we saved earlier in one line without a space (in my case it's <code>10381830</code>)</li>
+</ol>
+<p>And click VID/PID button</p>
+<p><img alt="Set VID/PID" src="../../lib/kmNet/32_set_vid_pid.png" /></p>
+<ol>
+<li>You should see such a window which means that the process was successful</li>
+</ol>
+<p><img alt="Spoofing Success" src="../../lib/kmNet/33_spoofing_success.png" /></p>
+<ol>
+<li>
+<p>Go back to your main PC and open USBLogView.exe again, make the program fullscreen</p>
+</li>
+<li>
+<p>Unplug the Kmbox from your main PC and plug it back in</p>
+</li>
+</ol>
+<p><img alt="Verify Spoofing" src="../../lib/kmNet/34_verify_spoofing.png" /></p>
+<p>You should see the same Vendor ID and Product ID that you saw in Step 3</p>
+<p>If it is, then the spoofing was successful</p>
+<h2 id="advanced-settings">Advanced Settings</h2>
+<h3 id="how-to-enable-bypass-mode">How to Enable Bypass Mode</h3>
+<p>Bypass mode allows physical keyboard and mouse to pass directly through the box. In Bypass mode, physical keyboard and mouse data is directly passed through to the target computer without processing by the box.</p>
+<p><strong>Important Warning</strong>:
+- This Bypass mode is suspected to be a fake Bypass
+- <strong>PID/VID are not correctly passed through</strong>, may not fully simulate real physical keyboard and mouse devices
+- Please be aware of related limitations and risks when using</p>
+<p><strong>Usage Notes</strong>:
+- In Bypass mode, if using high-speed devices (High Speed, 480Mbps), you may experience obvious lag and high latency issues
+- Net only supports up to Full Speed (12Mbps). If the device is High Speed (480Mbps), Net box will only recognize it as Full Speed
+- USB protocol specifies: Full Speed devices 1ms per frame, High Speed devices 0.125ms per frame
+- For perfect passthrough support, please choose the NB version with higher speed rating
+- If you want to use high-speed devices on Net, please choose KM mode</p>
+<p>For specific setup methods, please refer to <a href="https://www.kmbox.top/wiki_doc/kmboxNet/site/">Kmbox Net Official Documentation</a>.</p>
+<h3 id="how-to-enable-km-mode">How to Enable KM Mode</h3>
+<p>KM mode is one of Kmbox Net's working modes, which can be set in the box's host computer software.</p>
+<h3 id="how-to-modify-curves">How to Modify Curves</h3>
+<ol>
+<li>Download the box's host computer control software</li>
+<li>After connecting the box, you can select hardware curve values and algorithm types</li>
+<li>Default curve is disabled. If you need to enable it, set it in the host computer software</li>
+</ol>
+<h3 id="check-box-inherent-parameters">Check Box Inherent Parameters</h3>
+<p>You can view the inherent parameters (IP, Port, UUID) on the box:</p>
+<p><img alt="Box Inherent Parameters" src="../../lib/kmNet/35_inherent_parameters_box.png" /></p>
+<h2 id="related-resources">Related Resources</h2>
+<ul>
+<li><strong>Official Documentation</strong>: <a href="https://www.kmbox.top/wiki_doc/kmboxNet/site/">Kmbox Net User Manual</a></li>
+<li><strong>Video Tutorial</strong>: <a href="https://youtu.be/ts4Vc6hs38Q?si=HI33KvlLr6wfqQ-C">YouTube Connection Tutorial Video</a></li>
+<li><strong>Network Card Driver Download</strong>: <a href="https://www.kmbox.top/wiki_doc/kmboxNet/site/">Click to download network card driver</a></li>
+<li><strong>Host Computer Software Download</strong>: <a href="https://www.kmbox.top/wiki_doc/kmboxNet/site/">Click to download KmboxNet host computer software</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

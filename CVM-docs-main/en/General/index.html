@@ -1,0 +1,3189 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Configuration documentation and setup guides for the CVM colorBot project.">
+      
+      
+      
+        <link rel="canonical" href="https://asenyeroao-ct.github.io/CVM-Docs/CVM-docs-main/en/General/">
+      
+      
+        <link rel="prev" href="../Working-Principle/">
+      
+      
+        <link rel="next" href="../Aimbot/">
+      
+      
+        
+          <link rel="alternate" href="/CVM-Docs/CVM-docs-main/en/CVM/" hreflang="en">
+        
+          <link rel="alternate" href="/CVM-Docs/CVM-docs-main/zh-CN/CVM/" hreflang="zh-CN">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>General - CVM colorBot Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#general-tab-parameters" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="CVM colorBot Documentation" class="md-header__button md-logo" aria-label="CVM colorBot Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CVM colorBot Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              General
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/CVM-Docs/CVM-docs-main/en/CVM/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/CVM-Docs/CVM-docs-main/zh-CN/CVM/" hreflang="zh-CN" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="CVM colorBot Documentation" class="md-nav__button md-logo" aria-label="CVM colorBot Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CVM colorBot Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Language
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Language
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CVM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Working-Principle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working Principle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capture-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capture Controls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-hsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom HSV
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detection-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detection Parameters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mouse-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mouse Lock
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#button-mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Button Mask
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-setup-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Setup Order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-parameter-interactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Parameter Interactions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Aimbot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aimbot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sec-Aimbot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sec Aimbot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Trigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RCS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RCS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Config
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_9" id="__nav_2_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aimbot Modes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Aimbot Modes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aimbot/normal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aimbot/silent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Silent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aimbot/ncaf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NCAF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aimbot/windmouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WindMouse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aimbot/bezier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezier
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aimbot/pid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PID
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_10" id="__nav_2_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/en/OBS-UDP-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OBS UDP Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/en/FOV-size/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV Size
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/en/FovSize-res/1k/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 1K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/en/FovSize-res/2k/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 2K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/en/FovSize-res/4k/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 4K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/en/FovSize-res/21-9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 21:9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/en/CVM-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVM Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/en/Python-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/en/GStreamer-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GStreamer Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/en/MAKCU-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MAKCU Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/en/Kmbox-Net-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kmbox Net Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简体中文
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    简体中文
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/CVM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/Working-Principle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工作原理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/General/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General 通用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/Aimbot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aimbot 主自瞄
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/Sec-Aimbot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sec Aimbot 副自瞄
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/Trigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trigger 扳机
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/RCS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RCS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/Config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Config 配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_9" id="__nav_2_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aimbot 模式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Aimbot 模式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/aimbot/normal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/aimbot/silent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Silent 静默
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/aimbot/ncaf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NCAF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/aimbot/windmouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WindMouse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/aimbot/bezier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezier 贝塞尔
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zh-CN/aimbot/pid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PID
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_10" id="__nav_2_2_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安装指南
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    安装指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/zh-CN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    索引
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/zh-CN/OBS-UDP-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OBS UDP 设置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/zh-CN/FOV-size/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV Size 对照表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/zh-CN/FovSize-res/1k/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 1K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/zh-CN/FovSize-res/2k/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 2K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/zh-CN/FovSize-res/4k/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 4K
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/zh-CN/FovSize-res/21-9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOV 21:9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/zh-CN/CVM-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CVM 安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/zh-CN/Python-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python 安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/zh-CN/GStreamer-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GStreamer 安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/zh-CN/MAKCU-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MAKCU 设置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared-guides/zh-CN/Kmbox-Net-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kmbox Net 连接
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capture-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capture Controls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-hsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom HSV
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detection-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detection Parameters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mouse-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mouse Lock
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#button-mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Button Mask
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-setup-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Setup Order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-parameter-interactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Parameter Interactions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="general-tab-parameters">General Tab Parameters</h1>
+<p>Back to index: <a href="../CVM/">CVM.md</a></p>
+<h2 id="hardware-api">Hardware API</h2>
+<table>
+<thead>
+<tr>
+<th>UI Name</th>
+<th>Config Key</th>
+<th>Type</th>
+<th>Range/Options</th>
+<th>Default</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input API</td>
+<td><code>mouse_api</code></td>
+<td>enum (string)</td>
+<td><code>Serial</code>, <code>Arduino</code>, <code>SendInput</code>, <code>Net</code>, <code>KmboxA</code>, <code>MakV2</code>, <code>MakV2Binary</code>, <code>DHZ</code></td>
+<td><code>Serial</code></td>
+<td>Selects mouse control backend.</td>
+<td>MAKCU and Ferrum both use this option.</td>
+</tr>
+<tr>
+<td>Auto Connect Mouse API On Startup</td>
+<td><code>auto_connect_mouse_api</code></td>
+<td>bool</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Auto-connects selected mouse backend during startup.</td>
+<td>Useful for fixed hardware setups.</td>
+</tr>
+<tr>
+<td>Auto Switch Serial to 4M On Startup</td>
+<td><code>serial_auto_switch_4m</code></td>
+<td>bool</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Sends Serial 4M baud handshake during startup after auto-connect.</td>
+<td>Applies when <code>mouse_api=Serial</code> and device is connected first.</td>
+</tr>
+<tr>
+<td>COM Mode</td>
+<td><code>serial_port_mode</code></td>
+<td>enum (string)</td>
+<td><code>Auto</code>, <code>Manual</code></td>
+<td><code>Auto</code></td>
+<td>Serial API COM port selection mode.</td>
+<td>Applies when <code>mouse_api=Serial</code>.</td>
+</tr>
+<tr>
+<td>COM Port</td>
+<td><code>serial_port</code></td>
+<td>string</td>
+<td>e.g. <code>COM3</code></td>
+<td><code>""</code></td>
+<td>Manual COM port value for Serial API.</td>
+<td>Used only in Serial + Manual mode.</td>
+</tr>
+<tr>
+<td>COM Port (optional)</td>
+<td><code>arduino_port</code></td>
+<td>string</td>
+<td>e.g. <code>COM4</code></td>
+<td><code>""</code></td>
+<td>Arduino serial port.</td>
+<td>Empty value allows auto-detect by backend logic.</td>
+</tr>
+<tr>
+<td>Baud</td>
+<td><code>arduino_baud</code></td>
+<td>int</td>
+<td>positive integer</td>
+<td><code>115200</code></td>
+<td>Arduino serial baud rate.</td>
+<td>Invalid input is normalized to <code>115200</code>.</td>
+</tr>
+<tr>
+<td>IP Address</td>
+<td><code>net_ip</code></td>
+<td>string</td>
+<td>IPv4 / hostname</td>
+<td><code>192.168.2.188</code></td>
+<td>Network target for Net API.</td>
+<td>Use with <code>net_port</code> and <code>net_uuid</code>.</td>
+</tr>
+<tr>
+<td>Port</td>
+<td><code>net_port</code></td>
+<td>string</td>
+<td>numeric string</td>
+<td><code>6234</code></td>
+<td>Network target port for Net API.</td>
+<td>Stored as string in config.</td>
+</tr>
+<tr>
+<td>UUID</td>
+<td><code>net_uuid</code></td>
+<td>string</td>
+<td>device UUID/MAC-like value</td>
+<td><code>""</code></td>
+<td>Device identifier for Net API.</td>
+<td><code>net_mac</code> is a deprecated alias synchronized with <code>net_uuid</code>.</td>
+</tr>
+<tr>
+<td>VID/PID</td>
+<td><code>kmboxa_vid_pid</code></td>
+<td>string</td>
+<td>e.g. <code>66882021</code>, <code>6688/2021</code>, <code>V984D741</code>, <code>0x1A20/0x07E5</code></td>
+<td><code>"0/0"</code></td>
+<td>Combined KmboxA device ID input used for API init.</td>
+<td>UI uses one field; backend parses and syncs <code>kmboxa_vid</code> + <code>kmboxa_pid</code> for compatibility.</td>
+</tr>
+<tr>
+<td>Port (optional)</td>
+<td><code>makv2_port</code></td>
+<td>string</td>
+<td>e.g. <code>COM5</code></td>
+<td><code>""</code></td>
+<td>Serial port for MakV2 API.</td>
+<td>Empty value allows backend default detection path.</td>
+</tr>
+<tr>
+<td>Baud</td>
+<td><code>makv2_baud</code></td>
+<td>int</td>
+<td>positive integer</td>
+<td><code>4000000</code></td>
+<td>Serial baud for MakV2 API.</td>
+<td>Invalid input is normalized to <code>4000000</code>.</td>
+</tr>
+<tr>
+<td>IP Address</td>
+<td><code>dhz_ip</code></td>
+<td>string</td>
+<td>IPv4 / hostname</td>
+<td><code>192.168.2.188</code></td>
+<td>Network target for DHZ API.</td>
+<td>Used with UDP-style command transport.</td>
+</tr>
+<tr>
+<td>Port</td>
+<td><code>dhz_port</code></td>
+<td>string</td>
+<td>numeric string</td>
+<td><code>5000</code></td>
+<td>Network target port for DHZ API.</td>
+<td>Stored as string in config.</td>
+</tr>
+<tr>
+<td>Random Shift</td>
+<td><code>dhz_random</code></td>
+<td>int</td>
+<td>integer <code>&gt;=0</code></td>
+<td><code>0</code></td>
+<td>Caesar-shift randomization parameter for DHZ commands.</td>
+<td>Invalid input is normalized to <code>0</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="capture-controls">Capture Controls</h2>
+<table>
+<thead>
+<tr>
+<th>UI Name</th>
+<th>Config Key</th>
+<th>Type</th>
+<th>Range/Options</th>
+<th>Default</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Method</td>
+<td>runtime (<code>capture.mode</code>)</td>
+<td>enum (string)</td>
+<td><code>NDI</code>, <code>UDP</code>, <code>CaptureCard</code>, <code>MSS</code></td>
+<td>runtime value</td>
+<td>Selects capture backend.</td>
+<td>Runtime state from <code>CaptureService</code>; not persisted as a config key in this table.</td>
+</tr>
+<tr>
+<td>Target FPS</td>
+<td><code>target_fps</code></td>
+<td>float</td>
+<td><code>1</code> to <code>1000</code></td>
+<td><code>80</code></td>
+<td>Limits tracking/processing loop frequency.</td>
+<td>Invalid UI value is reset to <code>80</code>.</td>
+</tr>
+<tr>
+<td>NDI Source</td>
+<td><code>last_ndi_source</code></td>
+<td>string or null</td>
+<td>discovered NDI source name</td>
+<td><code>null</code></td>
+<td>Remembers preferred NDI source for reconnect.</td>
+<td>Set when connecting selected NDI source.</td>
+</tr>
+<tr>
+<td>Enable Center Crop (NDI)</td>
+<td><code>ndi_fov_enabled</code></td>
+<td>bool</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Enables center square crop for NDI frames.</td>
+<td>Crop size controlled by <code>ndi_fov</code>.</td>
+</tr>
+<tr>
+<td>FOV (NDI half-size)</td>
+<td><code>ndi_fov</code></td>
+<td>int</td>
+<td>slider <code>16</code> to <code>1920</code></td>
+<td><code>320</code></td>
+<td>Half-size of square crop area for NDI.</td>
+<td>Effective crop area is <code>2 * ndi_fov</code> per side.</td>
+</tr>
+<tr>
+<td>UDP IP Address</td>
+<td><code>udp_ip</code></td>
+<td>string</td>
+<td>IPv4 / hostname</td>
+<td><code>127.0.0.1</code></td>
+<td>Source address for UDP capture stream.</td>
+<td>Fill in the second PC IP (the PC running this software).</td>
+</tr>
+<tr>
+<td>UDP Port</td>
+<td><code>udp_port</code></td>
+<td>string</td>
+<td>numeric string</td>
+<td><code>1234</code></td>
+<td>Source port for UDP capture stream.</td>
+<td>Stored as string in config.</td>
+</tr>
+<tr>
+<td>Enable Center Crop (UDP)</td>
+<td><code>udp_fov_enabled</code></td>
+<td>bool</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Enables center square crop for UDP frames.</td>
+<td>Crop size controlled by <code>udp_fov</code>.</td>
+</tr>
+<tr>
+<td>FOV (UDP half-size)</td>
+<td><code>udp_fov</code></td>
+<td>int</td>
+<td>slider <code>16</code> to <code>1920</code></td>
+<td><code>320</code></td>
+<td>Half-size of square crop area for UDP.</td>
+<td>Effective crop area is <code>2 * udp_fov</code> per side.</td>
+</tr>
+<tr>
+<td>Device Index</td>
+<td><code>capture_device_index</code></td>
+<td>int</td>
+<td>integer <code>&gt;=0</code></td>
+<td><code>0</code></td>
+<td>Capture card device index.</td>
+<td>Used in CaptureCard mode.</td>
+</tr>
+<tr>
+<td>Resolution Width</td>
+<td><code>capture_width</code></td>
+<td>int</td>
+<td>positive integer</td>
+<td><code>1920</code></td>
+<td>Capture card width setting.</td>
+<td>Paired with <code>capture_height</code>.</td>
+</tr>
+<tr>
+<td>Resolution Height</td>
+<td><code>capture_height</code></td>
+<td>int</td>
+<td>positive integer</td>
+<td><code>1080</code></td>
+<td>Capture card height setting.</td>
+<td>Paired with <code>capture_width</code>.</td>
+</tr>
+<tr>
+<td>FPS</td>
+<td><code>capture_fps</code></td>
+<td>float</td>
+<td>positive number</td>
+<td><code>240</code></td>
+<td>Capture card source FPS target.</td>
+<td>Backend/hardware may clamp actual value.</td>
+</tr>
+<tr>
+<td>CaptureCard Force BGR</td>
+<td><code>capture_card_force_bgr</code></td>
+<td>bool</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>true</code></td>
+<td>Forces CaptureCard frames through BGR normalization before HSV detection.</td>
+<td>Recommended to keep enabled for consistent color detection across devices/backends.</td>
+</tr>
+<tr>
+<td>CaptureCard Set Convert RGB</td>
+<td><code>capture_card_set_convert_rgb</code></td>
+<td>bool</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>true</code></td>
+<td>Requests backend color conversion via <code>CAP_PROP_CONVERT_RGB</code>.</td>
+<td>Backend support varies; unsupported backends silently ignore this request.</td>
+</tr>
+<tr>
+<td>CaptureCard Probe Frames</td>
+<td><code>capture_card_probe_frames</code></td>
+<td>int</td>
+<td>integer <code>&gt;=1</code></td>
+<td><code>3</code></td>
+<td>Number of probe frames used to validate each FourCC during initialization.</td>
+<td>Failed probe triggers automatic fallback to the next preferred FourCC.</td>
+</tr>
+<tr>
+<td>CaptureCard Debug Color Log</td>
+<td><code>capture_card_debug_color_log</code></td>
+<td>bool</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Enables verbose frame color-format logs for CaptureCard path.</td>
+<td>Intended for troubleshooting only due high log volume.</td>
+</tr>
+<tr>
+<td>Range X</td>
+<td><code>capture_range_x</code></td>
+<td>int</td>
+<td>minimum <code>128</code></td>
+<td><code>128</code></td>
+<td>Capture region width baseline for CaptureCard workflow.</td>
+<td>UI enforces minimum <code>128</code> on focus-out.</td>
+</tr>
+<tr>
+<td>Range Y</td>
+<td><code>capture_range_y</code></td>
+<td>int</td>
+<td>minimum <code>128</code></td>
+<td><code>128</code></td>
+<td>Capture region height baseline for CaptureCard workflow.</td>
+<td>UI enforces minimum <code>128</code> on focus-out.</td>
+</tr>
+<tr>
+<td>Monitor Index</td>
+<td><code>mss_monitor_index</code></td>
+<td>int</td>
+<td>integer <code>&gt;=1</code></td>
+<td><code>1</code></td>
+<td>Target monitor for MSS capture.</td>
+<td>Value depends on local monitor list order.</td>
+</tr>
+<tr>
+<td>FOV X (MSS half-width)</td>
+<td><code>mss_fov_x</code></td>
+<td>int</td>
+<td>slider <code>16</code> to <code>1920</code></td>
+<td><code>320</code></td>
+<td>MSS capture half-width around center.</td>
+<td>Effective width is <code>2 * mss_fov_x</code>.</td>
+</tr>
+<tr>
+<td>FOV Y (MSS half-height)</td>
+<td><code>mss_fov_y</code></td>
+<td>int</td>
+<td>slider <code>16</code> to <code>1080</code></td>
+<td><code>320</code></td>
+<td>MSS capture half-height around center.</td>
+<td>Effective height is <code>2 * mss_fov_y</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="settings">Settings</h2>
+<table>
+<thead>
+<tr>
+<th>UI Name</th>
+<th>Config Key</th>
+<th>Type</th>
+<th>Range/Options</th>
+<th>Default</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In-Game Sensitivity</td>
+<td><code>in_game_sens</code></td>
+<td>float</td>
+<td><code>0.1</code> to <code>20</code></td>
+<td><code>0.235</code></td>
+<td>Reference in-game sensitivity value used by movement calculations.</td>
+<td>Tune to match your game sensitivity scale.</td>
+</tr>
+<tr>
+<td>Target Color</td>
+<td><code>color</code></td>
+<td>enum (string)</td>
+<td><code>yellow</code>, <code>purple</code>, <code>red</code>, <code>custom</code></td>
+<td><code>purple</code></td>
+<td>Selects target color profile for HSV detection.</td>
+<td><code>custom</code> enables Custom HSV section.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="custom-hsv">Custom HSV</h2>
+<table>
+<thead>
+<tr>
+<th>UI Name</th>
+<th>Config Key</th>
+<th>Type</th>
+<th>Range/Options</th>
+<th>Default</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H Min</td>
+<td><code>custom_hsv_min_h</code></td>
+<td>int</td>
+<td><code>0</code> to <code>179</code></td>
+<td><code>0</code></td>
+<td>Minimum hue bound for custom detection mask.</td>
+<td>Only used when <code>color=custom</code>.</td>
+</tr>
+<tr>
+<td>S Min</td>
+<td><code>custom_hsv_min_s</code></td>
+<td>int</td>
+<td><code>0</code> to <code>255</code></td>
+<td><code>0</code></td>
+<td>Minimum saturation bound for custom detection mask.</td>
+<td>Only used when <code>color=custom</code>.</td>
+</tr>
+<tr>
+<td>V Min</td>
+<td><code>custom_hsv_min_v</code></td>
+<td>int</td>
+<td><code>0</code> to <code>255</code></td>
+<td><code>0</code></td>
+<td>Minimum value bound for custom detection mask.</td>
+<td>Only used when <code>color=custom</code>.</td>
+</tr>
+<tr>
+<td>H Max</td>
+<td><code>custom_hsv_max_h</code></td>
+<td>int</td>
+<td><code>0</code> to <code>179</code></td>
+<td><code>179</code></td>
+<td>Maximum hue bound for custom detection mask.</td>
+<td>Only used when <code>color=custom</code>.</td>
+</tr>
+<tr>
+<td>S Max</td>
+<td><code>custom_hsv_max_s</code></td>
+<td>int</td>
+<td><code>0</code> to <code>255</code></td>
+<td><code>255</code></td>
+<td>Maximum saturation bound for custom detection mask.</td>
+<td>Only used when <code>color=custom</code>.</td>
+</tr>
+<tr>
+<td>V Max</td>
+<td><code>custom_hsv_max_v</code></td>
+<td>int</td>
+<td><code>0</code> to <code>255</code></td>
+<td><code>255</code></td>
+<td>Maximum value bound for custom detection mask.</td>
+<td>Only used when <code>color=custom</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="detection-parameters">Detection Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>UI Name</th>
+<th>Config Key</th>
+<th>Type</th>
+<th>Range/Options</th>
+<th>Default</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Merge Distance</td>
+<td><code>detection_merge_distance</code></td>
+<td>int</td>
+<td>UI slider <code>50</code> to <code>500</code></td>
+<td><code>12</code></td>
+<td>Distance threshold for merging nearby detection rectangles.</td>
+<td>Tooltip recommendation: <code>200</code> to <code>300</code> (tooltip default text mentions <code>250</code>).</td>
+</tr>
+<tr>
+<td>Min Contour Points</td>
+<td><code>detection_min_contour_points</code></td>
+<td>int</td>
+<td>UI slider <code>3</code> to <code>100</code></td>
+<td><code>5</code></td>
+<td>Filters contours with too few points (noise suppression).</td>
+<td>Tooltip recommendation: <code>3</code> to <code>10</code> (default <code>5</code>).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mouse-lock">Mouse Lock</h2>
+<table>
+<thead>
+<tr>
+<th>UI Name</th>
+<th>Config Key</th>
+<th>Type</th>
+<th>Range/Options</th>
+<th>Default</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lock Main Aimbot X-Axis</td>
+<td><code>mouse_lock_main_x</code></td>
+<td>bool</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Blocks physical X-axis movement while Main Aimbot is actively driving mouse movement.</td>
+<td>Lock auto-releases when aimbot no longer drives movement.</td>
+</tr>
+<tr>
+<td>Lock Main Aimbot Y-Axis</td>
+<td><code>mouse_lock_main_y</code></td>
+<td>bool</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Blocks physical Y-axis movement while Main Aimbot is active.</td>
+<td>Lock auto-releases when aimbot no longer drives movement.</td>
+</tr>
+<tr>
+<td>Lock Sec Aimbot X-Axis</td>
+<td><code>mouse_lock_sec_x</code></td>
+<td>bool</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Blocks physical X-axis movement while Sec Aimbot is active.</td>
+<td>Lock auto-releases when aimbot no longer drives movement.</td>
+</tr>
+<tr>
+<td>Lock Sec Aimbot Y-Axis</td>
+<td><code>mouse_lock_sec_y</code></td>
+<td>bool</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Blocks physical Y-axis movement while Sec Aimbot is active.</td>
+<td>Lock auto-releases when aimbot no longer drives movement.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="button-mask">Button Mask</h2>
+<table>
+<thead>
+<tr>
+<th>UI Name</th>
+<th>Config Key</th>
+<th>Type</th>
+<th>Range/Options</th>
+<th>Default</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enable Button Mask</td>
+<td><code>button_mask_enabled</code></td>
+<td>bool</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Enables per-button masking/locking policy.</td>
+<td>Master switch for all button mask items below.</td>
+</tr>
+<tr>
+<td>L-Click</td>
+<td><code>mask_left_button</code></td>
+<td>bool</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Mask policy for left mouse button.</td>
+<td>Internal index <code>0</code>.</td>
+</tr>
+<tr>
+<td>R-Click</td>
+<td><code>mask_right_button</code></td>
+<td>bool</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Mask policy for right mouse button.</td>
+<td>Internal index <code>1</code>.</td>
+</tr>
+<tr>
+<td>M-Click</td>
+<td><code>mask_middle_button</code></td>
+<td>bool</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Mask policy for middle mouse button.</td>
+<td>Internal index <code>2</code>.</td>
+</tr>
+<tr>
+<td>Side 4</td>
+<td><code>mask_side4_button</code></td>
+<td>bool</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Mask policy for side mouse button 4.</td>
+<td>Internal index <code>3</code>.</td>
+</tr>
+<tr>
+<td>Side 5</td>
+<td><code>mask_side5_button</code></td>
+<td>bool</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>false</code></td>
+<td>Mask policy for side mouse button 5.</td>
+<td>Internal index <code>4</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="recommended-setup-order">Recommended Setup Order</h2>
+<ol>
+<li>Set <code>mouse_api</code> first and confirm the device can connect/reconnect reliably.</li>
+<li>Pick capture method (<code>NDI</code>/<code>UDP</code>/<code>CaptureCard</code>/<code>MSS</code>) and lock a stable source resolution/FPS.</li>
+<li>Set <code>target_fps</code> based on real capture throughput, not only monitor refresh rate.</li>
+<li>Confirm target color (<code>color</code>) before tuning any aim/trigger logic.</li>
+<li>If using <code>custom</code> color, narrow HSV range first, then fine-tune detection merge/noise thresholds.</li>
+<li>Enable mouse lock or button mask only after basic tracking behavior is stable.</li>
+</ol>
+<h2 id="key-parameter-interactions">Key Parameter Interactions</h2>
+<ul>
+<li><code>target_fps</code> + capture FPS: if <code>target_fps</code> is much higher than real capture FPS, control feels unstable due to repeated frames.</li>
+<li><code>ndi_fov</code> / <code>udp_fov</code> / <code>mss_fov_x</code> + mode FOV (<code>fovsize</code>/<code>fovsize_sec</code>): capture crop too small can hide valid targets even when mode FOV is large.</li>
+<li><code>color=custom</code> + <code>detection_min_contour_points</code>: very wide HSV plus low contour points usually increases false positives.</li>
+<li><code>detection_merge_distance</code> + <code>trigger_min_pixels</code>: over-merging can inflate pixel counts and trigger too early.</li>
+<li>Mouse lock (<code>mouse_lock_*</code>) + activation mode (<code>hold_disable</code>/<code>toggle</code>): test release conditions carefully to avoid unexpected input blocking.</li>
+</ul>
+<h2 id="quick-troubleshooting">Quick Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Check First</th>
+<th>Then Adjust</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Device connects on first launch but fails after restart</td>
+<td><code>auto_connect_mouse_api</code>, COM mode/port consistency</td>
+<td><code>serial_auto_switch_4m</code> and backend baud settings</td>
+</tr>
+<tr>
+<td>Target color is visible but not detected</td>
+<td><code>color</code> profile and capture color conversion options</td>
+<td>Custom HSV bounds, <code>detection_min_contour_points</code></td>
+</tr>
+<tr>
+<td>Too many false detections in cluttered scenes</td>
+<td>Capture crop size and color profile selection</td>
+<td>Increase <code>trigger_min_ratio</code>, raise contour/min-pixel related thresholds</td>
+</tr>
+<tr>
+<td>Aimbot/Trigger behavior changes between modes unexpectedly</td>
+<td>Active capture backend and current mode-dependent keys</td>
+<td>Re-check shared keys (<code>fovsize</code>, offsets, activation keybinds)</td>
+</tr>
+<tr>
+<td>Input feels delayed or inconsistent</td>
+<td>Real capture FPS and <code>target_fps</code> mismatch</td>
+<td>Delay/smoothing parameters in mode-specific docs</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
